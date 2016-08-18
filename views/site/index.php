@@ -11,10 +11,17 @@ use yii\widgets\ActiveForm;
 $script=<<< JS
  function initialize(lat,long,description) {
     var myLatLng = {lat: lat, lng: long};
-    //var image = window.location.protocol + "//" + window.location.host +"/web/images/chaide_mapa.png";
+    var image = window.location.protocol + "//" + window.location.host +"/web/images/icono.svg";
+    var icon = {
+    url: image, // url
+    // scaledSize: new google.maps.Size(120,40), // scaled size
+    // origin: new google.maps.Point(0,0), // origin
+    // anchor: new google.maps.Point(0, 0) // anchor
+};
         var mapOptions = {
           center: new google.maps.LatLng(lat,long),
           zoom: 17,
+          scrollwheel: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
 //          width:"100%",
 //          height:"100%"
@@ -26,7 +33,7 @@ $script=<<< JS
     position: myLatLng,
     map: map,
     title: description,
-    //icon: image
+    icon: icon
   });
  var infowindow = new google.maps.InfoWindow({
     content: description
@@ -36,7 +43,8 @@ infowindow.open(map, marker);
         function location_map(lat,long) {
         var mapOptions = {
           center: new google.maps.LatLng(lat,long),
-          zoom: 17,
+          zoom: 19,
+          scrollwheel: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
 //          width:"100%",
 //          height:"100%"
@@ -46,7 +54,7 @@ infowindow.open(map, marker);
             mapOptions);
       }
 $(document).ready(function() {
-  initialize(0,0,'test');
+  initialize(-0.1802957,-78.478818,'Pasaje Jardín E10-46 y Avenida 6 de Diciembre');
     });
 JS;
 $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyDkyYOwDEFs05V-KrHCsUYr_gOnJwJhvmY');
@@ -56,14 +64,14 @@ AppAsset::register($this);
 $this->title = 'EXIT';
 ?>
 <!-- -->
-<section  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/<?= $home->picture ?>')">
+<section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/<?= $home->picture ?>')">
     <div class="inf-home">
         <span><?= $home->title ?>
               </span>
          <span class="second-text-home">
          <?= $home->subtitle ?>
         </span>
-        <a href="#">
+        <a href="#MISIONES" class="btn-menu" to_section="missions">
             <div class="btn-comprara">
                 Seleccionar una misión.
             </div>
@@ -72,7 +80,7 @@ $this->title = 'EXIT';
 
 </section>
 
-<section class="cont-exitint2" >
+<section id="what-is" class="cont-exitint2" >
     <h1>Exit es un juego</h1>
         <div class="it-is-cont">
             <div class="row">
@@ -93,7 +101,7 @@ $this->title = 'EXIT';
         </div>
 </section>
 
-<section  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/mision.svg')">
+<section id="missions"  class="background-exitint interna-exit4" style="background-image:url('<?= URL::base() ?>/images/mision.svg')">
     <div class="info-mis">
         <h1>MISIONES</h1>
             <div class="row">
@@ -114,17 +122,27 @@ Para escapar debes superar todas las pruebas, no serán necesarios conocimiento
         </span>
       </div>
       <div class="secc-intcolchon">
-        <ul class="ventajas-1">
- 
+        <ul class="ventajas-<?= count($games) ?>">
+        <?php foreach($games as $game): ?>
             <li>
-                <div class="mis-label"><span class="mis-tit">Escape del Cuartel</span> <br/> <span class="mis-subtit">Real de Lima</span></div>
-                <img src="<?= URL::base() ?>/images/15.svg" class="img-propiedad"/>
+              <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
+                <div class="mis-label" style="<?= ($game->status == 'INACTIVE') ? 'background:gray;' : '' ?>"><span class="mis-tit"><?= $game->title ?></span> <br/> <span class="mis-subtit"><?= $game->subtitle ?></span>
+                  <?= ($game->status == 'INACTIVE') ? '<br/>PROXIMAMENTE' : '' ?>
+                </div>
+                <img src="<?= URL::base() ?>/images/game/<?= $game->picture ?>" class="img-propiedad"/>
+              </a>
             </li>
-          
+          <?php endforeach; ?>
         </ul>   
     </div>
 </section>
-<section class="cont-exitint2" style="background-image:url('<?= URL::base() ?>/images/13.svg')" >
+<!-- <section class="cont-exitint2" style="background-image:url('<?= URL::base() ?>/images/13.svg')" >
     <h1 style="color:white;">ENCUÉNTRANOS</h1>
     <div id="map"></div>
+</section> -->
+<section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
+    
+    <h1 style="color:white;">ENCUÉNTRANOS</h1>
+    <div id="map" style="width:90%;min-height:400px;margin-left:5%;"></div>
+    
 </section>

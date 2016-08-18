@@ -112,6 +112,7 @@ nav ul li a:link, nav ul li a:visited{
     text-decoration:none;
     color:white;
     text-align:center;
+
     }   
 .m-menu{
     margin: 3% 1% 0 0;
@@ -150,7 +151,7 @@ nav ul li a:link, nav ul li a:visited{
     .mis-label{
             z-index: 2;
     position: absolute;
-    top: 55%;
+    top: 49%;
     color: white;
     background: #e61939;
     width: 95%;
@@ -251,6 +252,13 @@ nav ul li a:link, nav ul li a:visited{
     min-height:100%;
     position:relative;
     float:left;
+    }  
+.interna-exit4{
+    width:100%;
+    min-height:100%;
+    position:relative;
+    float:left;
+    padding-bottom: 33%;
     }   
 #registro-chaide{
     width:100%;
@@ -805,7 +813,7 @@ footer{
     min-height:100%;
     position:relative;
     float:left;
-    background-image:url(../images/int-colchon2.jpg);
+    /*background-image:url(../images/int-colchon2.jpg);*/
     background-size: 100%;
     background-attachment: fixed;
     background-position: top center;
@@ -878,13 +886,13 @@ footer{
     color:#FFF;
     float:left;
     }
-.cont-colchonint3{
+.cont-exitint3{
     width:100%;
     position:relative;
     float:left;
     padding:1% 0;
     background-color:#FFF;
-    min-height:70%;
+    min-height:100%;
     }
 .cont-colchon360{
     width:800px;
@@ -2537,7 +2545,6 @@ ul.publiciad-abj li{
     width: 15%;
     margin: 0 0.5%;
     padding: 0 1%;
-    background: rgba(0,0,0,0.8);
     list-style: none;
     position: relative;
     height: 98%;

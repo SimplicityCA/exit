@@ -29,7 +29,15 @@ use yii\helpers\Url;
 //         $("#cont-buscardor").removeClass("to-right");
 //     }); 
 // });';
-// $this->registerJs($script,View::POS_END);
+$script=<<< JS
+$(".btn-menu").click(function() {
+    var section=$(this).attr('to_section');
+    $('html, body').animate({
+        scrollTop: $("#"+section).offset().top
+    }, 1000);
+});
+JS;
+$this->registerJs($script,View::POS_END);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -64,14 +72,14 @@ AppAsset::register($this);
     <header>
         <nav>
             <ul>
-                <li><a href="<?= Url::home() ?>"><img src="<?= URL::base() ?>/images/logo.svg" alt="logotipo chaide"/></a></li>
-                <li class="m-menu"><a href="<?= Url::to(['article/index','type'=>'news']) ?>" class="hvr-bounce-to-top">¿QUÉ ES?</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">ELIGE UNA MISIÓN</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">GALERIA</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">RESERVAS</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">ENCUÉNTRANOS</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">CONTACTO</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">EMPRESAS</a></li>
+                <li><a href="<?= Url::home() ?>"><img src="<?= URL::base() ?>/images/logo.svg" alt="logotipo exit"/></a></li>
+                <li class="m-menu"><a  href="#¿QUÉ ES?" to_section="what-is" class="btn-menu">¿QUÉ ES?</a></li>
+                <li class="m-menu"><a href="#ELGIGE UNA MISIÓN" to_section="missions"class="btn-menu">ELIGE UNA MISIÓN</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="btn-menu">GALERIA</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="btn-menu">RESERVAS</a></li>
+                <li class="m-menu"><a href="#ENCUÉNTRANOS" to_section="find-us" class="btn-menu">ENCUÉNTRANOS</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="btn-menu">CONTACTO</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="btn-menu">EMPRESAS</a></li>
             </ul>
             <div id="barra-mobile">
                 <a id="menu-chaide"><span></span></a>

@@ -6,7 +6,7 @@
 @media screen and (max-width: 1800px){
 .secc-intcolchon ul li{
     width: 17.6%;
-    margin: 6% 0 0 0;
+    margin: 7% 0 0 3%;
     padding: 0 1%;
 	}
 .txt-estructura-interna h1 {
@@ -119,6 +119,7 @@ header{
 .ventajas-4, .ventajas-3, .ventajas-2, .ventajas-1, .ventajas-5, .ventajas-6{
 	width:100% !important;
 	margin:0 0% !important;
+  padding-top: 1%;
 	}	
 }
 

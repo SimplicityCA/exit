@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Content;
+use app\models\Game;
 class SiteController extends Controller
 {
     public function behaviors()
@@ -51,7 +52,8 @@ class SiteController extends Controller
     {
         
         $home=Content::find()->where(['type'=>'HOME'])->one();
-        return $this->render('index',['home'=>$home]);
+        $games=Game::find()->all();
+        return $this->render('index',['home'=>$home,'games'=>$games]);
     }
 
     public function actionLogin()
