@@ -101,7 +101,7 @@ $this->title = 'EXIT';
         </div>
 </section>
 
-<section id="missions"  class="background-exitint interna-exit4" style="background-image:url('<?= URL::base() ?>/images/mision.svg')">
+<section id="missions"  class="background-exitint interna-exit4" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
     <div class="info-mis">
         <h1>MISIONES</h1>
             <div class="row">

@@ -151,13 +151,14 @@ nav ul li a:link, nav ul li a:visited{
     .mis-label{
             z-index: 2;
     position: absolute;
-    top: 49%;
+    /*top: 49%;*/
     color: white;
     background: #e61939;
     width: 95%;
     /* left: -7%; */
     margin-left: -13%;
     text-align: center;
+    margin-top: 111%;
     } 
     .mis-tit{
     font-size: 1.6em;
@@ -848,9 +849,9 @@ footer{
 .secc-intcolchon{
     width:95%;
     padding:0 2.5%;
-    position:absolute;
+/*    position:absolute;
     bottom:0;
-    left:0;
+    left:0;*/
     height:30%;
     }
 .secc-intcolchon ul{
@@ -863,8 +864,8 @@ footer{
     width: 15%;
     margin:0 0.5%;
     padding:0 2%;
-    background:rgba(0,0,0,0.8);
-    list-style:none;
+    /*background:rgba(0,0,0,0.8);*/
+/*    list-style:none;*/
     position:relative;
     height:98%;
     float:left;
@@ -2545,7 +2546,7 @@ ul.publiciad-abj li{
     width: 15%;
     margin: 0 0.5%;
     padding: 0 1%;
-    list-style: none;
+/*    list-style: none;*/
     position: relative;
     height: 98%;
     float: left;
@@ -2553,6 +2554,7 @@ ul.publiciad-abj li{
 .secc-intcolchon ul {
     width: 100%;
     height: 100%;
+    left: 2.5%;
     float: left;
     position: relative;
 }
