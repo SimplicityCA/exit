@@ -1,0 +1,1346 @@
+@media screen and (max-width: 1910px){
+.header-int {
+    height: 19%;
+}
+}
+@media screen and (max-width: 1800px){
+.secc-intcolchon ul li{
+	width: 17.6%;
+	margin:0 0.2%;
+	padding:0 1%;
+	}
+.txt-estructura-interna h1 {
+  margin: 2% 0 0 0;
+}
+#asesor-compra{
+	width:2.3%;
+	}
+.cont-colchon360{
+	width:750px;
+	height:750px;
+	left:7%;
+	}			
+}
+@media screen and (max-width: 1700px){
+.cont-medidas50 ul{
+  width: 40%;
+  padding: 2% 0 0 38%;
+}
+.cont-medidas50 ul li span {
+  width: 40%;
+}
+.txt-altura {
+  width: 40%;
+  margin: 2% 0 2% 33%;
+}
+.header-int {
+    height: 17%;
+}
+header {
+    width: 100%;
+    left: 0%;
+    top: 0%;
+}
+}
+@media screen and (max-width: 1600px) {
+.cont-colchon360{
+	width:700px;
+	height:700px;
+	left:5%;
+}
+#asesor-pag7 {
+    width: 80%;
+    margin: 10px 10%;
+}
+	}
+@media screen and (max-width: 1480px){
+.cont-colchon360{
+	width:650px;
+	height:650px;
+}	
+.secc-intcolchon {
+  width: 98%;
+  padding: 0 1%;
+	}
+.txt-estructura-interna {
+  width: 35%;
+  padding: 2% 2.5% 2% 2.5%;
+  float: left;
+}	
+.conte-local{
+	width: 52%;
+    margin: 1% 0 0 2%;
+	}
+header{
+	width:100%;
+	left:0%;
+	}	
+}
+@media screen and (max-width: 1435px){
+.secc-intcolchon {
+ height:35%;
+	}
+}	
+@media screen and (max-width: 1366px) {
+.cont-colchon360{
+	width:600px;
+	height:600px;
+}
+body{
+	font-size:1.1em;
+	}	
+header{
+	width:100%;
+	left:0%;
+	}
+.footter-home ul{
+	width:70%;
+	margin:0 15%;
+	}	
+.cont-compra {
+  width: 25%;
+}	
+.txt-colchonint {
+  width: 45%;
+  bottom: 3%;
+  left: 8%;
+}
+.secciones-productos ul {
+    width: 90%;
+    margin: 0.5% 5%;
+}	
+.cont-titulos {
+    margin: 8.5% 25% 0 25%;
+}
+.secc-noticia{
+	width:90%;
+	padding:0 5%;
+	}
+.ventajas-4, .ventajas-3, .ventajas-2, .ventajas-1, .ventajas-5, .ventajas-6{
+	width:100% !important;
+	margin:0 0% !important;
+	}	
+}
+
+@media screen and (max-width: 1280px) {
+.cont-colchon360{
+	width:600px;
+	height:600px;
+	left: 3%;
+}
+header{
+	width:100%;
+	left:0%;
+	}
+body{
+	font-size:1em;
+	}	
+.n-colchon {
+  top: 12%;
+}
+.footter-intcolchon ul{
+	width:90%;
+	margin:0 5%;
+	}
+/* B */
+.btn-comprara{
+    width: 33%;
+    clear: both;
+    float: left;
+    margin: 10% 0 0 30%;
+    align-self: auto;
+	azimuth:behind;
+	}
+#productos-submenu{
+	border-bottom-color:1px solid #C94B4D;
+	}	
+.footter-home{
+	min-width:100px;
+	align-self:flex-end;
+	stress:inherit;
+	}	
+.menu-imagen{
+	marquee-speed:fast;
+	break-before:left;	
+	}	
+.btn-comprara{
+	drop-initial-after-adjust:mathematical
+	}	
+.menu-imagen{
+	align-items:flex-start;
+	appearance:desktop
+	}
+/**/		
+
+.txt-estructura-interna {
+  width: 37%;
+  padding: 6% 2% 4% 2%;
+  margin:0 0 0 56%
+}	
+.img-comfort {
+  width: 70%;
+  margin: 2% 15% 0 15%;
+  
+}
+.header-int {
+    height: 15%;
+}
+.background-registro {
+    background-size: 120%;
+}
+.cont-formulario {
+    width: 50%;
+    float: left;
+    margin: 0% 22% 0 22%;
+    padding: 1% 3%;
+    background-color: rgba(0,0,0,0.75);
+}
+.cont-notinternas {
+    width: 90%;
+    float: left;
+    padding: 1% 5%;
+}
+.inf-notprincipal {
+    width: 50%;
+    bottom: 8%;
+    right: 5%;
+}
+.cont-trayectoria {
+    width: 90%;
+    padding: 10% 5% 1% 5%;
+}
+#asesor-pag1, #asesor-pag2, #asesor-pag4 {
+    width: 70%;
+    margin: 10px 15%;
+}
+#asesor-pag3, #asesor-pag5, #asesor-pag6, #asesor-pag7, #asesor-medida {
+    width: 80%;
+    margin: 10px 10%;
+}
+}
+
+@media screen and (max-width: 1150px) {
+.background-home {
+    background-size:cover;
+	}
+.background-registro{
+	background-size:cover;
+	}	
+.img-propiedad {
+    top: -10%;
+}	
+.cont-colchon360{
+	width:540px;
+	height:540px;
+}
+}
+@media screen and (max-width: 1080px) {
+.cont-colchon360{
+	width:500px;
+	height:500px;
+}
+}
+@media screen and (max-width: 1024px) {
+header{
+	width:100%;
+	left:0;
+	}
+nav ul li {
+    width: 14.28%;
+}	
+body{
+	font-size:0.9em;
+	}	
+.footter-home ul{
+	width:80%;
+	margin:0 10%;
+	}	
+.cont-footer {
+  width: 80%;
+  padding: 0 10%;
+}
+.footer-cierre ul {
+  width: 20%;
+  margin: 0 40%;
+}
+#home-chaide {
+  width: 100%;
+  min-height: 85%;
+}
+.footter-intcolchon ul {
+  width: 98%;
+  margin: 0 1%;
+}
+.txt-colchonint {
+  width: 50%;
+  bottom: 3%;
+  left: 3%;
+}
+.btn-comprar2 {
+  top: 60%;
+}
+.secciones-productos ul {
+    width: 100%;
+    margin: 0.5% 0;
+}
+.secciones-productos ul li {
+    font-size: 0.8em;
+}
+.cont-titulos {
+    width: 60%;
+    margin:10% 20% 0 20%;
+}
+.cont-formulario {
+    width: 60%;
+    float: left;
+    margin: 0 17% 0 17%;
+    padding: 1% 3%;
+}
+.conte-local {
+    width: 60%;
+}
+.cont-maps iframe {
+    min-height: 400px;
+}
+.secc-noticia{
+	width:96%;
+	padding:0 2%;
+	}
+.cont-trayectoria{
+    width: 98%;
+    padding: 10% 1% 1% 1%;
+}	
+.cont-video{
+	display:none;
+	}
+#asesor-pag7{
+    width: 100%;
+    margin: 10px 0;
+}	
+}
+/* TAMAÑO TABLETS */
+@media screen and (max-width:980px){
+.cont-colchon360{
+	width:700px;
+	height:700px;
+	position:relative;
+	margin:0 auto;
+}
+.txt-estructura-interna {
+    width: 94%;
+    padding: 0 2% 2% 4%;
+    margin: 0 0 0 0;
+}
+}
+@media screen and (max-width:960px){
+.cont-medidas50 ul {
+  width: 60%;
+  padding: 2% 0 0 28%;
+}
+.txt-altura {
+  width: 60%;
+  margin: 2% 0 2% 20%;
+}
+.img-comfort {
+  width: 80%;
+  margin: 2% 10% 2% 10%;
+}
+.cont-compra {
+  width:30%;
+}
+#asesor-compra{
+	width:3%;
+	top:20%;
+	}	
+.header-int {
+    height: 12%;
+}	
+.tit-productos {
+    width: 40%;
+    padding: 1% 30%;
+}
+.cont-paginternas {
+    width: 90%;
+    padding: 15% 5% 2% 5%;
+}
+.background-registro {
+    background-size: 120%;
+}
+.background-registro {
+    background-size: cover;
+}
+.cont-formulario {
+    width: 60%;
+    float: left;
+    margin: 0% 17% 0 17%;
+    padding: 1% 3%;
+    background-color: rgba(0,0,0,0.75);
+}
+.cont-titulos {
+    width: 80%;
+    margin: 15% 10% 0 10%;
+}
+.cont-formulario {
+    width: 86%;
+    margin: 0% 5% 0 5%;
+    padding: 1% 2%;
+}
+.cont-secciones ul{
+    width: 90% !important;
+    margin: 0.5% 5% !important;
+}
+ul.secciones-noticias{
+	width: 100% !important;
+	margin:0 !important;
+	padding:0;
+	font-size: 1em;
+	}
+	
+
+.img-comfort {
+    width: 60%;
+    margin: 2% 20% 2% 20%;
+}
+
+}
+@media screen and (max-width: 800px) {
+.footter-home ul{
+	width:90%;
+	margin:0 5%;
+	}
+.cont-footer {
+  width: 90%;
+  padding: 0 5%;
+}
+.footer-cierre ul {
+  width: 30%;
+  margin: 0 35%;
+}	
+.cont-servicios {
+  height: 50%;
+  /*background-attachment:fixed;
+  background-size:200%;
+  background-repeat:no-repeat;
+  background-position:30% 0;*/
+}
+#home-chaide {
+  width: 100%;
+  min-height: 70%;
+}
+.txt-secc {
+  width: 60%;
+  top: 25%;
+  left: 5%;
+}
+.footter-home p {
+    width: 80%;
+    padding: 0 10%;
+}
+.secc-intcolchon {
+    position: relative;
+    height: auto;
+    float: left;
+}
+.cont-noticia{
+	width:90%;
+	margin:0 5% 1% 5%;
+	padding:0 0 1% 0;
+	border-bottom:1px dashed #535353;
+	}
+.txt-noticia{
+	margin:5% 0 0 0;
+	}
+.img-noticia {
+    width: 100%;
+    height: 350px;
+	position:relative;
+}
+.colchon-celular{
+	display:block;
+	}
+.cont-exitint2{
+	background-image:none;
+	height:auto;
+	}	
+.desc-noticia {
+    width: 96%;
+    margin: 1% 0;
+    padding: 0 2%;
+}	
+.ventajas-4 li, .ventajas-2 li, .ventajas-3 li, .ventajas-5 li, .ventajas-6 li, .ventajas-1 li{
+	width: 96% !important;
+    margin: 2% 1% !important;
+	}	
+.secc-intcolchon ul li p{
+	    padding: 10px 0;
+	}
+.cont-colchon360{
+	width:650px;
+	height:650px;
+}	
+.img-propiedad {
+    width: 10%;
+    top: -32%;
+    left: -2%;
+}	
+.interna-exit {
+    width: 100%;
+    min-height: 10%;
+	overflow:hidden;
+}	
+.background-exitint{
+	background:none !important;
+	}	
+.interna-exit img{
+	width:120%;
+	margin-left:-10%;
+	}	
+.cont-compra {
+    top: 25%;
+}	
+header {
+    position:fixed;
+}
+.m-menu {
+ display:none;
+}
+nav ul {
+  width: 14%;
+}	
+nav ul li{
+  width: 100%;
+}
+#barra-mobile{
+	display:block;
+}
+#menu-mobile{
+	display:block;
+	}
+#cont-iniciarsesion {
+    position: fixed;
+    background-color:#333333;
+    padding: 3px 2%;
+    width: 96%;
+	text-align:right;
+	font-size:1em;
+	height:21px;
+}
+header{
+	top:26px;
+	}	
+#barra-mobile{
+	margin:0 !important;
+	}
+#asesor-pag1, #asesor-pag2, #asesor-pag4 {
+    width: 100%;
+    margin: 15px 0;
+}
+#asesor-pag3, #asesor-pag5, #asesor-pag6, #asesor-pag7, #asesor-medida {
+    width:100%;
+    margin: 15px 0;
+}
+.btn-aseror-back {
+    padding: 10px 30px;
+}		
+}
+@media screen and (max-width: 760px) {
+
+.cont-footer {
+  width: 98%;
+  padding: 0 1%;
+}	
+.footter-home {
+  background-size: cover;
+}
+.footter-home ul {
+  width: 95%;
+  margin: 0 2.5%;
+}
+.footter-home ul li img {
+  width: 20%;
+  margin: 0 40%;
+}
+.txt-informativo, .txt-informativo-medium {
+  width: 95% !important;
+  margin: 4% 2.5% 0 2.5%;
+}
+.li-medium img {
+  width: 27% !important;
+  margin: 0 36.5% !important;
+}
+.txt-informativo h1, .txt-informativo-medium h1{
+	width:100%;
+	text-align:center;
+	float:left;
+	}
+.txt-informativo span, .txt-informativo-medium span{
+	text-align:center;
+	width:100%;
+	float:left;
+	}
+	
+.cont-servicios {
+  background-attachment:scroll;
+  background-size:100%;
+  height: 70%;
+}	
+.cont-compra {
+  width: 35%;
+  top: 15%;
+}	
+.btn-comprar2 {
+  top: 50%;
+  width:50%;
+  left:25%;
+}
+.header-int {
+    height: 11%;
+}
+.img-locales {
+    opacity: 0.3;
+}
+.conte-local {
+    width: 96%;
+}
+.cont-notinternas {
+    width: 98%;
+    float: left;
+    padding: 1% 1%;
+}
+
+.secc-intcolchon ul li {
+  width: 96%;
+  margin: 5% 1%;
+  padding: 0 1%;
+}		
+
+.secc-intcolchon ul li {
+    width: 96%;
+    margin: 2% 1%;
+}	
+
+
+}
+@media screen and (max-width: 720px) {
+#home-chaide {
+  min-height: 100%;
+}
+.background-exitint {
+  background-size: 120%;
+  background-attachment: scroll;
+}
+.n-colchon {
+   left: 0;
+}
+.cont-compra {
+  width: 40%;
+}
+.txt-colchonint h1 {
+  font-size: 2em;
+}
+.txt-colchonint p {
+  font-size: 1.1em;
+}
+.footter-intcolchon ul li {
+  width: 33.33%;
+}
+..interna-exit {
+  background-attachment: scroll;
+}
+
+.txt-estructura-interna {
+  width: 80%;
+  padding: 0 10% 2% 10%;
+}
+.cont-medidas50 ul {
+  width: 80%;
+  padding: 2% 0 0 20%;
+}
+.img-comfort {
+  width: 90%;
+  margin: 6% 5% 3% 5%;
+}
+.txt-altura {
+  width: 80%;
+  margin: 2% 0 2% 10%;
+}
+#asesor-compra{
+	display:none;
+	}	
+.secciones-productos ul li {
+    width: 41.7%;
+    padding: 0 4%;
+}
+.noticia-int {
+    width: 47%;
+    margin: 1%;
+    float: none;
+    display: inline-block;
+}
+.cont-colchon360{
+	width:600px;
+	height:600px;
+}
+#a-1975 {
+    width: 30%;
+    padding: 2% 35%;
+}
+#cont-ekos, #cont-2013 {
+    width: 50%;
+    margin: 2% 25% 2% 25%;
+}
+#cont-1994, #cont-2007 {
+    width: 70%;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+	margin:0 15%
+}
+#a-1994, #a-2003, #a-2005, #a-2007, #a-2012, #a-2013 {
+    width: 40%;
+    margin: 2% 30%;
+}
+#img-1994, #img-2003, #img-2005, #img-2007, #img-2012, #img-2013 {
+    width: 40%;
+    margin: 1% 30%;
+}
+#cont-2003, #cont-2012 {
+    width: 70%;
+    position: relative;
+    top: 0;
+    right: 0;
+	margin:0 15%;
+   }
+#txt-chaide h1, #cont-1994 h1, #cont-2003 h1, #cont-ekos h1, #cont-2007 h1, #cont-2012 h1, #cont-2013 h1 {
+    font-size: 1.5em;
+} 
+#txt-chaide span, #cont-1994 span, #cont-2003 span, #cont-ekos span, #cont-2007 span, #cont-2012 span, #cont-2013 span {
+    font-size: 0.9em;
+}
+#imagen-3 {
+    width: 50%;
+    float: left;
+    margin: 0 25% 0 25%;
+}
+#txt-chaide {
+    width: 40%;
+    position: relative;
+    left: 0;
+    top: 0;
+	margin:0 30%;
+}
+#imagen-1 {
+    width: 30%;
+    margin: 1% 35%;
+}
+#fundada-quito {
+    width: 25%;
+    position: relative;
+    right: 0;
+    top:0;
+	margin:1% 37.5%;
+}
+#fundada-quito {
+    width: 25%;
+    position: relative;
+    right: 0;
+    top:0;
+	margin:1% 37.5%;
+}
+.cont-trayectoria {
+    width: 98%;
+    padding: 20% 1% 1% 1%;
+}
+#tit-trayectoria {
+    width: 50%;
+    padding: 2% 25%;
+}
+.asesor-6opc ul li {
+    width: 31.3%;
+    padding: 1% 1%;
+}
+.asesor-6opc ul li img {
+    width: 70%;
+    margin: 0 15%;
+}
+.asesor-6opc ul li a:link, .asesor-6opc ul li a:visited {
+    width: 80% !important;
+    margin: 5px 10% !important;
+}
+}
+@media screen and (max-width: 600px) {
+.cont-descuento {
+    width: 25%;
+}
+.cont-descuento span{
+    font-size: 1.6em;
+} 
+.cont-colchon360{
+	width:500px;
+	height:500px;
+}	
+.cont-footer {
+ display:none;
+}	
+.cont-compra {
+  width: 50%;
+  right: 2%;
+}
+#home-chaide {
+  min-height: auto;
+}
+.cont-compra {
+  width: 100%;
+  right: 0;
+  position: relative;
+}
+.footter-intcolchon {
+  position: relative;
+}
+.cont-fcompra {
+  width: 60%;
+  margin: 0 20%;
+}
+.secc-intcolchon ul li p {
+  width: 100%;
+  padding: 10px 0 ;
+}
+.header-int {
+    height: 10%;
+}	
+.cont-secciones ul li {
+    width: 45.8% !important;
+    padding: 0 2% !important;
+}	
+.cont-formulario {
+    width: 96%;
+    margin: 0% 1% 0 1%;
+    padding: 1% 1%;
+}
+ul.secciones-noticias li{
+	width: 50% !important;
+    padding: 0 !important;
+	margin:0 !important;
+	}
+.not-principal {
+    margin: 15% 0 0 0;
+}
+.img-noticia {
+    width: 100%;
+    height: 300px;
+}	
+.img-propiedad {
+    width: 12%;
+    top: -28%;
+    left: 0;
+}
+
+.secc-intcolchon ul li {
+    margin: 3% 1%;
+}
+.txt-secciones {
+    float: left;
+	min-height: 120px;
+}
+.asesor-4opc ul li {
+    width: 49%;
+    padding: 1% 0.5%;
+}
+.asesor-3opc ul li img {
+    width: 98%;
+    margin: 0 1%;
+}
+.asesor-3opc a:link, .asesor-4opc a:visited {
+    width: 100% !important;
+    margin: 7px 0% !important;
+}
+}
+/* TAMAÑO TABLETS */
+@media screen and (max-width:500px){
+.cont-colchon360{
+	width:400px;
+	height:400px;
+}	
+.txt-colchonint {
+  width: 80%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: #FFF;
+  padding:10px 10%;
+  background:rgba(0,0,0,0.8);
+  float:left;
+}
+.interna-exit {
+    min-height: auto;
+}
+.border-der {
+  border-right:none;
+}
+.cont-medidas50 {
+  width: 100%;
+  float: left;
+}
+.cont-paginternas {
+    width: 96%;
+    padding: 22% 2% 2% 2%;
+}
+.header-int {
+    height: 9%;
+}	
+.txt-noticia {
+    width: 100%;
+    margin: 5% 0 0 0;
+}
+.cont-noticia img {
+    width: 60%;
+    margin: 0 20%;
+}
+
+nav ul li {
+    width: 150%;
+}
+#barra-mobile {
+    width: 78%;
+}
+.img-propiedad {
+    width: 13%;
+    top: -25%;
+}
+.cont-secciones h1{
+	font-size:1.5em;
+	}
+nav ul {
+  width: 22%;
+}
+#asesor-pag2 ul li img, .asesor-2opc ul li img {
+    width: 60% !important;
+    margin: 0 20% !important;
+}	
+.btn-asesor:link, .btn-asesor:visited {
+    width: 70%;
+    margin: 5px 15%;
+}
+.peso-parejas ul li {
+    width: 98%;
+    margin:10px 1%;
+}
+.asesor-5opc ul li {
+    width: 48%;
+    padding: 1% 1%;
+}
+.asesor-5opc ul li img {
+    width: 70%;
+    margin: 0 15%;
+}
+.asesor-5opc ul li a:link, .asesor-5opc ul li a:visited {
+    width: 80% !important;
+    margin: 5px 10% !important;
+}
+.asesor-6opc ul li img {
+    width: 100%;
+    margin: 0 ;
+}
+.asesor-6opc ul li a:link, .asesor-6opc ul li a:visited {
+    width:100% !important;
+    margin: 5px 0% !important;
+}
+	}
+@media screen and (max-width: 430px) {
+.thumb-noticias {
+    width: 50%;
+    height: auto;
+    position: relative;
+	margin:0 25%;
+}	
+.thumb-noticias img{
+	position: relative;
+	width:100%;
+	height:auto;
+	}	
+ul.secciones-noticias li {
+    width: 100% !important;
+}
+#botonera-perfil {
+    width: 100%;
+}
+.cont-perfil {
+    width: 96%;
+    margin: 0% 1% 0 1%;
+    padding: 1% 1%;
+}
+#botonera-perfil li {
+    width: 33%;
+}
+#botonera-perfil li a:link, #botonera-perfil li a:visited {
+    padding: 8px 0;
+}
+.cont-infocamposf1 {
+    width: 98%;
+}
+.cont-infocamposf2 {
+    width: 98%;
+	margin: 0;
+}
+.footer-cierre ul {
+  width: 40%;
+  margin: 0 30%;
+}	
+nav ul {
+  width: 23%;
+}
+#barra-mobile {
+  width: 77%;
+  margin: 2% 0 0 0;
+}
+.btn-comprar2 {
+  top: 40%;
+  width:60%;
+  left:20%;
+}
+.header-int {
+    height: 11%;
+}
+.cont-paginternas {
+    padding: 25% 2%;
+}
+.cont-titulos {
+    width: 80%;
+    margin: 22% 10% 0 10%;
+} 
+#registro-chaide {
+    width: 96%;
+    min-height: 80%;
+    position: relative;
+    float: left;
+    padding: 0 2% 0 2%;
+}
+.cont-campos, .cont-campos-header{
+	padding:5px 0;
+	}
+.cont-formulario input[type="submit"] {
+    width: 35%;
+}
+.cont-txt{
+	width:56%;
+	margin:0 1% 0 0;
+	}	
+.cont-cant{
+	margin:0 1% 0 0;
+	}	
+.footter-home p {
+    width: 96%;
+    padding: 0 2%;
+}	
+.cont-locales {
+    margin: 17% 0 0 0;
+}
+.cont-maps iframe {
+    min-height: 350px;
+}
+
+nav ul li {
+    width: 100%;
+}
+.img-propiedad {
+    width: 14%;
+    top: -20%;
+}
+#a-1994, #a-2003, #a-2005, #a-2007, #a-2012, #a-2013 {
+    width: 50%;
+    margin: 2% 25%;
+}
+#img-1994, #img-2003, #img-2005, #img-2007, #img-2012, #img-2013 {
+    width: 50%;
+    margin: 2% 25%;
+}
+#imagen-2 {
+    width: 60%;
+    float: left;
+    margin: 5% 20% 5% 20%;
+    position: relative;
+}
+#txt-chaide {
+    width: 70%;
+    margin: 0 15%;
+}
+}
+@media screen and (max-width: 400px) {
+.cont-colchon360{
+	width:300px;
+	height:300px;
+}	
+.asesor-5opc ul li img {
+    width: 90%;
+    margin: 0 5%;
+}
+.asesor-5opc ul li a:link, .asesor-5opc ul li a:visited {
+    width: 100% !important;
+    margin: 5px 0% !important;
+}
+.cont-descuento {
+    width: 30%;
+  }
+.cont-descuento span{
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 360px) {
+.footer-cierre ul {
+  width: 50%;
+  margin: 0 25%;
+}
+.footter-home ul li {
+  min-height:120px;
+}
+.footter-home ul li img {
+  width: 40%;
+  margin: 0 30%;
+}
+.li-medium img {
+  width: 50% !important;
+  margin: 0 25% !important;
+}	
+nav ul {
+  width: 25%;
+}
+#barra-mobile {
+  width: 75%;
+  margin: 2% 0 0 0;
+}
+.txt-informativo span, .txt-informativo-medium span {
+    line-height: 1em;
+}
+.txt-secciones {
+    float: left;
+}
+.header-int {
+    height: 9%;
+}
+.cont-titulos {
+    width: 80%;
+    margin: 25% 10% 0 10%;
+}
+.cont-noticia img {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.img-propiedad {
+    width: 16%;
+    top: -15%;
+}
+.cont-secciones h1{
+	font-size:1.2em;
+	}
+.btn-comprar2 {
+    top: 35%;
+}
+#asesor-pag2 ul li img, .asesor-2opc ul li img {
+    width: 80% !important;
+    margin: 0 10% !important;
+}	
+.btn-asesor:link, .btn-asesor:visited {
+    width: 90%;
+    margin: 7px 5%;
+}
+.asesor-3opc ul li {
+    width: 48%;
+    padding: 1% 1%;
+}	
+}
+/* PORTRAIT */
+@media screen and (max-width: 1024px) and (orientation:portrait){
+
+.inf-home {
+  width: 80%;
+  margin: 30% 10% 40% 10%;
+}
+.cont-servicios {
+  height: 50%;
+  
+}
+.background-exitint {
+    background-size: 160%; /* 120 */
+}
+
+}
+@media screen and (max-width: 780px) and (orientation:portrait){
+.secc-intcolchon {
+    position: relative;
+    height: auto;
+    float: left;
+}
+.interna-exit {
+    min-height: 10%;
+}	
+.cont-compra {
+    top: 25%;
+}
+.background-home {
+    background-size: 131%;
+}
+.background-exitint {
+    background-size: 160%; /* 120 */
+}
+.cont-exitint2 {
+    background-attachment:local;
+	min-height:60%;
+}
+.img-propiedad {
+    top: -20%;
+	left: -2%;
+	width:60px;
+}
+.secc-intcolchon ul li{
+	height:auto;
+	}
+#home-chaide {
+    width: 100%;
+    min-height: 56%;
+	padding:0 0 4% 0;
+}
+.n-colchon {
+    top: 15%;
+	left:1%;
+}
+.cont-servicios {
+    background-attachment: inherit;
+	background-size: cover;
+}
+#linea-c {
+    clear: both;
+}
+.txt-secc {
+    top: 35%;
+}
+#menu-mobile{
+	display:block;
+	}
+.m-menu {
+ display:none;
+}
+	
+nav ul li{
+  width: 100%;
+}
+#barra-mobile{
+	display:block;
+}		
+}
+@media screen and (max-width: 420px) and (orientation:portrait){
+.inf-home span {
+    font-size: 1.2em;
+}
+.inf-home {
+    float:left;
+	margin: 55% 10% 5% 10%;
+}
+.background-home {
+    background-size: 165%;
+}
+.btn-comprara {
+    width: 70%;
+    margin: 2% 15% 0 15%;
+}
+.footter-home {
+    float: left;
+	position:relative;
+}
+.footter-home ul {
+    width: 98%;
+    margin: 0 1%;
+}
+#linea-s {
+    font-size: 1.5em;
+}
+#linea-c {
+    font-size: 3em;
+    clear: both;
+    margin: -5px 0 0 0;
+}
+.txt-secciones {
+    width: 96%;
+    padding: 3% 2%;
+    float: left;
+}
+.txt-secciones h1{
+	width:100%;
+	float:left;
+	text-align:center;
+	}
+.txt-secciones span{
+    width: 100%;
+    font-size: 0.9em;
+	text-align:center;
+	float:left;
+}	
+#txt-linea {
+    width: 100%;
+    padding: 1% 0 0 0;
+}
+.txt-secc {
+    width: 80%;
+    top: 35%;
+    left: 3%;
+}
+.btn-comprar3 {
+    width: 60%;
+    margin: 3% 20% 0 20%;
+}
+.cont-servicios {
+    background-size: 124%;
+    height:50%;
+}
+.flecha-r, .flecha-l{
+    width: 15%;
+    top: 15%;
+}
+.btn-comprar2 {
+    top: 45%;
+    width: 70%;
+    left: 15%;
+}
+}
+@media screen and (max-width: 360px) and (orientation:portrait){
+.txt-secciones {
+    width: 90%;
+    padding: 3% 5%;
+}
+.btn-comprar2 {
+    top: 40%;
+}
+.inf-home {
+    margin: 51% 10% 5% 10%;
+}
+#txt-linea {
+    margin: 20px 0 0 0;
+}
+.txt-secc {
+    top: 25%;
+}
+}
+/*@media screen and (max-width: 960px) and (orientation:portrait){
+.cont-exitint2 {
+  width: 100%;
+  height: 60%;
+}
+}*/
+/* LANDSCAPE */
+@media screen and (max-width: 1024px) and (orientation:landscape){
+.inf-home {
+  width: 80%;
+  margin: 35% 10% 0 10%;
+}
+.cont-servicios {
+  background-attachment:scroll;
+  background-size:100%;
+  height: 70%;
+}
+#home-chaide {
+    width: 100%;
+   min-height: 80%;
+}
+}
+
