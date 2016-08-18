@@ -91,4 +91,9 @@ $this->title = 'EXIT';
           
     </div>
         <h1>ELIGE UNA MISIÓN</h1>
+        <div class="row">
+        <span>
+Para escapar debes superar todas las pruebas, no serán necesarios conocimientos previos, solo la lógica, la rapidez de reacción y el trabajo en equipo. Pase lo que pase, vivirás una experiencia ultra divertida que la recordarás por mucho tiempo.
+        </span>
+      </div>
 </section>
