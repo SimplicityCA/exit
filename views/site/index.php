@@ -9,19 +9,49 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Product */
 $script=<<< JS
- var fotorama = $('.fotorama').data('fotorama');
-$("#play").click(function(){
-        $("#video-colchon-interna").get(0).play();  
-        $("#play").fadeOut();
-        $("#stop").show();
-    });
-$("#stop").click(function(){
-        $("#stop").hide();
-        $("#video-colchon-interna").get(0).pause(); 
-        $("#play").fadeIn();
+ function initialize(lat,long,description) {
+    var myLatLng = {lat: lat, lng: long};
+    //var image = window.location.protocol + "//" + window.location.host +"/web/images/chaide_mapa.png";
+        var mapOptions = {
+          center: new google.maps.LatLng(lat,long),
+          zoom: 17,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+//          width:"100%",
+//          height:"100%"
+          
+        };
+        var map = new google.maps.Map(document.getElementById("map"),
+            mapOptions);
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: description,
+    //icon: image
+  });
+ var infowindow = new google.maps.InfoWindow({
+    content: description
+  });
+infowindow.open(map, marker);
+      }
+        function location_map(lat,long) {
+        var mapOptions = {
+          center: new google.maps.LatLng(lat,long),
+          zoom: 17,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+//          width:"100%",
+//          height:"100%"
+//       
+        };
+        var map = new google.maps.Map(document.getElementById("map"),
+            mapOptions);
+      }
+$(document).ready(function() {
+  initialize(0,0,'test');
     });
 JS;
+$this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyDkyYOwDEFs05V-KrHCsUYr_gOnJwJhvmY');
 $this->registerJs($script,View::POS_END);
+
 AppAsset::register($this);
 $this->title = 'EXIT';
 ?>
@@ -61,19 +91,6 @@ $this->title = 'EXIT';
                <hr class="style-three"></hr>
             </div>
         </div>
-<!--     <div class="secc-intcolchon">
-        <ul class="ventajas-1">
- 
-            <li>
-                <h1>test</h1>
-                <p>
-                test
-                </p>
-                <img src="<?= URL::base() ?>/images/propiedades-colchon/test.svg" class="img-propiedad"/>
-            </li>
-          
-        </ul>   
-    </div> -->
 </section>
 
 <section  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/mision.svg')">
@@ -91,9 +108,23 @@ $this->title = 'EXIT';
           
     </div>
         <h1>ELIGE UNA MISIÓN</h1>
-        <div class="row">
+        <div class="info-mis-second">
         <span>
 Para escapar debes superar todas las pruebas, no serán necesarios conocimientos previos, solo la lógica, la rapidez de reacción y el trabajo en equipo. Pase lo que pase, vivirás una experiencia ultra divertida que la recordarás por mucho tiempo.
         </span>
       </div>
+      <div class="secc-intcolchon">
+        <ul class="ventajas-1">
+ 
+            <li>
+                <div class="mis-label"><span class="mis-tit">Escape del Cuartel</span> <br/> <span class="mis-subtit">Real de Lima</span></div>
+                <img src="<?= URL::base() ?>/images/15.svg" class="img-propiedad"/>
+            </li>
+          
+        </ul>   
+    </div>
+</section>
+<section class="cont-exitint2" style="background-image:url('<?= URL::base() ?>/images/13.svg')" >
+    <h1 style="color:white;">ENCUÉNTRANOS</h1>
+    <div id="map"></div>
 </section>

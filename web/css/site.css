@@ -134,12 +134,36 @@ nav ul li a:link, nav ul li a:visited{
 .info-mis{
     width: 30%;
     color: white;
-    margin: 6% 0 10% 3%;
+    margin: 6% 0 4% 3%;
     } 
+.info-mis-second{
+    text-align: center;
+    color: white;
+    width: 55%;
+    margin-left: 22%;
+    font-weight: 300;
+}
     .info-mis div{
             font-size: 1.2em;
     font-weight: 300;
-    }         
+    }  
+    .mis-label{
+            z-index: 2;
+    position: absolute;
+    top: 55%;
+    color: white;
+    background: #e61939;
+    width: 95%;
+    /* left: -7%; */
+    margin-left: -13%;
+    text-align: center;
+    } 
+    .mis-tit{
+    font-size: 1.6em;
+    }   
+    .mis-subtit{
+    font-weight: 300;
+    }   
 /* anim-menu */
 /* Bounce To Top */
 /*.hvr-bounce-to-top {
@@ -812,6 +836,7 @@ footer{
     background: #999;
     width:100%;
 }
+
 .secc-intcolchon{
     width:95%;
     padding:0 2.5%;
@@ -1871,7 +1896,7 @@ ul.publiciad-abj li{
     }   
 /**/
 .img-propiedad{
-    width: 25%;
+    width: 100%;
     position: absolute;
     top: -15%;
     left: -10%;

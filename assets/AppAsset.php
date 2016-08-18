@@ -23,6 +23,7 @@ class AppAsset extends AssetBundle
         'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700'
     ];
     public $js = [
+        'js/fotorama.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

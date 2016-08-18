@@ -5,9 +5,9 @@
 }
 @media screen and (max-width: 1800px){
 .secc-intcolchon ul li{
-	width: 17.6%;
-	margin:0 0.2%;
-	padding:0 1%;
+    width: 17.6%;
+    margin: 6% 0 0 0;
+    padding: 0 1%;
 	}
 .txt-estructura-interna h1 {
   margin: 2% 0 0 0;
@@ -78,7 +78,7 @@ header{
 }
 @media screen and (max-width: 1435px){
 .secc-intcolchon {
- height:35%;
+ height:44%;
 	}
 }	
 @media screen and (max-width: 1366px) {
