@@ -57,7 +57,7 @@ $(document).ready(function() {
   initialize(-0.1802957,-78.478818,'Pasaje Jardín E10-46 y Avenida 6 de Diciembre');
     });
 JS;
-$this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyDkyYOwDEFs05V-KrHCsUYr_gOnJwJhvmY');
+$this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHaPsQQtspQ7Sm-azY4CQ4uuVjCRW0l4');
 $this->registerJs($script,View::POS_END);
 
 AppAsset::register($this);
