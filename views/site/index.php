@@ -126,9 +126,11 @@ Para escapar debes superar todas las pruebas, no serán necesarios conocimiento
         <?php foreach($games as $game): ?>
             <li>
               <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
+                <?php if($game->status == 'INACTIVE'){ ?>
                 <div class="mis-label" style="<?= ($game->status == 'INACTIVE') ? 'background:gray;' : '' ?>"><span class="mis-tit"><?= $game->title ?></span> <br/> <span class="mis-subtit"><?= $game->subtitle ?></span>
                   <?= ($game->status == 'INACTIVE') ? '<br/>PROXIMAMENTE' : '' ?>
                 </div>
+                 <?php } ?>
                 <img src="<?= URL::base() ?>/images/game/<?= $game->picture ?>" class="img-propiedad"/>
               </a>
             </li>

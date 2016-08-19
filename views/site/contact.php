@@ -7,12 +7,15 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use yii\helpers\Url;
 
-$this->title = 'Contact';
+$this->title = 'Contáctenos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
+<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
+    <h1 style="margin-top:10%;"><?= Html::encode($this->title) ?></h1>
+    <div class="inf-contact">
+    
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
@@ -33,13 +36,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php else: ?>
 
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
 
-        <div class="row">
-            <div class="col-lg-5">
+        <div class="row" style="color:white;">
+            <div class="row">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
@@ -66,3 +65,4 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php endif; ?>
 </div>
+</section>

@@ -301,6 +301,14 @@ nav ul li a:link, nav ul li a:visited{
     text-align:center;  
     font-family: 'Yanone Kaffeesatz';
     }
+    .inf-contact{
+    width: 50%;
+    padding: 1% 0;
+    margin: 0 30% 0 23%;
+    /* position: relative; */
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz';
+    }
 .inf-home h1{
     font-size:2em;
     color:#888170;
