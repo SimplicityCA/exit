@@ -40,16 +40,18 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row" style="color:white;">
             <div class="row">
             	<span>Disponemos de cortesías para la prensa, al finalizar el juego deberán contar su experiencia a través de sus distintos medios. Para aplicar por favor llenar el siguiente formulario:</span>
+               
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
                     <?= $form->field($model, 'name') ?>
 
                     <?= $form->field($model, 'email') ?>
 
-                    <?= $form->field($model, 'subject') ?>
+                    <?= $form->field($model, 'medio') ?>
 
                     <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
-
+                    <?= $form->field($model, 'office') ?>
+                    <?= $form->field($model, 'cellphone') ?>
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
                     ]) ?>

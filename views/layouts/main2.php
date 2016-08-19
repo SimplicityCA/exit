@@ -77,9 +77,10 @@ AppAsset::register($this);
                 <li class="m-menu"><a href="<?= Url::home() ?>#missions" to_section="missions"class="btn-menu">ELIGE UNA MISIÓN</a></li>
                 <li class="m-menu"><a href="#" class="btn-menu">GALERIA</a></li>
                 <li class="m-menu"><a href="#" class="btn-menu">RESERVAS</a></li>
-                <li class="m-menu"><a href="<?= Url::home() ?>#find-us" to_section="find-us" class="btn-menu">ENCUÉNTRANOS</a></li>
+                <li class="m-menu"><a href="<?= Url::home() ?>#find-us" to_section="find-us" class="btn-menu">¿CÓMO LLEGAR A EXIT?</a></li>
                 <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu">CONTACTO</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu">PRENSA Y MEDIOS</a></li>
+                <!-- <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li> -->
             </ul>
             <div id="barra-mobile">
                 <a id="menu-chaide"><span></span></a>

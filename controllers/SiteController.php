@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\ContactFormp;
 use app\models\Content;
 use app\models\Game;
 class SiteController extends Controller
@@ -91,7 +92,19 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    public function actionContactp()
+    {   
+        $this->layout="main2";
+        $model = new ContactFormp();
+        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
 
+            return $this->refresh();
+        }
+        return $this->render('contactp', [
+            'model' => $model,
+        ]);
+    }
     public function actionAbout()
     {
         return $this->render('about');

@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 // $this->registerJs($script,View::POS_END);
 
 AppAsset::register($this);
-$this->title = 'EXIT | <?= $model->title ?> <?= $model->subtitle ?>';
+$this->title = "EXIT |  $model->title $model->subtitle";
 ?>
 <!-- -->
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/game/<?= $model->landing_picture ?>')">
@@ -36,21 +36,35 @@ $this->title = 'EXIT | <?= $model->title ?> <?= $model->subtitle ?>';
 <section id="what-is" class="cont-exitint2" >
     <h1>Descripción del juego</h1>
         <div class="it-is-cont">
-            <div class="row">
-              <div class="col-sm-8">Estarás encerrado en una habitación temática y tienes 60 minutos para completar una misión y salir victorioso.</div>
-              <div class="col-sm-4"><img src="<?= URL::base() ?>/images/reloj.svg" /></div>
+            <div class="row" style="font-size: 1.87em;">
+              <?= $model->description ?>
+              
               <hr class="style-three"></hr>
-            </div>
-            <div class="row">
-              <div class="col-sm-8">Deberás resolver enigmas, encontrar pistas, abrir puertas secretas, desactivar bombas y escapar.</div>
-              <div class="col-sm-4"><img src="<?= URL::base() ?>/images/21.svg" /></div>
-              <hr class="style-three"></hr>
-            </div>
-            <div class="row">
-              <div class="col-sm-8">Escapes o no, vivirás una experiencia única para compartir con amigos, compañeros y familia en equipos de 2 a 6 personas. ¿Puedes lograr que tu equipo sea el mejor?</div>
-              <div class="col-sm-4"><img src="<?= URL::base() ?>/images/22.svg" /></div>
-               <hr class="style-three"></hr>
             </div>
         </div>
+</section>
+<section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
+    
+    <h1 style="color:white;">HALL OF FAME</h1>
+    <div class="it-is-cont">
+    <div class="row" style="margin-bottom:2%">
+      <span style="color:white;">RECORD HISTÓRICO</span>
+      <div class="col-sm-4" >
+        <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+      </div>
+      <div class="col-sm-8" style="color:white;">
+        <?= $model->recordh ?>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom:2%">
+      <span style="color:white;">MEJOR TIEMPO AGOSTO 2016</span>
+      <div class="col-sm-4" >
+        <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+      </div>
+      <div class="col-sm-8" style="color:white;">
+      <?= $model->recordm ?>
+      </div>
+    </div>
+    </div>
 </section>
 

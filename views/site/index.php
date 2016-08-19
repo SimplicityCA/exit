@@ -102,7 +102,7 @@ $this->title = 'EXIT';
 </section>
 
 <section id="missions"  class="background-exitint interna-exit4" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
-    <div class="info-mis">
+<!--     <div class="info-mis">
         <h1>MISIONES</h1>
             <div class="row">
             <span>Estarás encerrado en una habitación temática y tienes 60 minutos para completar una misión y salir victorioso. </span><br/>
@@ -114,7 +114,7 @@ $this->title = 'EXIT';
             
                 
           
-    </div>
+    </div> -->
         <h1>ELIGE UNA MISIÓN</h1>
         <div class="info-mis-second">
         <span>
@@ -144,7 +144,7 @@ Para escapar debes superar todas las pruebas, no serán necesarios conocimiento
 </section> -->
 <section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
     
-    <h1 style="color:white;">ENCUÉNTRANOS</h1>
+    <h1 style="color:white;">¿CÓMO LLEGAR A EXIT?</h1>
     <div id="map" style="width:90%;min-height:400px;margin-left:5%;"></div>
     
 </section>

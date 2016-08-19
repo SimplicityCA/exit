@@ -9,7 +9,7 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use yii\helpers\Url;
 
-$this->title = 'Contáctenos';
+$this->title = 'CONTÁCTANOS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
