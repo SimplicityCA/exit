@@ -52,7 +52,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
       <div class="col-sm-4" >
         <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
       </div>
-      <div class="col-sm-8" style="color:white;">
+      <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
         <?= $model->recordh ?>
       </div>
     </div>
@@ -61,7 +61,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
       <div class="col-sm-4" >
         <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
       </div>
-      <div class="col-sm-8" style="color:white;">
+      <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
       <?= $model->recordm ?>
       </div>
     </div>
