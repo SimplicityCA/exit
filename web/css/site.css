@@ -165,7 +165,11 @@ nav ul li a:link, nav ul li a:visited{
     }   
     .mis-subtit{
     font-weight: 300;
-    }   
+    } 
+    .reserve{
+        width:90%;
+        margin-left: 5%;
+    }  
 /* anim-menu */
 /* Bounce To Top */
 /*.hvr-bounce-to-top {

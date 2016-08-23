@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Game;
+use app\models\Reserve;
 use app\models\GameSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -39,11 +40,31 @@ class GameController extends Controller
     public function actionView($id)
     {
         $this->layout="main2";
+        $events = array();
+        $aux=Reserve::find()->where(['game_id'=>$id])->all();
+foreach($aux as $k => $reserve){
+    $date=date('Y-m-d H:i:s',strtotime($reserve->start_date));
+     $date2=date('Y-m-d\Th:i:s\Z',strtotime($reserve->end_date));
+   $Event = new \yii2fullcalendar\models\Event();
+  $Event->id = $reserve->id;
+  $Event->title = $reserve->description;
+  $Event->start = $reserve->start_date;
+    //$Event->end = $date2;
+  $events[] = $Event;   
+}
+
+ 
         return $this->render('view', [
+            'model' => $this->findModel($id),'events'=>$events
+        ]);
+    }
+    public function actionReserve($id)
+    {
+        $this->layout="main2";
+        return $this->render('reserve', [
             'model' => $this->findModel($id),
         ]);
     }
-
 
 
 

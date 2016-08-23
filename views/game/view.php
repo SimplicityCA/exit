@@ -24,7 +24,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
          <span class="second-text-home">
          <?= $model->subtitle ?>
         </span>
-        <a href="#MISIONES" class="btn-menu" >
+        <a href="#" to_section="reserve"class="btn-menu" >
             <div class="btn-comprara">
                 Reserva ya!
             </div>
@@ -66,5 +66,17 @@ $this->title = "EXIT |  $model->title $model->subtitle";
       </div>
     </div>
     </div>
+</section>
+<section id="reserve" class="cont-exitint2" >
+    <h1>Reservas</h1>
+        <div class="reserve">
+            <div class="row">
+                   <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
+      'events'=> $events,
+  ));?>
+              
+              <hr class="style-three"></hr>
+            </div>
+        </div>
 </section>
 

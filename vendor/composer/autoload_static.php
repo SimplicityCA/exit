@@ -15,6 +15,7 @@ class ComposerStaticInit99ef0f2ff0f430adc3ea4587d65d48fa
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\jui\\' => 8,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
@@ -22,6 +23,7 @@ class ComposerStaticInit99ef0f2ff0f430adc3ea4587d65d48fa
             'yii\\codeception\\' => 16,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
+            'yii2fullcalendar\\' => 17,
         ),
         'c' => 
         array (
@@ -37,6 +39,10 @@ class ComposerStaticInit99ef0f2ff0f430adc3ea4587d65d48fa
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
+        ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
         ),
         'yii\\gii\\' => 
         array (
@@ -65,6 +71,10 @@ class ComposerStaticInit99ef0f2ff0f430adc3ea4587d65d48fa
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'yii2fullcalendar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/philippfrenzel/yii2fullcalendar',
         ),
         'cebe\\markdown\\' => 
         array (

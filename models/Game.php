@@ -58,4 +58,8 @@ class Game extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Picture::className(), ['game_id' => 'id']);
     }
+    public function getReserves()
+    {
+        return $this->hasMany(Reserve::className(), ['game_id' => 'id']);
+    }
 }
