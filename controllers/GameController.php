@@ -49,7 +49,7 @@ foreach($aux as $k => $reserve){
   $Event->id = $reserve->id;
   $Event->title = $reserve->description;
   $Event->start = $reserve->start_date;
-    //$Event->end = $date2;
+    $Event->end = $reserve->end_date;
   $events[] = $Event;   
 }
 
