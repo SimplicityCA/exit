@@ -11,6 +11,17 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Url;
+use PayPal\Api\Amount;
+use PayPal\Api\Details;
+use PayPal\Api\Item;
+use PayPal\Api\ItemList;
+use PayPal\Api\Payer;
+use PayPal\Api\Payment;
+use PayPal\Api\RedirectUrls;
+use PayPal\Api\Transaction;
+use PayPal\Api\PaymentExecution;
+use PayPal\Rest\ApiContext;
+use PayPal\Auth\OAuthTokenCredential;
 /**
  * GameController implements the CRUD actions for Game model.
  */
@@ -70,6 +81,58 @@ foreach($aux as $k => $reserve){
             $reserve=Reserve::findOne($model->reserve_id);
             $reserve->status='CLOSE';
             $reserve->save();
+            if($model->pay_method=="PAYPAL"){
+                        $item=new Item();
+                        $item->setName($reserve->game->title." ".$reserve->game->subtitle)
+                            ->setCurrency('USD')
+                            ->setQuantity(1)
+                            ->setPrice($model->total_price)
+                            ->setSku($model->id);
+                        $items[]=$item;
+                                    $apiContext = $this->getApiContext();
+
+            $payer = new Payer();
+            $payer->setPaymentMethod("paypal");
+            $itemList = new ItemList();
+            $itemList->setItems($items);
+
+            $details = new Details();
+            $details->setSubtotal($model->total_price);
+
+            $amount = new Amount();
+            $amount->setCurrency("USD")
+                ->setTotal($model->total_price)
+                ->setDetails($details);
+
+            $transaction = new Transaction();
+            $transaction->setAmount($amount)
+                ->setItemList($itemList)
+                ->setDescription("Reserva Juego Exit")
+                ->setInvoiceNumber($this->generateRandomString(10));
+
+            $baseUrl = Url::base(true);
+            $redirectUrls = new RedirectUrls();
+            $redirectUrls->setReturnUrl("$baseUrl/game/congrats?id=".$model->id)
+                ->setCancelUrl("$baseUrl/game/view?id=".$reserve->game_id);
+
+            $payment = new Payment();
+            $payment->setIntent("sale")
+                ->setPayer($payer)
+                ->setRedirectUrls($redirectUrls)
+                ->setTransactions(array($transaction));
+
+            try {
+                $payment->create($apiContext);
+            } catch (Exception $ex) {
+                print_r($ex);
+                exit(1);
+            }
+
+            $approvalUrl = $payment->getApprovalLink();
+            /* --- */
+           // var_dump($items); 
+            return $this->redirect($approvalUrl);
+            }
             return $this->redirect(['congrats', 'id' => $model->id]);
         } else {
             return $this->render('reserve', [
@@ -77,7 +140,44 @@ foreach($aux as $k => $reserve){
             ]);
         }
     }
+    private function getApiContext()
+    {
 
+        $clientId = 'AatTLKio46ZF9wUTx86WbYFk3OWMuCtzS_zKXf0S8CEfh3w7y4qpQeDZycGfmZ9O0_KZCsCjPLUXVCic';
+        $clientSecret = 'EB5a1uCkXOQpyDnAG8IQwM0GSxNHujeVcknVqVp93q-sJ6INOu5Xp_Pn8xgdOPHymJdkiAtcI4AmIXUI';
+
+        $apiContext = new ApiContext(
+            new OAuthTokenCredential(
+                $clientId,
+                $clientSecret
+            )
+        );
+
+        $apiContext->setConfig(
+            array(
+                'mode' => 'sandbox',
+                //'mode' => 'live',
+                'log.LogEnabled' => true,
+                'log.FileName' => '../PayPal.log',
+                'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+                'validation.level' => 'log',
+                'cache.enabled' => true,
+                // 'http.CURLOPT_CONNECTTIMEOUT' => 30
+                // 'http.headers.PayPal-Partner-Attribution-Id' => '123123123'
+            )
+        );
+        return $apiContext;
+    }
+
+    private function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
     public function actionCongrats($id){
 
         $this->layout="main2";
