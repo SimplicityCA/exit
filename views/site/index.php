@@ -72,7 +72,7 @@ $this->title = 'EXIT';
            <span class="second-text-home">
            <?= $home->subtitle ?>
           </span>
-          <a href="#MISIONES" class="btn btn-comprara" to_section="missions">
+          <a href="#MISIONES" class="btn btn-comprara btn-to-section" to_section="missions">
                   Seleccionar una misión
           </a>
       </div>

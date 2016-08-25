@@ -8,29 +8,29 @@ use yii\web\View;
 use yii\helpers\Url;
 /* @var $this \yii\web\View */
 /* @var $content string */
-// $script='$(document).ready(function() {
-// $("#menu-chaide").click(function(){
-//         $(this).toggleClass("active");
-//         $("#menu-mobile").toggleClass("menu-active");
-//         $("#general").toggleClass("general-active");
-//     });  
-//    $(".btn-cerrarw").click(function(){
-//        $(".flash_message_warning").fadeOut();
-//        $(".flash_message_success").fadeOut();
+$script2='$(document).ready(function() {
+$("#menu-chaide").click(function(){
+        $(this).toggleClass("active");
+        $("#menu-mobile").toggleClass("menu-active");
+        $("#general").toggleClass("general-active");
+    });  
+   $(".btn-cerrarw").click(function(){
+       $(".flash_message_warning").fadeOut();
+       $(".flash_message_success").fadeOut();
        
-//        });
-//     $("#btn-submobile-p").click(function(){
-//         $("#submenu-mobile").slideToggle();
-//     }); 
-//     $("#b-buscar").click(function(){
-//         $("#cont-buscardor").addClass("to-right");
-//     });
-//     $("#btn-cerrarb").click(function(){
-//         $("#cont-buscardor").removeClass("to-right");
-//     }); 
-// });';
+       });
+    $("#btn-submobile-p").click(function(){
+        $("#submenu-mobile").slideToggle();
+    }); 
+    $("#b-buscar").click(function(){
+        $("#cont-buscardor").addClass("to-right");
+    });
+    $("#btn-cerrarb").click(function(){
+        $("#cont-buscardor").removeClass("to-right");
+    }); 
+});';
 $script=<<< JS
-$(".btn-menu").click(function() {
+$(".btn-to-section").click(function() {
     var section=$(this).attr('to_section');
     $('html, body').animate({
         scrollTop: $("#"+section).offset().top
@@ -38,6 +38,7 @@ $(".btn-menu").click(function() {
 });
 JS;
 $this->registerJs($script,View::POS_END);
+$this->registerJs($script2,View::POS_END);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -73,13 +74,13 @@ AppAsset::register($this);
         <nav>
             <ul>
                 <li><a href="<?= Url::home() ?>"><img src="<?= URL::base() ?>/images/logo.svg" alt="logotipo exit"/></a></li>
-                <li class="m-menu"><a  href="<?= Url::home() ?>#what-is" to_section="what-is" class="btn-menu">¿QUÉ ES?</a></li>
-                <li class="m-menu"><a href="<?= Url::home() ?>#missions" to_section="missions"class="btn-menu">ELIGE UNA MISIÓN</a></li>
-                <li class="m-menu"><a href="#" class="btn-menu">GALERIA</a></li>
-                <li class="m-menu"><a href="<?= Url::home() ?>#missions" class="btn-menu">RESERVAS</a></li>
-                <li class="m-menu"><a href="<?= Url::home() ?>#find-us" to_section="find-us" class="btn-menu">¿CÓMO LLEGAR A EXIT?</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu">CONTACTO</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu">PRENSA Y MEDIOS</a></li>
+                <li class="m-menu"><a  href="<?= Url::home() ?>#what-is" to_section="what-is" class="btn-menu btn-to-section">¿QUÉ ES?</a></li>
+                <li class="m-menu"><a href="<?= Url::home() ?>#missions" to_section="missions"class="btn-menu btn-to-section">ELIGE UNA MISIÓN</a></li>
+                <li class="m-menu"><a href="#" class="btn-menu btn-to-section">GALERIA</a></li>
+                <li class="m-menu"><a href="<?= Url::home() ?>#missions" class="btn-menu btn-to-section">RESERVAS</a></li>
+                <li class="m-menu"><a href="<?= Url::home() ?>#find-us" to_section="find-us" class="btn-menu btn-to-section">¿CÓMO LLEGAR A EXIT?</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu btn-to-section">CONTACTO</a></li>
+                <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu btn-to-section">PRENSA Y MEDIOS</a></li>
                 <!-- <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li> -->
             </ul>
             <div id="barra-mobile">
