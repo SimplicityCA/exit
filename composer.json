@@ -18,7 +18,8 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "philippfrenzel/yii2fullcalendar":"*"
+        "philippfrenzel/yii2fullcalendar":"*",
+        "paypal/rest-api-sdk-php": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
