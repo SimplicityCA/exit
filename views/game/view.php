@@ -18,21 +18,21 @@ $this->title = "EXIT |  $model->title $model->subtitle";
 ?>
 <!-- -->
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/game/<?= $model->landing_picture ?>')">
-    <div class="inf-home">
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 inf-home">
         <span><?= $model->title ?>
               </span>
          <span class="second-text-home">
          <?= $model->subtitle ?>
         </span>
-        <a href="#" to_section="reserve"class="btn-menu" >
+        <a href="#" to_section="reserve"class="btn btn-comprara btn-to-section" >
             <div class="btn-comprara">
                 Reserva ya!
             </div>
         </a>
     </div>
-
+  </div>
 </section>
-
 <section id="what-is" class="cont-exitint2" >
     <h1>Descripción del juego</h1>
         <div class="it-is-cont">
