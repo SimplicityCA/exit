@@ -8,27 +8,27 @@ use yii\web\View;
 use yii\helpers\Url;
 /* @var $this \yii\web\View */
 /* @var $content string */
-// $script='$(document).ready(function() {
-// $("#menu-chaide").click(function(){
-//         $(this).toggleClass("active");
-//         $("#menu-mobile").toggleClass("menu-active");
-//         $("#general").toggleClass("general-active");
-//     });  
-//    $(".btn-cerrarw").click(function(){
-//        $(".flash_message_warning").fadeOut();
-//        $(".flash_message_success").fadeOut();
+$script='$(document).ready(function() {
+$("#menu-chaide").click(function(){
+        $(this).toggleClass("active");
+        $("#menu-mobile").toggleClass("menu-active");
+        $("#general").toggleClass("general-active");
+    });  
+   $(".btn-cerrarw").click(function(){
+       $(".flash_message_warning").fadeOut();
+       $(".flash_message_success").fadeOut();
        
-//        });
-//     $("#btn-submobile-p").click(function(){
-//         $("#submenu-mobile").slideToggle();
-//     }); 
-//     $("#b-buscar").click(function(){
-//         $("#cont-buscardor").addClass("to-right");
-//     });
-//     $("#btn-cerrarb").click(function(){
-//         $("#cont-buscardor").removeClass("to-right");
-//     }); 
-// });';
+       });
+    $("#btn-submobile-p").click(function(){
+        $("#submenu-mobile").slideToggle();
+    }); 
+    $("#b-buscar").click(function(){
+        $("#cont-buscardor").addClass("to-right");
+    });
+    $("#btn-cerrarb").click(function(){
+        $("#cont-buscardor").removeClass("to-right");
+    }); 
+});';
 $script=<<< JS
 $(".btn-menu").click(function() {
     var section=$(this).attr('to_section');
@@ -77,7 +77,7 @@ AppAsset::register($this);
                 <li class="m-menu"><a href="#ELGIGE UNA MISIÓN" to_section="missions"class="btn-menu">ELIGE UNA MISIÓN</a></li>
                 <li class="m-menu"><a href="#" class="btn-menu">GALERIA</a></li>
                 <li class="m-menu"><a href="#" class="btn-menu">RESERVAS</a></li>
-                <li class="m-menu"><a href="#ENCUÉNTRANOS" to_section="find-us" class="btn-menu">¿CÓMO LLEGAR A EXIT?</a></li>
+                <li class="m-menu"><a href="#ENCUÉNTRANOS" to_section="find-us" class="btn-menu">¿CÓMO LLEGAR?</a></li>
                 <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu">CONTACTO</a></li>
                 <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu">PRENSA Y MEDIOS</a></li>
                 <!-- <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li> -->
