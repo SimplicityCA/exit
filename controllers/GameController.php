@@ -9,7 +9,7 @@ use app\models\GameSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Url;
 /**
  * GameController implements the CRUD actions for Game model.
  */
@@ -41,7 +41,7 @@ class GameController extends Controller
     {
         $this->layout="main2";
         $events = array();
-        $aux=Reserve::find()->where(['game_id'=>$id])->all();
+        $aux=Reserve::find()->where(['game_id'=>$id,'status'=>'OPEN'])->all();
 foreach($aux as $k => $reserve){
     $date=date('Y-m-d H:i:s',strtotime($reserve->start_date));
      $date2=date('Y-m-d\Th:i:s\Z',strtotime($reserve->end_date));
@@ -50,6 +50,7 @@ foreach($aux as $k => $reserve){
   $Event->title = $reserve->description;
   $Event->start = $reserve->start_date;
     $Event->end = $reserve->end_date;
+    $Event->url = Url::to(['game/reserve','id'=>$reserve->id]);
   $events[] = $Event;   
 }
 
@@ -61,6 +62,7 @@ foreach($aux as $k => $reserve){
     public function actionReserve($id)
     {
         $this->layout="main2";
+        die("Entró");
         return $this->render('reserve', [
             'model' => $this->findModel($id),
         ]);
