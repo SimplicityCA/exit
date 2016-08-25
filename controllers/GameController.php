@@ -79,6 +79,8 @@ foreach($aux as $k => $reserve){
     }
 
     public function actionCongrats($id){
+
+        $this->layout="main2";
         $model=Client::findOne($id);
         return $this->render('congrats', [
                 'model' => $model
