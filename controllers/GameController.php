@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Game;
 use app\models\Reserve;
+use app\models\Client;
 use app\models\GameSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -62,13 +63,27 @@ foreach($aux as $k => $reserve){
     public function actionReserve($id)
     {
         $this->layout="main2";
-        die("Entró");
-        return $this->render('reserve', [
-            'model' => $this->findModel($id),
-        ]);
+        $reserve=Reserve::findOne($id);
+        $model=New Client;
+        $model->reserve_id=$id;
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $reserve=Reserve::findOne($model->reserve_id);
+            $reserve->status='CLOSE';
+            $reserve->save();
+            return $this->redirect(['congrats', 'id' => $model->id]);
+        } else {
+            return $this->render('reserve', [
+                'model' => $model,'reserve'=>$reserve
+            ]);
+        }
     }
 
-
+    public function actionCongrats($id){
+        $model=Client::findOne($id);
+        return $this->render('congrats', [
+                'model' => $model
+            ]);
+    }
 
 
     /**
