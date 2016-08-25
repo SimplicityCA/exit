@@ -60,4 +60,8 @@ class Reserve extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Game::className(), ['id' => 'game_id']);
     }
+        public function getClients()
+    {
+        return $this->hasMany(Client::className(), ['id' => 'game_id']);
+    }
 }
