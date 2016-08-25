@@ -8,10 +8,10 @@ use yii\web\View;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Product */
-// $script=<<< JS
+//  $script=<<< JS
 
 // JS;
-// $this->registerJs($script,View::POS_END);
+//  $this->registerJs($script,View::POS_END);
 
 AppAsset::register($this);
 $this->title = "EXIT |  $model->title $model->subtitle";
@@ -68,11 +68,11 @@ $this->title = "EXIT |  $model->title $model->subtitle";
     </div>
 </section>
 <section id="reserve" class="cont-exitint2" >
-    <h1>Reservas</h1>
+    <h1>Horarios Disponibles</h1>
         <div class="reserve">
             <div class="row">
                    <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
-      'events'=> $events,
+      'events'=> $events
   ));?>
               
               <hr class="style-three"></hr>
