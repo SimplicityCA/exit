@@ -147,8 +147,9 @@ body{
 .btn-comprara{
     width: 33%;
     clear: both;
-    float: left;
-    margin: 10% 0 0 30%;
+    /*float: left;
+    margin: 10% 0 0 30%;*/
+    margin-top:5%;
     align-self: auto;
 	azimuth:behind;
 	}
@@ -227,9 +228,9 @@ body{
 .background-registro{
 	background-size:cover;
 	}	
-.img-propiedad {
+/*.img-propiedad {
     top: -10%;
-}	
+}	*/
 .cont-colchon360{
 	width:540px;
 	height:540px;
@@ -480,9 +481,9 @@ ul.secciones-noticias{
 	height:650px;
 }	
 .img-propiedad {
-    width: 10%;
+    /*width: 10%;
     top: -32%;
-    left: -2%;
+    left: -2%;*/
 }	
 .interna-exit {
     width: 100%;
@@ -490,7 +491,7 @@ ul.secciones-noticias{
 	overflow:hidden;
 }	
 .background-exitint{
-	background:none !important;
+	/*background:none !important;*/
 	}	
 .interna-exit img{
 	width:120%;
@@ -500,7 +501,8 @@ ul.secciones-noticias{
     top: 25%;
 }	
 header {
-    position:fixed;
+    /*position:fixed;*/
+    background:none;
 }
 .m-menu {
  display:none;
@@ -529,9 +531,9 @@ nav ul li{
 header{
 	top:26px;
 	}	
-#barra-mobile{
+/*#barra-mobile{
 	margin:0 !important;
-	}
+	}*/
 #asesor-pag1, #asesor-pag2, #asesor-pag4 {
     width: 100%;
     margin: 15px 0;
@@ -831,11 +833,11 @@ ul.secciones-noticias li{
     width: 100%;
     height: 300px;
 }	
-.img-propiedad {
+/*.img-propiedad {
     width: 12%;
     top: -28%;
     left: 0;
-}
+}*/
 
 .secc-intcolchon ul li {
     margin: 3% 1%;
@@ -902,13 +904,13 @@ ul.secciones-noticias li{
 nav ul li {
     width: 150%;
 }
-#barra-mobile {
+/*#barra-mobile {
     width: 78%;
-}
-.img-propiedad {
+}*/
+/*.img-propiedad {
     width: 13%;
     top: -25%;
-}
+}*/
 .cont-secciones h1{
 	font-size:1.5em;
 	}
@@ -991,10 +993,10 @@ ul.secciones-noticias li {
 nav ul {
   width: 23%;
 }
-#barra-mobile {
+/*#barra-mobile {
   width: 77%;
   margin: 2% 0 0 0;
-}
+}*/
 .btn-comprar2 {
   top: 40%;
   width:60%;
@@ -1044,10 +1046,10 @@ nav ul {
 nav ul li {
     width: 100%;
 }
-.img-propiedad {
+/*.img-propiedad {
     width: 14%;
     top: -20%;
-}
+}*/
 #a-1994, #a-2003, #a-2005, #a-2007, #a-2012, #a-2013 {
     width: 50%;
     margin: 2% 25%;
@@ -1106,10 +1108,10 @@ nav ul li {
 nav ul {
   width: 25%;
 }
-#barra-mobile {
+/*#barra-mobile {
   width: 75%;
   margin: 2% 0 0 0;
-}
+}*/
 .txt-informativo span, .txt-informativo-medium span {
     line-height: 1em;
 }
@@ -1128,10 +1130,10 @@ nav ul {
     margin: 0 5%;
 }
 
-.img-propiedad {
+/*.img-propiedad {
     width: 16%;
     top: -15%;
-}
+}*/
 .cont-secciones h1{
 	font-size:1.2em;
 	}
@@ -1189,11 +1191,11 @@ nav ul {
     background-attachment:local;
 	min-height:60%;
 }
-.img-propiedad {
+/*.img-propiedad {
     top: -20%;
 	left: -2%;
 	width:60px;
-}
+}*/
 .secc-intcolchon ul li{
 	height:auto;
 	}
@@ -1243,7 +1245,8 @@ nav ul li{
 }
 .btn-comprara {
     width: 70%;
-    margin: 2% 15% 0 15%;
+    /*margin: 2% 15% 0 15%;*/
+    margin-top:2%;
 }
 .footter-home {
     float: left;

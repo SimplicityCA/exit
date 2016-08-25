@@ -140,25 +140,27 @@ nav ul li a:link, nav ul li a:visited{
 .info-mis-second{
     text-align: center;
     color: white;
-    width: 55%;
-    margin-left: 22%;
+    /* width: 55%; */
+    /* margin-left: 22%; */
     font-weight: 300;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
     .info-mis div{
             font-size: 1.2em;
     font-weight: 300;
     }  
     .mis-label{
-            z-index: 2;
-    position: absolute;
-    /*top: 49%;*/
-    color: white;
-    background: #e61939;
-    width: 95%;
-    /* left: -7%; */
-    margin-left: -13%;
-    text-align: center;
-    margin-top: 111%;
+        z-index: 2;
+        position: absolute;
+        /*top: 79%;*/
+        color: white;
+        background: #e61939;
+        width: 100%;
+        /* left: -7%; */
+        /*margin-left: -10%;*/
+        text-align: center;
+        bottom: 0px;
     } 
     .mis-tit{
     font-size: 1.6em;
@@ -281,13 +283,21 @@ nav ul li a:link, nav ul li a:visited{
     background-repeat:no-repeat;
     }
 .background-exitint{
-    background-image:url(../images/int-colchon.jpg);
+    padding-bottom:3%;
     background-size:100%;
     background-attachment:fixed;
     background-position:top center;
     background-repeat:no-repeat;
     background-color: black;
-    }   
+    }
+.background-mision{
+    background-size:100%;
+    background-attachment:fixed;
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-color: black;
+    padding-bottom:3%;
+}   
 .background-registro{
     background-image:url(../images/formularios.jpg);
     background-size:100%;
@@ -298,9 +308,10 @@ nav ul li a:link, nav ul li a:visited{
     }   
 /**/    
 .inf-home{
-    width:63%;
+    /*width:63%;*/
     padding:1% 0;
-    margin:25% 30% 0 18%;
+    /*margin:25% 30% 0 18%;*/
+    margin-top:20%;
     position:relative;
     text-align:center;  
     font-family: 'Yanone Kaffeesatz';
@@ -323,7 +334,7 @@ nav ul li a:link, nav ul li a:visited{
     border:1px solid #FFF;
     }   
 .inf-home span{
-    width:98%;
+    width:100%;
     text-align:center;
     font-size:2.3em;
     color:white;
@@ -331,7 +342,7 @@ nav ul li a:link, nav ul li a:visited{
     }  
     .second-text-home{
         font-weight: 100;
-    } 
+    }
 .footter-home{
     width:100%;
     position:relative;
@@ -667,11 +678,7 @@ footer{
     }   
 /**/    
 #barra-mobile{
-    width:86%;
-    float:left;
-    background:rgba(255,255,255,0.6);
-    padding:1% 0;
-    margin: 0.5% 0 0 0;
+    margin-right:2%;
     display:none;
     }   
 #menu-chaide{
@@ -1127,12 +1134,13 @@ footer{
     }   
 .btn-comprara{
     width: 30%;
-    margin: 5% 20% 0 35%;
+    /*margin: 5% 20% 0 35%;*/
+    margin-top:5%;
     padding: 1% 0;
     text-align: center;
     color: #FFF;
     background-color: #e61939;
-    float: left;
+    /*float: left;*/
     border-radius: 25px;
     font-size: 1.5em;
     }   
@@ -1918,11 +1926,15 @@ ul.publiciad-abj li{
 /**/
 .img-propiedad{
     width: 100%;
-    position: absolute;
-    top: -15%;
-    left: -10%;
+    /*position: absolute;*/
+    /*top: -15%;
+    left: -10%;*/
     }   
-
+.game-container{
+    margin-left:1.6%;
+    margin-right:1.6%;
+    padding:0;
+}
 #h1-home-2{
     color:#a6a19e !important;
     }   
@@ -2830,3 +2842,4 @@ ul.publiciad-abj li{
 .c-blue{
     color: #005f92;
 }
+

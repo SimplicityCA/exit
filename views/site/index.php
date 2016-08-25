@@ -65,19 +65,18 @@ $this->title = 'EXIT';
 ?>
 <!-- -->
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/<?= $home->picture ?>')">
-    <div class="inf-home">
-        <span><?= $home->title ?>
-              </span>
-         <span class="second-text-home">
-         <?= $home->subtitle ?>
-        </span>
-        <a href="#MISIONES" class="btn-menu" to_section="missions">
-            <div class="btn-comprara">
-                Seleccionar una misión.
-            </div>
-        </a>
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 inf-home">
+          <span><?= $home->title ?>
+                </span>
+           <span class="second-text-home">
+           <?= $home->subtitle ?>
+          </span>
+          <a href="#MISIONES" class="btn btn-comprara" to_section="missions">
+                  Seleccionar una misión
+          </a>
+      </div>
     </div>
-
 </section>
 
 <section id="what-is" class="cont-exitint2" >
@@ -101,7 +100,7 @@ $this->title = 'EXIT';
         </div>
 </section>
 
-<section id="missions"  class="background-exitint interna-exit4" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
+<section id="missions"  class="background-mision interna-exit4" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
 <!--     <div class="info-mis">
         <h1>MISIONES</h1>
             <div class="row">
@@ -116,27 +115,29 @@ $this->title = 'EXIT';
           
     </div> -->
         <h1>ELIGE UNA MISIÓN</h1>
-        <div class="info-mis-second">
-        <span>
-Para escapar debes superar todas las pruebas, no serán necesarios conocimientos previos, solo la lógica, la rapidez de reacción y el trabajo en equipo. Pase lo que pase, vivirás una experiencia ultra divertida que la recordarás por mucho tiempo.
-        </span>
-      </div>
-      <div class="secc-intcolchon">
-        <ul class="ventajas-<?= count($games) ?>">
-        <?php foreach($games as $game): ?>
-            <li>
-              <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
-                <?php if($game->status == 'INACTIVE'){ ?>
-                <div class="mis-label" style="<?= ($game->status == 'INACTIVE') ? 'background:gray;' : '' ?>"><span class="mis-tit"><?= $game->title ?></span> <br/> <span class="mis-subtit"><?= $game->subtitle ?></span>
-                  <?= ($game->status == 'INACTIVE') ? '<br/>PROXIMAMENTE' : '' ?>
-                </div>
-                 <?php } ?>
-                <img src="<?= URL::base() ?>/images/game/<?= $game->picture ?>" class="img-propiedad"/>
-              </a>
-            </li>
-          <?php endforeach; ?>
-        </ul>   
-    </div>
+        <div class="info-mis-second col-sm-8 col-sm-offset-2 col-xs-12">
+          <span>
+            Para escapar debes superar todas las pruebas, no serán necesarios conocimientos previos, solo la lógica, la rapidez de reacción y el trabajo en equipo. Pase lo que pase, vivirás una experiencia ultra divertida que la recordarás por mucho tiempo.
+          </span>
+        </div>
+        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+          <!-- <ul class="col-sm-10 col-sm-offset-1"> -->
+          <?php foreach($games as $game): ?>
+              <div class="col-md-2 col-sm-3 col-xs-8 col-xs-offset-2 game-container">
+                <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
+                  <img src="<?= URL::base() ?>/images/game/<?= $game->picture ?>" class="img-propiedad"/>
+                  <?php if($game->status == 'INACTIVE'){ ?>
+                  <div class="mis-label" style="<?= ($game->status == 'INACTIVE') ? 'background:gray;' : '' ?>"><span class="mis-tit"><?= $game->title ?></span> <br/> <span class="mis-subtit"><?= $game->subtitle ?></span>
+                    <?= ($game->status == 'INACTIVE') ? '<br/>PROXIMAMENTE' : '' ?>
+                  </div>
+                   <?php } ?>
+                  
+                </a>
+              </div>
+            <?php endforeach; ?>
+          <!-- </ul>    -->
+        </div>
+
 </section>
 <!-- <section class="cont-exitint2" style="background-image:url('<?= URL::base() ?>/images/13.svg')" >
     <h1 style="color:white;">ENCUÉNTRANOS</h1>
