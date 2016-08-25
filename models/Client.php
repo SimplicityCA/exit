@@ -51,13 +51,15 @@ class Client extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'identity' => 'Identity',
-            'names' => 'Names',
-            'lastnames' => 'Lastnames',
-            'phone' => 'Phone',
-            'cellphone' => 'Cellphone',
+            'identity' => 'Cédula',
+            'names' => 'Nombres',
+            'lastnames' => 'Apellidos',
+            'phone' => 'Teléfono',
+            'cellphone' => 'Celular',
             'email' => 'Email',
             'reserve_id' => 'Reserve ID',
+            'number_players' => 'Número de Participantes',
+            'pay_method' => 'Método de Pago',
         ];
     }
 

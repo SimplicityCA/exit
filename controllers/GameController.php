@@ -78,9 +78,6 @@ foreach($aux as $k => $reserve){
         $model=New Client;
         $model->reserve_id=$id;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $reserve=Reserve::findOne($model->reserve_id);
-            $reserve->status='CLOSE';
-            $reserve->save();
             if($model->pay_method=="PAYPAL"){
                         $item=new Item();
                         $item->setName($reserve->game->title." ".$reserve->game->subtitle)
@@ -131,8 +128,14 @@ foreach($aux as $k => $reserve){
             $approvalUrl = $payment->getApprovalLink();
             /* --- */
            // var_dump($items); 
+            $reserve=Reserve::findOne($model->reserve_id);
+            $reserve->status='CLOSE';
+            $reserve->save();
             return $this->redirect($approvalUrl);
             }
+            $reserve=Reserve::findOne($model->reserve_id);
+            $reserve->status='CLOSE';
+            $reserve->save();
             return $this->redirect(['congrats', 'id' => $model->id]);
         } else {
             return $this->render('reserve', [
@@ -182,6 +185,45 @@ foreach($aux as $k => $reserve){
 
         $this->layout="main2";
         $model=Client::findOne($id);
+        if(isset($_GET['PayerID'])){
+                    $payerId=$_GET['PayerID'];
+        $paymentId=$_GET['paymentId'];
+        $apiContext = $this->getApiContext();
+        $paymentExecution = new PaymentExecution();
+        $paymentExecution->setPayerId($payerId);
+        $payment = new Payment();
+        $payment->setId($paymentId);
+        try {
+            $payment = $payment->execute($paymentExecution, $apiContext);
+            // $response = $payment->toJSON();
+            $purchase=new Purchase;
+            $payer_info=$payment->payer->payer_info;
+            $transaction=$payment->transactions[0];
+            $purchase->first_name=$payer_info->first_name;
+            $purchase->last_name=$payer_info->last_name;
+            $purchase->email=$payer_info->email;
+            $purchase->address=$payer_info->shipping_address->line1.' '.$payer_info->shipping_address->line2;
+            $purchase->city=$payer_info->shipping_address->city;
+            $purchase->state=$payer_info->shipping_address->state;
+            $purchase->postal_code=$payer_info->shipping_address->postal_code;
+            $purchase->country_code=$payer_info->shipping_address->country_code;
+            $purchase->recipient_name=$payer_info->shipping_address->recipient_name;
+            $purchase->total=$transaction->amount->total;
+            $items='';
+            $quantities='';
+            foreach ($transaction->item_list->items as $item) {
+                $items.=$item->sku.',';
+                $quantities.=$item->quantity.',';
+            }
+            $purchase->items=$items;
+            $purchase->quantities=$quantities;
+            $purchase->creation_date=date('Y-m-d H:i:s');
+            $purchase->save();
+            // print_r($payment);die();
+        } catch (Exception $e) {
+            print_r($e);die();
+        }
+        }
         return $this->render('congrats', [
                 'model' => $model
             ]);
