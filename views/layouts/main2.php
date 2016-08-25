@@ -8,27 +8,27 @@ use yii\web\View;
 use yii\helpers\Url;
 /* @var $this \yii\web\View */
 /* @var $content string */
-// $script='$(document).ready(function() {
-// $("#menu-chaide").click(function(){
-//         $(this).toggleClass("active");
-//         $("#menu-mobile").toggleClass("menu-active");
-//         $("#general").toggleClass("general-active");
-//     });  
-//    $(".btn-cerrarw").click(function(){
-//        $(".flash_message_warning").fadeOut();
-//        $(".flash_message_success").fadeOut();
+$script2='$(document).ready(function() {
+$("#menu-chaide").click(function(){
+        $(this).toggleClass("active");
+        $("#menu-mobile").toggleClass("menu-active");
+        $("#general").toggleClass("general-active");
+    });  
+   $(".btn-cerrarw").click(function(){
+       $(".flash_message_warning").fadeOut();
+       $(".flash_message_success").fadeOut();
        
-//        });
-//     $("#btn-submobile-p").click(function(){
-//         $("#submenu-mobile").slideToggle();
-//     }); 
-//     $("#b-buscar").click(function(){
-//         $("#cont-buscardor").addClass("to-right");
-//     });
-//     $("#btn-cerrarb").click(function(){
-//         $("#cont-buscardor").removeClass("to-right");
-//     }); 
-// });';
+       });
+    $("#btn-submobile-p").click(function(){
+        $("#submenu-mobile").slideToggle();
+    }); 
+    $("#b-buscar").click(function(){
+        $("#cont-buscardor").addClass("to-right");
+    });
+    $("#btn-cerrarb").click(function(){
+        $("#cont-buscardor").removeClass("to-right");
+    }); 
+});';
 $script=<<< JS
 $(".btn-to-section").click(function() {
     var section=$(this).attr('to_section');
@@ -38,6 +38,7 @@ $(".btn-to-section").click(function() {
 });
 JS;
 $this->registerJs($script,View::POS_END);
+$this->registerJs($script2,View::POS_END);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
