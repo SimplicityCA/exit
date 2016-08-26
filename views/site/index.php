@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 $script=<<< JS
  function initialize(lat,long,description) {
     var myLatLng = {lat: lat, lng: long};
-    var image = window.location.protocol + "//" + window.location.host +"/web/images/icono.svg";
+    var image = window.location.protocol + "//" + window.location.host +"/web/images/icono2.gif";
     var icon = {
     url: image, // url
     // scaledSize: new google.maps.Size(120,40), // scaled size
