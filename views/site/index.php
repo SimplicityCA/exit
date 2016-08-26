@@ -66,7 +66,7 @@ $this->title = 'EXIT';
 <!-- -->
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/<?= $home->picture ?>')">
     <div class="container">
-      <div class="col-sm-8 col-sm-offset-2 col-xs-12 inf-home">
+      <div class="inf-home">
           <span><?= $home->title ?>
                 </span>
            <span class="second-text-home">
