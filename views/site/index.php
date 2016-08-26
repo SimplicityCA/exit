@@ -66,7 +66,7 @@ $this->title = 'EXIT';
 <!-- -->
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/<?= $home->picture ?>')">
     <div class="container">
-      <div class="col-sm-8 col-sm-offset-2 col-xs-12 inf-home">
+      <div class="inf-home">
           <span><?= $home->title ?>
                 </span>
            <span class="second-text-home">
@@ -115,13 +115,12 @@ $this->title = 'EXIT';
           
     </div> -->
         <h1>ELIGE UNA MISIÓN</h1>
-        <div class="info-mis-second col-sm-8 col-sm-offset-2 col-xs-12">
+        <div class="info-mis-second">
           <span>
             Para escapar debes superar todas las pruebas, no serán necesarios conocimientos previos, solo la lógica, la rapidez de reacción y el trabajo en equipo. Pase lo que pase, vivirás una experiencia ultra divertida que la recordarás por mucho tiempo.
           </span>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-          <!-- <ul class="col-sm-10 col-sm-offset-1"> -->
+        <div class="mission">
           <?php foreach($games as $game): ?>
               <div class="col-md-2 col-sm-3 col-xs-8 col-xs-offset-2 game-container">
                 <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
@@ -135,17 +134,12 @@ $this->title = 'EXIT';
                 </a>
               </div>
             <?php endforeach; ?>
-          <!-- </ul>    -->
         </div>
 
 </section>
-<!-- <section class="cont-exitint2" style="background-image:url('<?= URL::base() ?>/images/13.svg')" >
-    <h1 style="color:white;">ENCUÉNTRANOS</h1>
-    <div id="map"></div>
-</section> -->
 <section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
     
     <h1 style="color:white;">¿CÓMO LLEGAR A EXIT?</h1>
-    <div id="map" style="width:90%;min-height:400px;margin-left:5%;"></div>
+    <div id="map"></div>
     
 </section>

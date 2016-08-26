@@ -140,11 +140,15 @@ nav ul li a:link, nav ul li a:visited{
 .info-mis-second{
     text-align: center;
     color: white;
-    /* width: 55%; */
-    /* margin-left: 22%; */
     font-weight: 300;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+.mission {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
 }
     .info-mis div{
             font-size: 1.2em;
@@ -840,15 +844,14 @@ footer{
     background-repeat: no-repeat;
     }
 .it-is-cont{
-    width: 80%;
-    float: left;
-    margin-left: 10%;
-    margin-top:2%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 .it-is-cont div{
-
-        font-size: 1.5em;
+    font-size: 1.5em;
     font-weight: 300;
+    margin-bottom: 20px;
 }
 .cont-exitint2 div span{
     text-align: center;
@@ -863,6 +866,8 @@ footer{
     border-bottom: 2px dotted whitesmoke;
     background: #999;
     width:100%;
+    margin-top: 20px;
+    float: left;
 }
 
 .secc-intcolchon{
@@ -906,14 +911,20 @@ footer{
     color:#FFF;
     float:left;
     }
-.cont-exitint3{
+.cont-exitint3 {
     width:100%;
     position:relative;
     float:left;
-    padding:1% 0;
-    background-color:#FFF;
-    min-height:100%;
-    }
+    padding-bottom: 40px;
+}
+.cont-exitint3 h1 {
+    padding-bottom: 30px;
+}
+#map {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 400px;
+}
 .cont-colchon360{
     width:800px;
     height:800px;
