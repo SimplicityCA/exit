@@ -840,15 +840,14 @@ footer{
     background-repeat: no-repeat;
     }
 .it-is-cont{
-    width: 80%;
-    float: left;
-    margin-left: 10%;
-    margin-top:2%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 .it-is-cont div{
-
-        font-size: 1.5em;
+    font-size: 1.5em;
     font-weight: 300;
+    margin-bottom: 20px;
 }
 .cont-exitint2 div span{
     text-align: center;
@@ -863,6 +862,8 @@ footer{
     border-bottom: 2px dotted whitesmoke;
     background: #999;
     width:100%;
+    margin-top: 20px;
+    float: left;
 }
 
 .secc-intcolchon{
