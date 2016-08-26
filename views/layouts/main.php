@@ -38,7 +38,7 @@ $(".btn-to-section").click(function() {
 });
 JS;
 $this->registerJs($script,View::POS_END);
-$this->registerJs($script2,View::POS_END);
+//$this->registerJs($script2,View::POS_END);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -71,21 +71,36 @@ AppAsset::register($this);
     <!-- -->
 <!-- MENU CHAIDE -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="<?= Url::home() ?>"><img src="<?= URL::base() ?>/images/logo.svg" alt="logotipo exit"/></a></li>
-                <li class="m-menu"><a  href="#¿QUÉ ES?" to_section="what-is" class="btn-menu btn-to-section">¿QUÉ ES?</a></li>
-                <li class="m-menu"><a href="#ELGIGE UNA MISIÓN" to_section="missions"class="btn-menu btn-to-section">ELIGE UNA MISIÓN</a></li>
-                <li class="m-menu"><a href="#" class="btn-menu btn-to-section">GALERIA</a></li>
-                <li class="m-menu"><a href="#" to_section="missions" class="btn-menu btn-to-section">RESERVAS</a></li>
-                <li class="m-menu"><a href="#ENCUÉNTRANOS" to_section="find-us" class="btn-menu btn-to-section">¿CÓMO LLEGAR?</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu btn-to-section">CONTACTO</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu btn-to-section">PRENSA Y MEDIOS</a></li>
-                <!-- <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li> -->
-            </ul>
-            <div id="barra-mobile">
-                <a id="menu-chaide"><span></span></a>
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid" style="padding:0">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="<?= Url::home() ?>"><img class="logo-header" src="<?= URL::base() ?>/images/logo.svg" alt="logotipo exit"/></a>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+              </button>
+                
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu-container" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                    <li class="m-menu"><a  href="#¿QUÉ ES?" to_section="what-is" class="btn-menu btn-to-section">¿QUÉ ES?</a></li>
+                    <li class="m-menu"><a href="#ELGIGE UNA MISIÓN" to_section="missions"class="btn-menu btn-to-section">ELIGE UNA MISIÓN</a></li>
+                    <li class="m-menu"><a href="#" class="btn-menu btn-to-section">GALERIA</a></li>
+                    <li class="m-menu"><a href="#" to_section="missions" class="btn-menu btn-to-section">RESERVAS</a></li>
+                    <li class="m-menu"><a href="#ENCUÉNTRANOS" to_section="find-us" class="btn-menu btn-to-section">¿CÓMO LLEGAR?</a></li>
+                    <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu btn-to-section">CONTACTO</a></li>
+                    <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu btn-to-section">PRENSA Y MEDIOS</a></li>
+                    <!-- <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li> -->
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
         </nav>
     </header>
             <?= $content ?>
@@ -102,21 +117,7 @@ AppAsset::register($this);
 </footer>
 <!-- -->
 </div>
-<!-- menu mobile -->
-<div id="menu-mobile">
-    <div class="con-submenumobile">
-        <ul>
-                <li class="m-menu"><a href="<?= Url::to(['locale/index']) ?>" class="hvr-bounce-to-top">HOME</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['article/index','type'=>'news']) ?>" class="hvr-bounce-to-top">¿QUÉ ES?</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">ELIGE UNA MISIÓN</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">GALERIA</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">RESERVAS</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">ENCUÉNTRANOS</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">CONTACTO</a></li>
-                <li class="m-menu"><a href="<?= Url::to(['site/innovation']) ?>" class="hvr-bounce-to-top">EMPRESAS</a></li>
-       </ul>
-   </div>
-</div>
+
 <?php $this->endBody() ?>
 </body>
 </html>
