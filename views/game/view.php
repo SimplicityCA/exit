@@ -18,33 +18,35 @@ $this->title = "EXIT |  $model->title $model->subtitle";
 ?>
 <!-- -->
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/game/<?= $model->landing_picture ?>')">
-    <div class="container">
-      <div class="col-sm-8 col-sm-offset-2 col-xs-12 inf-home">
-        <span><?= $model->title ?>
-              </span>
-         <span class="second-text-home">
-         <?= $model->subtitle ?>
-        </span>
-        <a href="#" to_section="reserve"class="btn btn-comprara btn-to-section" >
-            <div class="btn-comprara">
-                Reserva ya!
-            </div>
-        </a>
+      <div class="container">
+        <div class="inf-home">
+          <span><?= $model->title ?>
+                </span>
+           <span class="second-text-home">
+           <?= $model->subtitle ?>
+          </span>
+          <a href="#" to_section="reserve"class="btn btn-comprara btn-to-section" >
+                  Reserva ya!
+          </a>
+        </div>
     </div>
-  </div>
 </section>
 <section id="what-is" class="cont-exitint2" >
-    <h1>Descripción del juego</h1>
-        <div class="it-is-cont">
-            <div class="row" style="font-size: 1.87em;">
-              <?= $model->description ?>
-              
-              <hr class="style-three"></hr>
-            </div>
-        </div>
+    <div class="container" >
+      <div class="col-xs-12" >
+      <h1>Descripción del juego</h1>
+          <div class="it-is-cont">
+              <div class="row" style="font-size: 1.87em;">
+                <?= $model->description ?>
+                
+                <hr class="style-three"></hr>
+              </div>
+          </div>
+      </div>
+    </div>
 </section>
 <section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
-    
+    <div class="container" >
     <h1 style="color:white;">HALL OF FAME</h1>
     <div class="it-is-cont">
     <div class="row" style="margin-bottom:2%">
@@ -66,6 +68,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
       </div>
     </div>
     </div>
+  </div>
 </section>
 <section id="reserve" class="cont-exitint2" >
     <h1>Horarios Disponibles</h1>
