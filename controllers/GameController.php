@@ -196,29 +196,29 @@ foreach($aux as $k => $reserve){
         try {
             $payment = $payment->execute($paymentExecution, $apiContext);
             // $response = $payment->toJSON();
-            $purchase=new Purchase;
-            $payer_info=$payment->payer->payer_info;
-            $transaction=$payment->transactions[0];
-            $purchase->first_name=$payer_info->first_name;
-            $purchase->last_name=$payer_info->last_name;
-            $purchase->email=$payer_info->email;
-            $purchase->address=$payer_info->shipping_address->line1.' '.$payer_info->shipping_address->line2;
-            $purchase->city=$payer_info->shipping_address->city;
-            $purchase->state=$payer_info->shipping_address->state;
-            $purchase->postal_code=$payer_info->shipping_address->postal_code;
-            $purchase->country_code=$payer_info->shipping_address->country_code;
-            $purchase->recipient_name=$payer_info->shipping_address->recipient_name;
-            $purchase->total=$transaction->amount->total;
-            $items='';
-            $quantities='';
-            foreach ($transaction->item_list->items as $item) {
-                $items.=$item->sku.',';
-                $quantities.=$item->quantity.',';
-            }
-            $purchase->items=$items;
-            $purchase->quantities=$quantities;
-            $purchase->creation_date=date('Y-m-d H:i:s');
-            $purchase->save();
+            // $purchase=new Purchase;
+            // $payer_info=$payment->payer->payer_info;
+            // $transaction=$payment->transactions[0];
+            // $purchase->first_name=$payer_info->first_name;
+            // $purchase->last_name=$payer_info->last_name;
+            // $purchase->email=$payer_info->email;
+            // $purchase->address=$payer_info->shipping_address->line1.' '.$payer_info->shipping_address->line2;
+            // $purchase->city=$payer_info->shipping_address->city;
+            // $purchase->state=$payer_info->shipping_address->state;
+            // $purchase->postal_code=$payer_info->shipping_address->postal_code;
+            // $purchase->country_code=$payer_info->shipping_address->country_code;
+            // $purchase->recipient_name=$payer_info->shipping_address->recipient_name;
+            // $purchase->total=$transaction->amount->total;
+            // $items='';
+            // $quantities='';
+            // foreach ($transaction->item_list->items as $item) {
+            //     $items.=$item->sku.',';
+            //     $quantities.=$item->quantity.',';
+            // }
+            // $purchase->items=$items;
+            // $purchase->quantities=$quantities;
+            // $purchase->creation_date=date('Y-m-d H:i:s');
+            // $purchase->save();
             // print_r($payment);die();
         } catch (Exception $e) {
             print_r($e);die();
