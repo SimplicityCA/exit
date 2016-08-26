@@ -17,12 +17,12 @@ $this->title = "EXIT |  Felicidades";
 ?>
 <!-- -->
 
-<section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
+<section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
 
 
 <div class="client-form" style="margin-top:10%;color:white;">
 	<h1>Felicidades <?= $model->names ?> la reserva para <?= $model->reserve->game->title ?> <?= $model->reserve->game->subtitle ?> se ha realizado con éxito</h1>
-	<h2>Fecha de inicio del juego: <?= $model->reserve->start_date ?></h2>
+	<span>Fecha de inicio del juego: <?= $model->reserve->start_date ?></span>
 </div>
 
 </section>

@@ -28,13 +28,16 @@ $this->title = "EXIT |  ".$reserve->game->title." ".$reserve->game->subtitle;
 ?>
 <!-- -->
 
-<section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
+<section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
 
+    
+<div class="inf-contact" style="margin-top:10%;" >
+<h1>Reserva para <?= $this->title ?> </h1>
 
-<div class="client-form" style="margin-top:10%;color:white;">
-	<h1>Reserva para <?= $this->title ?> </h1>
-	<h1>Fecha y hora de inicio <?= $reserve->start_date ?> </h1>
-	<h1>Descuento del 20% si pagas en línea.</h1>
+            <div class="row" style="color:white;">
+                    <span>Fecha y hora de inicio <?= $reserve->start_date ?> </span>
+    <span>Descuento del 20% si pagas en línea.</span>
+            <div class="row">
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'identity')->textInput(['maxlength' => true]) ?>
@@ -61,7 +64,8 @@ $this->title = "EXIT |  ".$reserve->game->title." ".$reserve->game->subtitle;
     </div>
 
     <?php ActiveForm::end(); ?>
-
+</div>
+</div>
 </div>
 
 </section>
