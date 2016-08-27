@@ -56,6 +56,25 @@ nav ul li{
   background-color: transparent;
 }
 
+.title-hall{
+	color:white;margin-bottom:2%;
+}
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event {
+    color: black !important;
+    text-decoration: none;
+}
+
+.fc-event, .fc-event:visited {
+    border: 1px solid #e61939 !important;
+    background-color: #e61939 !important;
+}
+
+.cont-exitint2 div span {
+    color: black !important;
+    font-size: 1em !important;
+}
+
 @media screen and (max-width: 1150px) {
 	nav ul li{
 		width:12%;
@@ -87,4 +106,10 @@ nav ul li{
 	.m-menu {
 	    margin:0;
 	}
-}
+	.m-menu a:link, .m-menu a:visited {
+    	padding: 1.5% 0;
+	}
+	.title-hall{
+		margin-left:2%;
+	}
+	

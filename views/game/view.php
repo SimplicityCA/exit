@@ -47,30 +47,33 @@ $this->title = "EXIT |  $model->title $model->subtitle";
 </section>
 <section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
     <div class="container" >
-    <h1 style="color:white;">HALL OF FAME</h1>
-    <div class="it-is-cont">
-    <div class="row" style="margin-bottom:2%">
-      <span style="color:white;">RECORD HISTÓRICO</span>
-      <div class="col-sm-4" >
-        <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+      <h1 style="color:white;">HALL OF FAME</h1>
+      <div class="it-is-cont">
+        <div class="row" style="margin-bottom:2%">
+          <h3 class="title-hall">RECORD HISTÓRICO</h3>
+          <div class="col-sm-4" >
+            <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+          </div>
+          <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
+            
+            <?= $model->recordh ?>
+          </div>
+        </div>
+        <div class="row" style="margin-bottom:2%">
+          <h3 class="title-hall">MEJOR TIEMPO AGOSTO 2016</h3>
+          <div class="col-sm-4" >
+            <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+          </div>
+          <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
+            
+          <?= $model->recordm ?>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
-        <?= $model->recordh ?>
-      </div>
-    </div>
-    <div class="row" style="margin-bottom:2%">
-      <span style="color:white;">MEJOR TIEMPO AGOSTO 2016</span>
-      <div class="col-sm-4" >
-        <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
-      </div>
-      <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
-      <?= $model->recordm ?>
-      </div>
-    </div>
-    </div>
   </div>
 </section>
 <section id="reserve" class="cont-exitint2" >
+  <div class="container">
     <h1>Horarios Disponibles</h1>
         <div class="reserve">
             <div class="row">
@@ -81,5 +84,6 @@ $this->title = "EXIT |  $model->title $model->subtitle";
               <hr class="style-three"></hr>
             </div>
         </div>
+    </div>
 </section>
 
