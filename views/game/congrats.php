@@ -21,8 +21,8 @@ $this->title = "EXIT |  Felicidades";
 <div class="container">
 
 	<div class="client-form">
-		<h1>Felicidades <?= $model->names ?> la reserva para <?= $model->reserve->game->title ?> <?= $model->reserve->game->subtitle ?> se ha realizado con éxito</h1>
-		<span>Fecha de inicio del juego: <?= $model->reserve->start_date ?></span>
+		<h1 style="margin-bottom:2%">Felicidades <?= $model->names ?> la reserva para <?= $model->reserve->game->title ?> <?= $model->reserve->game->subtitle ?> se ha realizado con éxito</h1>
+		<span class="date-congrats">Fecha de inicio del juego: <?= $model->reserve->start_date ?></span>
 	</div>
 </div>
 </section>

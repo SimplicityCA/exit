@@ -79,6 +79,12 @@ nav ul li{
 	margin-top:20%;
 	color:white;
 	font-size:1em;
+	text-align:center;
+}
+
+.date-congrats{
+	font-size:2em;
+	margin-top:3%;
 }
 @media screen and (max-width: 1150px) {
 	nav ul li{
