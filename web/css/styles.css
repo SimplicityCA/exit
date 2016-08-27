@@ -1,0 +1,127 @@
+.navbar-default {
+     background-color: transparent; 
+     border-color: transparent;
+     color:white;
+
+}
+nav ul li a:link, nav ul li a:visited{
+    width:100%;
+    text-decoration:none;
+    color:white !important;
+    text-align:center !important;
+
+    } 
+
+.m-menu:hover a{
+    color: #e61939 !important;
+}      
+
+.logo-header{
+	width:8%;
+	float:left;
+}
+
+nav ul li{
+	width:10%;
+}
+.menu-container{
+	width:92%;
+	float:left;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e61939;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 1px;
+}
+.navbar-toggle{
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 42px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 0px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.title-hall{
+	color:white;margin-bottom:2%;
+}
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event {
+    color: black !important;
+    text-decoration: none;
+}
+
+.fc-event, .fc-event:visited {
+    border: 1px solid #e61939 !important;
+    background-color: #e61939 !important;
+}
+
+.cont-exitint2 div span {
+    color: black !important;
+    font-size: 1em !important;
+}
+
+.client-form{
+	margin-top:20%;
+	color:white;
+	font-size:1em;
+}
+@media screen and (max-width: 1150px) {
+	nav ul li{
+		width:12%;
+	}
+}
+@media screen and (max-width:960px){
+	nav ul li{
+		width:13%;
+	}
+}
+@media screen and (max-width:800px){
+	nav ul {
+    	width: 100%;
+	}
+	nav ul li{
+		width:13%;
+	}
+		.client-form{
+		margin-top:20%;
+		color:white;
+		font-size:0.6em;
+		margin-bottom:20%;
+	}
+}
+@media screen and (max-width: 767px) {
+	nav ul li{
+		width:100%;
+	}
+	.menu-container{
+		width:100%;
+		float:left;
+		background-color: black;
+		border-color: #e61939 !important;
+	}
+	.m-menu {
+	    margin:0;
+	}
+	.m-menu a:link, .m-menu a:visited {
+    	padding: 1.5% 0;
+	}
+	.title-hall{
+		margin-left:2%;
+	}
+
+}
