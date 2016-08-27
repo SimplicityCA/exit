@@ -312,10 +312,9 @@ nav ul li a:link, nav ul li a:visited{
     }   
 /**/    
 .inf-home{
-    /*width:63%;*/
     padding:1% 0;
-    /*margin:25% 30% 0 18%;*/
-    margin-top:20%;
+    margin-top:300px;
+    margin-bottom: 100px;
     position:relative;
     text-align:center;  
     font-family: 'Yanone Kaffeesatz';
