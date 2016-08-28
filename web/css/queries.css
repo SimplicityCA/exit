@@ -1,3 +1,29 @@
+@media (max-width: 992px) {
+  .inf-home {
+    margin-top: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .inf-home {
+    margin-top: 225px;
+  }
+  .inf-home span { 
+    font-size: 2em;
+  }
+  .btn-comprara {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 370px) {
+  .inf-home {
+    margin-top: 180px;
+  }
+}
+@media (max-width: 340px) {
+  .inf-home {
+    margin-top: 160px;
+  }
+}
 // @media screen and (max-width: 1910px){
 // .header-int {
 //     height: 19%;
