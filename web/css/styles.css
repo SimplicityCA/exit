@@ -2,7 +2,7 @@
      background-color: transparent; 
      border-color: transparent;
      color:white;
-
+     margin: 15px 0;
 }
 nav ul li a:link, nav ul li a:visited{
     width:100%;
@@ -15,11 +15,6 @@ nav ul li a:link, nav ul li a:visited{
 .m-menu:hover a{
     color: #e61939 !important;
 }      
-
-.logo-header{
-	width:90px;
-	float:left;
-}
 
 nav ul li{
 	width:10%;

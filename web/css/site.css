@@ -80,12 +80,13 @@ header{
     top:0%;
     z-index:101;
     padding-left: 5%;
-/*    position:fixed;*/
-   background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .2);
     color: white;
-    padding-top: 10px;
-    /*padding-bottom: 1%;*/
     }
+.logo-header{
+    width:90px;
+    float:left;
+}
 nav ul{
     width:100%;
     margin:0;
@@ -315,6 +316,7 @@ nav ul li a:link, nav ul li a:visited{
     position:relative;
     text-align:center;  
     font-family: 'Yanone Kaffeesatz';
+    margin-bottom: 150px;
 }
 @media (max-width: 767px) {
     .inf-home {
