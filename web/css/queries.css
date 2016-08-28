@@ -1,3 +1,8 @@
+@media (min-width: 992px) {
+  .info-mis-second {
+    font-size: 1.5em;
+  }
+}
 @media (max-width: 1200px) {
   .logo-header {
     width: 65px;
@@ -5,10 +10,22 @@
   header {
     font-size: 0.9em;
   }
+  .mission {
+    max-width: 992px;
+  }
+  .game-container {
+    margin: 0 16px;
+  }
 }
 @media (max-width: 992px) {
   .inf-home {
     margin-top: 250px;
+  }
+  .mission {
+    max-width: 768px;
+  }
+  .game-container {
+    margin: 0 12px;
   }
 }
 @media (max-width: 875px) {
@@ -28,7 +45,7 @@
     font-size: 1.3em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .inf-home {
     margin-top: 225px;
   }
@@ -47,6 +64,14 @@
   }
   .it-is-cont div {
     font-size: 1.2em;
+  }
+  .mission {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .game-container {
+    max-width: 334px;
+    margin: 15px auto;
   }
 }
 @media (max-width: 370px) {
