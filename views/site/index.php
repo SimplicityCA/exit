@@ -122,7 +122,7 @@ $this->title = 'EXIT';
         </div>
         <div class="mission">
           <?php foreach($games as $game): ?>
-              <div class="col-md-2 col-sm-3 col-xs-8 col-xs-offset-2 game-container">
+              <div class="col-sm-2 game-container">
                 <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
                   <img src="<?= URL::base() ?>/images/game/<?= $game->picture ?>" class="img-propiedad"/>
                   <?php if($game->status == 'INACTIVE'){ ?>
