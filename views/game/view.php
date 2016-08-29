@@ -8,10 +8,12 @@ use yii\web\View;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Product */
-//  $script=<<< JS
-
-// JS;
-//  $this->registerJs($script,View::POS_END);
+ $script=<<< JS
+$(document).ready(function() {
+ $('.fc-agendaWeek-button').click();
+});
+JS;
+ $this->registerJs($script,View::POS_END);
 
 AppAsset::register($this);
 $this->title = "EXIT |  $model->title $model->subtitle";
@@ -78,6 +80,12 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         <div class="reserve">
             <div class="row">
                    <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
+      'options'=>[
+        'locale'=>'es'
+      ],
+      'clientOptions'=>[
+      'default'=>'agendaweek',
+      ],
       'events'=> $events
   ));?>
               

@@ -57,7 +57,7 @@ class yii2fullcalendar extends elWidget
     public $header = [
         'center'=>'title',
         'left'=>'prev,next today',        
-        'right'=>'month,agendaWeek'
+        'right'=>'agendaWeek,month'
     ];
 
     /**
