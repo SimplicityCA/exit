@@ -64,11 +64,11 @@ $config = [
             'useFileTransport' => false,
                         'transport' => [
             'class' => 'Swift_SmtpTransport',
-            'host' => 'aspmx.l.google.com',
-            'username' => '',
-            'password' => '',
-            'port' => '587',
-            'encryption' => 'tls',
+            'host' => 'mail.exit.com.ec',
+            'username' => 'info@exit.com.ec',
+            'password' => 'Info2016'
+            'port' => '587'
+            // 'encryption' => 'tls',
         ],
         ],
         'log' => [

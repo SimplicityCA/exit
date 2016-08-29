@@ -139,6 +139,7 @@ foreach($aux as $k => $reserve){
             $reserve=Reserve::findOne($model->reserve_id);
             $reserve->status='CLOSE';
             $reserve->save();
+            $this->Sendemail($model);
             return $this->redirect(['congrats', 'id' => $model->id]);
         } else {
             return $this->render('reserve', [
@@ -187,6 +188,14 @@ foreach($aux as $k => $reserve){
         }
         return $randomString;
     }
+    protected function Sendemail($client){
+                $email=  Yii::$app->mailer->compose('transaction', [
+                'model' => $client,
+                ])->setFrom('info@exit.com.ec')
+                ->setTo("reservas@exit.com.ec")
+                ->setSubject("Reserva realizada #".$client->id)
+                ->send();
+        }
     public function actionCongrats($id){
 
         $this->layout="main2";
