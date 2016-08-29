@@ -66,7 +66,7 @@ $config = [
             'class' => 'Swift_SmtpTransport',
             'host' => 'mail.exit.com.ec',
             'username' => 'info@exit.com.ec',
-            'password' => 'Info2016'
+            'password' => 'Info2016',
             'port' => '587'
             // 'encryption' => 'tls',
         ],
