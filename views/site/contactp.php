@@ -13,7 +13,7 @@ $this->title = 'PRENSA Y MEDIOS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
-    <h1 style="margin-top:10%;"><?= Html::encode($this->title) ?></h1>
+    <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
     <div class="inf-contact">
     
 
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]) ?>
 
                     <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>
