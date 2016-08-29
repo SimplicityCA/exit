@@ -52,7 +52,9 @@ nav ul li{
 }
 
 .title-hall{
-	color:white;margin-bottom:2%;
+	color:white;
+	margin-bottom:2%;
+	margin-left: 15px;
 }
 
 .fc-event, .fc-event:hover, .ui-widget .fc-event {
@@ -80,6 +82,10 @@ nav ul li{
 .date-congrats{
 	font-size:2em;
 	margin-top:3%;
+}
+
+.title-hall{
+	margin-left:15px;
 }
 @media screen and (max-width: 1150px) {
 	nav ul li{
@@ -121,8 +127,4 @@ nav ul li{
 	.m-menu a:link, .m-menu a:visited {
     	padding: 1.5% 0;
 	}
-	.title-hall{
-		margin-left:2%;
-	}
-
 }
