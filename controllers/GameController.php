@@ -149,9 +149,12 @@ foreach($aux as $k => $reserve){
     private function getApiContext()
     {
 
-        $clientId = 'AatTLKio46ZF9wUTx86WbYFk3OWMuCtzS_zKXf0S8CEfh3w7y4qpQeDZycGfmZ9O0_KZCsCjPLUXVCic';
-        $clientSecret = 'EB5a1uCkXOQpyDnAG8IQwM0GSxNHujeVcknVqVp93q-sJ6INOu5Xp_Pn8xgdOPHymJdkiAtcI4AmIXUI';
-
+        //sandbox
+        // $clientId = 'AatTLKio46ZF9wUTx86WbYFk3OWMuCtzS_zKXf0S8CEfh3w7y4qpQeDZycGfmZ9O0_KZCsCjPLUXVCic';
+        // $clientSecret = 'EB5a1uCkXOQpyDnAG8IQwM0GSxNHujeVcknVqVp93q-sJ6INOu5Xp_Pn8xgdOPHymJdkiAtcI4AmIXUI';
+        //live
+        $clientId = 'ATxBN8Os9EWreT3C_YafJjxiZZAziIfwmZQKY-oh0j5dOWBEeg1q4D-vc-QcPIxgP7k8mA9RwGXQRKga';
+        $clientSecret = 'EIA-fUcMMX6BxScs9iREIUu2rYTYNzRHzJhRMZv_OwItd-pNWhXzbu6cb0cbsRvCKLHFmqtLU2cLFgbN';
         $apiContext = new ApiContext(
             new OAuthTokenCredential(
                 $clientId,
@@ -161,8 +164,8 @@ foreach($aux as $k => $reserve){
 
         $apiContext->setConfig(
             array(
-                'mode' => 'sandbox',
-                //'mode' => 'live',
+                //'mode' => 'sandbox',
+                'mode' => 'live',
                 'log.LogEnabled' => true,
                 'log.FileName' => '../PayPal.log',
                 'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
@@ -198,6 +201,8 @@ foreach($aux as $k => $reserve){
         $payment->setId($paymentId);
         try {
             $payment = $payment->execute($paymentExecution, $apiContext);
+            $model->status="PAYED";
+            $model->save();
             // $response = $payment->toJSON();
             // $purchase=new Purchase;
             // $payer_info=$payment->payer->payer_info;

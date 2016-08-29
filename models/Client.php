@@ -39,7 +39,7 @@ class Client extends \yii\db\ActiveRecord
             [['total_price'], 'number'],
             [['number_players'], 'number','min' => 4, 'max' => 8],
             [['identity', 'phone', 'cellphone'], 'string', 'max' => 10],
-            [['names', 'lastnames'], 'string', 'max' => 45],
+            [['names', 'lastnames','status'], 'string', 'max' => 45],
             [['email','pay_method'], 'string', 'max' => 150],
             [['reserve_id'], 'exist', 'skipOnError' => true, 'targetClass' => Reserve::className(), 'targetAttribute' => ['reserve_id' => 'id']],
         ];
