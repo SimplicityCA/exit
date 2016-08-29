@@ -37,6 +37,7 @@ class Client extends \yii\db\ActiveRecord
             [['identity', 'names', 'lastnames', 'phone', 'cellphone', 'email', 'reserve_id','number_players','pay_method','total_price'], 'required'],
             [['reserve_id','number_players'], 'integer'],
             [['total_price'], 'number'],
+            [['number_players'], 'number','min' => 4, 'max' => 8],
             [['identity', 'phone', 'cellphone'], 'string', 'max' => 10],
             [['names', 'lastnames'], 'string', 'max' => 45],
             [['email','pay_method'], 'string', 'max' => 150],
