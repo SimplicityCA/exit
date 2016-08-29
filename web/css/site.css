@@ -80,12 +80,13 @@ header{
     top:0%;
     z-index:101;
     padding-left: 5%;
-/*    position:fixed;*/
-   background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .2);
     color: white;
-    padding-top:1%;
-    /*padding-bottom: 1%;*/
     }
+.logo-header{
+    width:90px;
+    float:left;
+}
 nav ul{
     width:100%;
     margin:0;
@@ -287,8 +288,7 @@ nav ul li a:link, nav ul li a:visited{
     background-repeat:no-repeat;
     }
 .background-exitint{
-    padding-bottom:3%;
-    background-size:100%;
+    background-size:cover;
     background-attachment:fixed;
     background-position:top center;
     background-repeat:no-repeat;
@@ -310,16 +310,30 @@ nav ul li a:link, nav ul li a:visited{
     background-repeat:no-repeat;
     padding:0 0 3% 0;
     }   
-/**/    
+#contactform-verifycode-image,
+#contactformp-verifycode-image {
+    margin: 10px auto;
+    width: inherit;
+}
+#contact-form {
+    margin-top: 20px;
+}
+.game-view-what-is {
+    padding: 0 !important;
+}
 .inf-home{
-    /*width:63%;*/
-    padding:1% 0;
-    /*margin:25% 30% 0 18%;*/
-    margin-top:20%;
+    margin-top:280px;
     position:relative;
     text-align:center;  
     font-family: 'Yanone Kaffeesatz';
+    margin-bottom: 150px;
+}
+@media (max-width: 767px) {
+    .inf-home {
+        margin-top: 200px;
+        font-size: 16px;
     }
+}
     .inf-contact{
     width: 50%;
     padding: 1% 0;
@@ -328,6 +342,9 @@ nav ul li a:link, nav ul li a:visited{
     text-align: center;
     font-family: 'Yanone Kaffeesatz';
     }
+.contact-us-h1 {
+    margin-top: 170px;
+}
 .inf-home h1{
     font-size:2em;
     color:#888170;
@@ -853,6 +870,22 @@ footer{
     font-weight: 300;
     margin-bottom: 20px;
 }
+.hall-of-fame .row {
+    margin: 0;
+}
+.hall-of-fame h1 {
+    color: #FFF;
+}
+.hall-of-fame .it-is-cont {
+    padding-top: 0;
+}
+.container .reserve {
+    margin-top: 25px;
+}
+.container.hall-of-fame {
+    padding-left: 0;
+    padding-right: 0;
+}
 .cont-exitint2 div span{
     text-align: center;
     float: inherit;
@@ -1144,7 +1177,7 @@ footer{
     background-color:#bcbec0;
     }   
 .btn-comprara{
-    width: 30%;
+    width: 250px;
     /*margin: 5% 20% 0 35%;*/
     margin-top:5%;
     padding: 1% 0;
@@ -1942,8 +1975,7 @@ ul.publiciad-abj li{
     left: -10%;*/
     }   
 .game-container{
-    margin-left:1.6%;
-    margin-right:1.6%;
+    margin: 0 20px;
     padding:0;
 }
 #h1-home-2{

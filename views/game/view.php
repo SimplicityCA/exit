@@ -31,12 +31,12 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         </div>
     </div>
 </section>
-<section id="what-is" class="cont-exitint2" >
+<section id="what-is" class="cont-exitint2 game-view-what-is" >
     <div class="container" >
       <div class="col-xs-12" >
       <h1>Descripción del juego</h1>
           <div class="it-is-cont">
-              <div class="row" style="font-size: 1.87em;">
+              <div class="row">
                 <?= $model->description ?>
                 
                 <hr class="style-three"></hr>
@@ -46,10 +46,10 @@ $this->title = "EXIT |  $model->title $model->subtitle";
     </div>
 </section>
 <section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
-    <div class="container" >
-      <h1 style="color:white;">HALL OF FAME</h1>
+    <div class="container hall-of-fame" >
+      <h1>HALL OF FAME</h1>
       <div class="it-is-cont">
-        <div class="row" style="margin-bottom:2%">
+        <div class="row">
           <h3 class="title-hall">RECORD HISTÓRICO</h3>
           <div class="col-sm-4" >
             <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
