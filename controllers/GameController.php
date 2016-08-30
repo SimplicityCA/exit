@@ -57,12 +57,14 @@ class GameController extends Controller
 foreach($aux as $k => $reserve){
     $date=date('Y-m-d H:i:s',strtotime($reserve->start_date));
      $date2=date('Y-m-d H:i:s',strtotime($reserve->end_date));
-     $status=($reserve->status=='OPEN') ? 'Disponible' : 'Reservada';
+     $status=($reserve->status=='OPEN') ? 'Disponible' : 'Reservado';
    $Event = new \yii2fullcalendar\models\Event();
   $Event->id = $reserve->id;
-  $Event->title = $reserve->description." ".$status;
+  $Event->title = $status;
   $Event->start = $reserve->start_date;
     $Event->end = $reserve->end_date;
+    $Event->color=($reserve->status=='OPEN') ? '#1cce90 !important' : '#E61937';
+    
     if($reserve->status=='OPEN'){
     $Event->url = Url::to(['game/reserve','id'=>$reserve->id]);
     }

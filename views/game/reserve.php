@@ -56,7 +56,7 @@ $this->title = "EXIT |  ".$reserve->game->title." ".$reserve->game->subtitle;
 
         <?= $form->field($model, 'number_players')->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'pay_method')->dropDownList(['prompt'=>'Seleccione una Opción','PAYPAL' => 'PAYPAL','RESERVE'=>'Solo Reserva sin Pago']) ?>
+        <?= $form->field($model, 'pay_method')->dropDownList(['prompt'=>'Seleccione una Opción','PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo']) ?>
         <?= $form->field($model, 'total_price')->hiddenInput()->label(false); ?>
     <div class="form-group">
     	Precio: <div id="price">0</div>

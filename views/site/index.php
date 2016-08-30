@@ -125,11 +125,11 @@ $this->title = 'EXIT';
               <div class="col-sm-2 game-container">
                 <a href="<?= ($game->status == 'ACTIVE') ? Url::to(['game/view','id'=>$game->id]) : 'javascript:void(0)' ?>">
                   <img src="<?= URL::base() ?>/images/game/<?= $game->picture ?>" class="img-propiedad"/>
-                  <?php if($game->status == 'INACTIVE'){ ?>
+<!--                   <?php if($game->status == 'INACTIVE'){ ?>
                   <div class="mis-label" style="<?= ($game->status == 'INACTIVE') ? 'background:gray;' : '' ?>"><span class="mis-tit"><?= $game->title ?></span> <br/> <span class="mis-subtit"><?= $game->subtitle ?></span>
                     <?= ($game->status == 'INACTIVE') ? '<br/>PROXIMAMENTE' : '' ?>
                   </div>
-                   <?php } ?>
+                   <?php } ?> -->
                   
                 </a>
               </div>
