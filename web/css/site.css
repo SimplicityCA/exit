@@ -149,6 +149,18 @@ nav ul li a:link, nav ul li a:visited{
     float:left;
     margin:2% 0 0 3%;
     } 
+.anchor-link {
+    display: block;
+    height: 56px; /*same height as header*/
+    margin-top: -56px; /*same height as header*/
+    visibility: hidden;
+    float: left;
+    width: 100%;
+}
+.captcha-input {
+    max-width: 250px;
+    margin: 0 auto;
+}
 .info-mis{
     width: 30%;
     color: white;
@@ -287,8 +299,6 @@ nav ul li a:link, nav ul li a:visited{
     position:relative;
     float:left;
     padding-bottom: 33%;
-    margin-top: -57px;
-    padding-top: 57px;
     }   
 #registro-chaide{
     width:100%;
@@ -877,8 +887,6 @@ footer{
     background-attachment: fixed;
     background-position: top center;
     background-repeat: no-repeat;
-    margin-top: -57px;
-    padding-top: 57px;
     }
 .it-is-cont{
     max-width: 800px;
@@ -969,8 +977,6 @@ footer{
     position:relative;
     float:left;
     padding-bottom: 40px;
-    margin-top: -57px;
-    padding-top: 57px;
 }
 .cont-exitint3 h1 {
     padding-bottom: 30px;

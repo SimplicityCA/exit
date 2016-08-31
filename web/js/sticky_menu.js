@@ -12,9 +12,14 @@ function check_scroll() {
   }
 }
 $( document ).ready(function() {
-  console.log( "ready!" );
   check_scroll();
   $( window ).scroll(function() {
     check_scroll();
+  });
+  $('a.btn-menu').click(function(){
+    var $navbar = $('div.collapse.navbar-collapse.menu-container');
+    if ($navbar.hasClass('in')) {
+      $navbar.removeClass('in');
+    }
   });
 });
