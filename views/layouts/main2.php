@@ -8,6 +8,15 @@ use yii\web\View;
 use yii\helpers\Url;
 /* @var $this \yii\web\View */
 /* @var $content string */
+$script=<<< JS
+$(".btn-to-section").click(function() {
+    var section=$(this).attr('to_section');
+    $('html, body').animate({
+        scrollTop: $("#"+section).offset().top
+    }, 1000);
+});
+JS;
+$this->registerJs($script,View::POS_END);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>

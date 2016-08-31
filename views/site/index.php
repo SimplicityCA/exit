@@ -88,12 +88,12 @@ $this->title = 'EXIT';
               <hr class="style-three"></hr>
             </div>
             <div class="row">
-              <div class="col-sm-8">Deberás resolver enigmas, encontrar pistas, abrir puertas secretas, desactivar bombas y escapar.</div>
+              <div class="col-sm-8">Tendrás que encontrar claves, resolver enigmas y mantenerte alerta. Para ganar tendrás que superar todas las pruebas. No se requiere conocimientos previos o hablidades físicas, solo la lógica, agilidad mental y juego en equipo.</div>
               <div class="col-sm-4"><img src="<?= URL::base() ?>/images/21.svg" /></div>
               <hr class="style-three"></hr>
             </div>
             <div class="row">
-              <div class="col-sm-8">Escapes o no, vivirás una experiencia única para compartir con amigos, compañeros y familia en equipos de 2 a 6 personas. ¿Puedes lograr que tu equipo sea el mejor?</div>
+              <div class="col-sm-8">Escapes o no, vivirás una experiencia súper divertida con amigos, compañeros o familia en equipos de 4 a 6 personas. ¿Puedes lograr que tu equipo sea el mejor?</div>
               <div class="col-sm-4"><img src="<?= URL::base() ?>/images/22.svg" /></div>
                <hr class="style-three"></hr>
             </div>
