@@ -882,7 +882,7 @@ footer{
     min-height:100%;
     position:relative;
     float:left;
-    background:#F1C480;
+/*    background:#F1C480;*/
     background-size: 100%;
     background-attachment: fixed;
     background-position: top center;
@@ -894,7 +894,7 @@ footer{
     padding-top: 30px;
 }
 .it-is-cont div{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 300;
     margin-bottom: 20px;
 }

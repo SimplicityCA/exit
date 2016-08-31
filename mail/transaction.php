@@ -14,6 +14,7 @@
                   <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
+                        <p>Nombres y Apellidos:<?= $model->names ?> <?= $model->lastnames ?></p>
                         <p>Cédula:<?= $model->identity ?></p>
                         <p>Método de Pago <?= $model->pay_method ?></p>
                         <p>Teléfono:<?= $model->phone ?></p>
