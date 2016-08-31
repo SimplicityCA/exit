@@ -74,7 +74,7 @@ h1{
     }           
 /* MENU HEADER */
 header{
-    position:absolute;
+    position:fixed;
     width:100%;
     left:0%;
     top:0%;
@@ -86,6 +86,22 @@ header{
 .logo-header{
     width:90px;
     float:left;
+}
+header.is_stuck {
+    background: #000;
+}
+header.is_stuck .logo-header{
+    width: 35px;
+    margin-top: 8px;
+}
+header.is_stuck .navbar {
+    margin: 0;
+}
+header.is_stuck li.m-menu {
+    margin-top: 0;
+}
+header.is_stuck li.m-menu a {
+    line-height: 50px;
 }
 nav ul{
     width:100%;
@@ -271,6 +287,8 @@ nav ul li a:link, nav ul li a:visited{
     position:relative;
     float:left;
     padding-bottom: 33%;
+    margin-top: -57px;
+    padding-top: 57px;
     }   
 #registro-chaide{
     width:100%;
@@ -859,6 +877,8 @@ footer{
     background-attachment: fixed;
     background-position: top center;
     background-repeat: no-repeat;
+    margin-top: -57px;
+    padding-top: 57px;
     }
 .it-is-cont{
     max-width: 800px;
@@ -949,6 +969,8 @@ footer{
     position:relative;
     float:left;
     padding-bottom: 40px;
+    margin-top: -57px;
+    padding-top: 57px;
 }
 .cont-exitint3 h1 {
     padding-bottom: 30px;
