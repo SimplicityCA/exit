@@ -25,7 +25,8 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/fotorama.js',
-        'js/bootstrap.min.js'
+        'js/bootstrap.min.js',
+        'js/sticky_menu.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

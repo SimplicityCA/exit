@@ -78,8 +78,8 @@ $this->title = 'EXIT';
       </div>
     </div>
 </section>
-
-<section id="what-is" class="cont-exitint2" >
+<div class="anchor-link" id="what-is"></div>
+<section class="cont-exitint2" >
     <h1>Exit es un juego</h1>
         <div class="it-is-cont">
             <div class="row">
@@ -100,7 +100,8 @@ $this->title = 'EXIT';
         </div>
 </section>
 
-<section id="missions"  class="background-mision interna-exit4" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
+<div class="anchor-link" id="missions"></div>
+<section  class="background-mision interna-exit4" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
 <!--     <div class="info-mis">
         <h1>MISIONES</h1>
             <div class="row">
@@ -137,7 +138,8 @@ $this->title = 'EXIT';
         </div>
 
 </section>
-<section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
+<div class="anchor-link" id="find-us"></div>
+<section class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
     
     <h1 style="color:white;">¿CÓMO LLEGAR A EXIT?</h1>
     <div id="map"></div>

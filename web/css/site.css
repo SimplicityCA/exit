@@ -74,7 +74,7 @@ h1{
     }           
 /* MENU HEADER */
 header{
-    position:absolute;
+    position:fixed;
     width:100%;
     left:0%;
     top:0%;
@@ -86,6 +86,22 @@ header{
 .logo-header{
     width:90px;
     float:left;
+}
+header.is_stuck {
+    background: #000;
+}
+header.is_stuck .logo-header{
+    width: 35px;
+    margin-top: 8px;
+}
+header.is_stuck .navbar {
+    margin: 0;
+}
+header.is_stuck li.m-menu {
+    margin-top: 0;
+}
+header.is_stuck li.m-menu a {
+    line-height: 50px;
 }
 nav ul{
     width:100%;
@@ -133,6 +149,18 @@ nav ul li a:link, nav ul li a:visited{
     float:left;
     margin:2% 0 0 3%;
     } 
+.anchor-link {
+    display: block;
+    height: 56px; /*same height as header*/
+    margin-top: -56px; /*same height as header*/
+    visibility: hidden;
+    float: left;
+    width: 100%;
+}
+.captcha-input {
+    max-width: 250px;
+    margin: 0 auto;
+}
 .info-mis{
     width: 30%;
     color: white;

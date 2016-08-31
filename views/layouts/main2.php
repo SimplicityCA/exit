@@ -8,15 +8,6 @@ use yii\web\View;
 use yii\helpers\Url;
 /* @var $this \yii\web\View */
 /* @var $content string */
-$script=<<< JS
-$(".btn-to-section").click(function() {
-    var section=$(this).attr('to_section');
-    $('html, body').animate({
-        scrollTop: $("#"+section).offset().top
-    }, 1000);
-});
-JS;
-$this->registerJs($script,View::POS_END);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -67,13 +58,13 @@ AppAsset::register($this);
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse menu-container" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                    <li class="m-menu"><a  href="<?= Url::home() ?>#what-is" to_section="what-is" class="btn-menu btn-to-section">¿QUÉ ES?</a></li>
-                    <li class="m-menu"><a href="<?= Url::home() ?>#missions" to_section="missions"class="btn-menu btn-to-section">ELIGE UNA MISIÓN</a></li>
-                    <li class="m-menu"><a href="#" class="btn-menu btn-to-section">GALERIA</a></li>
-                    <li class="m-menu"><a href="<?= Url::home() ?>#missions" class="btn-menu btn-to-section">RESERVAS</a></li>
-                    <li class="m-menu"><a href="<?= Url::home() ?>#find-us" to_section="find-us" class="btn-menu btn-to-section">¿CÓMO LLEGAR A EXIT?</a></li>
-                    <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu btn-to-section">CONTACTO</a></li>
-                    <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu btn-to-section">PRENSA Y MEDIOS</a></li>
+                    <li class="m-menu"><a  href="<?= Url::home() ?>#what-is" to_section="what-is" class="btn-menu">¿QUÉ ES?</a></li>
+                    <li class="m-menu"><a href="<?= Url::home() ?>#missions" to_section="missions" class="btn-menu">ELIGE UNA MISIÓN</a></li>
+                    <li class="m-menu"><a href="#" class="btn-menu">GALERIA</a></li>
+                    <li class="m-menu"><a href="<?= Url::home() ?>#missions" class="btn-menu">RESERVAS</a></li>
+                    <li class="m-menu"><a href="<?= Url::home() ?>#find-us" to_section="find-us" class="btn-menu">¿CÓMO LLEGAR?</a></li>
+                    <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu">CONTACTO</a></li>
+                    <li class="m-menu"><a href="<?= Url::to(['site/contactp']) ?>" class="btn-menu">PRENSA Y MEDIOS</a></li>
                     <!-- <li class="m-menu"><a href="<?= Url::to(['site/company']) ?>" class="btn-menu">EMPRESAS</a></li> -->
               </ul>
             </div><!-- /.navbar-collapse -->

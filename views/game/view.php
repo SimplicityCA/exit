@@ -33,7 +33,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         </div>
     </div>
 </section>
-<section id="what-is" class="cont-exitint2 game-view-what-is" >
+<section class="cont-exitint2 game-view-what-is" >
     <div class="container" >
       <div class="col-xs-12" >
       <h1>Descripción del juego</h1>
@@ -47,7 +47,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
       </div>
     </div>
 </section>
-<section id="find-us" class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
+<section class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
     <div class="container hall-of-fame" >
       <h1>HALL OF FAME</h1>
       <div class="it-is-cont">
