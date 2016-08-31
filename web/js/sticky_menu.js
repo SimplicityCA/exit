@@ -1,11 +1,11 @@
 function check_scroll() {
-  if($(window).scrollTop() > 0)
+  if($(window).scrollTop() > 57)
   {
     $('header').addClass('is_stuck');
   }
   else
   {
-    if($(window).scrollTop() == 0)
+    if($(window).scrollTop() <= 57)
     {
       $('header').removeClass('is_stuck');
     }
