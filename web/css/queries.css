@@ -84,6 +84,19 @@
     max-width: 334px;
     margin: 15px auto;
   }
+  .info-map  div ul{
+    padding-left:20px;
+  }
+  .info-map div{
+    margin-bottom:20px;
+  }
+  .fb{
+    width:10%;
+  }
+  .text-media{
+    font-size:1.1em;
+}
+
 }
 @media (max-width: 370px) {
   .inf-home {

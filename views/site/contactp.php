@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="row" style="color:white;">
             <div class="row">
-            	<span>Disponemos de cortesías para la prensa, al finalizar el juego deberán contar su experiencia a través de sus distintos medios. Para aplicar por favor llenar el siguiente formulario:</span>
+            	<span class="text-media">Disponemos de cortesías para la prensa, al finalizar el juego deberán contar su experiencia a través de sus distintos medios. Para aplicar por favor llenar el siguiente formulario:</span>
                
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 

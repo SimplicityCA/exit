@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 $script=<<< JS
  function initialize(lat,long,description) {
     var myLatLng = {lat: lat, lng: long};
-    var image = window.location.protocol + "//" + window.location.host +"/web/images/icono2.gif";
+    var image = window.location.protocol + "//" + window.location.host +"/web/images/icono.gif";
     var icon = {
     url: image, // url
     // scaledSize: new google.maps.Size(120,40), // scaled size
@@ -142,6 +142,41 @@ $this->title = 'EXIT';
 <section class="cont-exitint3" style="background-image:url('<?= URL::base() ?>/images/pie-01.jpg')">
     
     <h1 style="color:white;">¿CÓMO LLEGAR A EXIT?</h1>
+    <div class="info-map">
+      <div class="col-sm-4">
+        <h3>Ecovía</h3>
+        <img src="<?= URL::base() ?>/images/bus.png" />
+        <ul>
+          <li>Bajarse en la ESTACIÓN BENALCAZAR</li>
+          <li>Cruzar a pie hacia el occidente</li>
+          <li>Caminar dos cuadras hacia el norte</li>
+          <li>Entrar por el pasaje El Jardín (cuchara)</li>
+          <li>Caminar media cuadra </li>
+        </ul>
+      </div> 
+      <div class="col-sm-4">
+          <h3>Auto Desde el Norte</h3>
+          <img class="car" src="<?= URL::base() ?>/images/carro_norte.png" />
+          <ul>
+            <li>Tomar la Av. 6 de Diciembre hacia el Sur en cualquier punto antes o hasta Av. Naciones Unidas</li>
+            <li>Continuar hacia el sur hasta pasar los SUPERCINES</li>
+            <li>Tomar la siguiente derecha en pasaje El Jardín. Disponemos de parqueaderos propios.</li>
+          </ul>
+      </div>
+      <div class="col-sm-4">
+          <h3>Auto Desde el Sur</h3>
+          <img class="car" src="<?= URL::base() ?>/images/carro_sur.png" />
+          <ul>
+            <li>Tomar la Av. de los Shyris hasta la Av. Naciones Unidas</li>
+            <li>Girar hacia la derecha en Av. Naciones Unidas hasta Av. 6 de Diciembre</li>
+            <li>Tomar la Av. 6 de Diciembre hacia el Sur hasta pasar los SUPERCINES</li>
+            <li>Tomar la siguiente derecha en pasaje El Jardín. Disponemos de parqueaderos propios.</li>
+          </ul>
+      </div>
+      <div style="background-color:white;" class="col-sm-12">
+        <img src="<?= URL::base() ?>/images/mapa.png" />
+      </div>
+    </div>
     <div id="map"></div>
     
 </section>

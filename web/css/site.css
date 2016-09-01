@@ -179,6 +179,53 @@ nav ul li a:link, nav ul li a:visited{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.info-map {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.info-company {
+    overflow: hidden;
+    max-width: 1200px;
+    color:white;
+    padding:0 40px;
+    margin-bottom:40px;
+}
+
+.info-map div{
+    padding: 0 30px;
+    text-align: center;
+    color:white;
+    margin-bottom:20px;
+}
+.info-map  div ul{
+    text-align: left;
+    margin-top:10px;
+}
+.info-map  h3{
+    font-size: 1.3em;
+    margin-bottom:10px;
+
+}
+.car{
+    width:63%;display:inline;
+}
+.fb{
+    width:7%;
+    display:inline;
+    vertical-align:text-bottom;
+
+}
+.mail:hover, .mail:visited, .mail:active{
+    text-decoration: none;
+    color:#e61939;
+
+}
+
+.text-media{
+    font-size:1.3em;
+}
     .info-mis div{
             font-size: 1.2em;
     font-weight: 300;
