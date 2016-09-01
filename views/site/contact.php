@@ -15,12 +15,15 @@ $this->params['breadcrumbs'][] = $this->title;
 <section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
     <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
     <div class="inf-contact">
-    
-
+        <div style="text-align:left;">
+            <label style="color:white;"> Teléfono: (02)600 7277 </label>
+            <label style="color:white;"> <a href="https://www.facebook.com/exitecuador/"><img class="fb" src="<?= URL::base() ?>/images/fb.png" /></a> </label>
+            <label style="color:white;"> E-mail: <a class="mail" href="mailto:info@exit.com.ec">info@exit.com.ec </label>
+        </div>
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">
-            Thank you for contacting us. We will respond to you as soon as possible.
+            Gracias por contactarse con nosotros.
         </div>
 
         <p>

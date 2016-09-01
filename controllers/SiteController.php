@@ -105,6 +105,11 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    public function actionCompany()
+    {   
+        $this->layout="main2";
+        return $this->render('company');
+    }
     public function actionAbout()
     {
         return $this->render('about');
