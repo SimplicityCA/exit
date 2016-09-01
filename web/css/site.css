@@ -209,6 +209,9 @@ nav ul li a:link, nav ul li a:visited{
 
 }
 .car{
+    width:30%;display:inline;
+}
+.bus{
     width:50%;display:inline;
 }
 .fb{

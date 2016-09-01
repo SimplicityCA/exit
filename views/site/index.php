@@ -83,7 +83,7 @@ $this->title = 'EXIT';
     <h1>Exit es un juego</h1>
         <div class="it-is-cont">
             <div class="row">
-              <div class="col-sm-8">Estarás encerrado en una habitación temática y tienes 60 minutos para completar una misión y salir victorioso.</div>
+              <div class="col-sm-8">Estarás encerrado en una habitación temática, tienes 60 minutos para completar una misión y salir victorioso.</div>
               <div class="col-sm-4"><img src="<?= URL::base() ?>/images/reloj.svg" /></div>
               <hr class="style-three"></hr>
             </div>
@@ -93,7 +93,7 @@ $this->title = 'EXIT';
               <hr class="style-three"></hr>
             </div>
             <div class="row">
-              <div class="col-sm-8">Escapes o no, vivirás una experiencia súper divertida con amigos, compañeros o familia en equipos de 4 a 6 personas. ¿Puedes lograr que tu equipo sea el mejor?</div>
+              <div class="col-sm-8">Escapes o no, vivirás una experiencia súper divertida con amigos, compañeros o familia en equipos de 4 a 6 personas. </br> </br>¿Puedes lograr que tu equipo sea el mejor?</div>
               <div class="col-sm-4"><img src="<?= URL::base() ?>/images/22.svg" /></div>
                <hr class="style-three"></hr>
             </div>
@@ -145,7 +145,7 @@ $this->title = 'EXIT';
     <div class="info-map">
       <div class="col-sm-4">
         <h3>Ecovía</h3>
-        <img class="car" src="<?= URL::base() ?>/images/bus.png" />
+        <img class="bus" src="<?= URL::base() ?>/images/bus.png" />
         <ul>
           <li>Bajarse en la ESTACIÓN BENALCAZAR</li>
           <li>Cruzar a pie hacia el occidente</li>
