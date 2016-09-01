@@ -36,6 +36,7 @@ AppAsset::register($this);
 
 <?php $this->beginBody() ?>
 <div id="general">
+
     <!-- -->
 
 <!--     <div id="cont-iniciarsesion">

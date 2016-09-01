@@ -78,10 +78,24 @@ foreach($aux as $k => $reserve){
     }
     public function actionReserve($id)
     {
+        Yii::$app->session->removeFlash('alert');
         $this->layout="main2";
         $reserve=Reserve::findOne($id);
         $model=New Client;
         $model->reserve_id=$id;
+        $now=new \Datetime();
+        $reserve_date=new \DateTime($reserve->start_date);
+        $diff=date_diff($now,$reserve_date);
+        $aux=0;
+        if($diff->days<=5 && $diff->days!=0){
+             $aux=1;
+            }else{
+                if($diff->h>=3 && $diff->days==0 ){
+                    $aux=1;  
+             }
+            }       
+            if($aux==1){
+                    
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             if($model->pay_method=="PAYPAL"){
                         $item=new Item();
@@ -148,6 +162,13 @@ foreach($aux as $k => $reserve){
                 'model' => $model,'reserve'=>$reserve
             ]);
         }
+    }else{
+            Yii::$app->session->setFlash('alert', "Solo puedes reservar con una semana de anticipación y hasta 3 horas antes.");
+            return $this->render('reserve', [
+                'model' => $model,'reserve'=>$reserve
+            ]);  
+    }
+
     }
     private function getApiContext()
     {
