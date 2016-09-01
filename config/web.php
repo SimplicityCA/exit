@@ -83,10 +83,10 @@ $config = [
         'db' => require(__DIR__ . '/db.php')
     ],
         'modules' => [
-    //     'admin' => [
-    //         'class' => 'app\modules\admin\Module',
-    //         'layout'=>'admin',
-    //     ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout'=>'admin',
+        ],
     //         'seo' => [
     //     'class' => 'infoweb\seo\Module',
     // ],
