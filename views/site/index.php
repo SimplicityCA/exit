@@ -145,7 +145,7 @@ $this->title = 'EXIT';
     <div class="info-map">
       <div class="col-sm-4">
         <h3>Ecovía</h3>
-        <img src="<?= URL::base() ?>/images/bus.png" />
+        <img class="car" src="<?= URL::base() ?>/images/bus.png" />
         <ul>
           <li>Bajarse en la ESTACIÓN BENALCAZAR</li>
           <li>Cruzar a pie hacia el occidente</li>
@@ -173,9 +173,9 @@ $this->title = 'EXIT';
             <li>Tomar la siguiente derecha en pasaje El Jardín. Disponemos de parqueaderos propios.</li>
           </ul>
       </div>
-      <div style="background-color:white;" class="col-sm-12">
+<!--       <div style="background-color:white;" class="col-sm-12">
         <img src="<?= URL::base() ?>/images/mapa.png" />
-      </div>
+      </div> -->
     </div>
     <div id="map"></div>
     
