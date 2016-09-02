@@ -96,7 +96,10 @@ foreach($aux as $k => $reserve){
             }       
             if($aux==1){
                     
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $price = ($model->pay_method!='RESERVE') ? $reserve->game->price : $reserve->game->price_d;
+            $model->total_price=$model->number_players*$price;
+            $model->save();
             if($model->pay_method=="PAYPAL"){
                         $item=new Item();
                         $item->setName($reserve->game->title." ".$reserve->game->subtitle)
