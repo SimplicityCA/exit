@@ -97,7 +97,7 @@ foreach($aux as $k => $reserve){
             if($aux==1){
                     
         if ($model->load(Yii::$app->request->post())) {
-            $price = ($model->pay_method!='RESERVE') ? $reserve->game->price : $reserve->game->price_d;
+            $price = ($model->pay_method!='RESERVE') ? $reserve->game->price_d : $reserve->game->price;
             $model->total_price=$model->number_players*$price;
             $model->save();
             if($model->pay_method=="PAYPAL"){
