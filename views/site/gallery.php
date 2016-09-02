@@ -22,33 +22,35 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
     <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
-    <div id="myCarousel" style="height:800px;" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <?php foreach($model as $k => $picture): ?>
-    <?php $aux = ($k==0) ? 'active' : ''; ?>
-    <li data-target="#myCarousel" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
-    <?php endforeach; ?>
-  </ol>
+    
+          <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <?php foreach($model as $k => $picture): ?>
+              <?php $aux = ($k==0) ? 'active' : ''; ?>
+              <li data-target="#myCarousel" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
+              <?php endforeach; ?>
+            </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <?php foreach($model as $k => $picture): ?>
-    <?php $aux = ($k==0) ? 'active' : ''; ?>
-    <div class="item <?= $aux ?>">
-      <img  style="width:100%;" src="<?= URL::base() ?>/images/<?= $picture->description ?>" alt="">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <?php foreach($model as $k => $picture): ?>
+              <?php $aux = ($k==0) ? 'active' : ''; ?>
+              <div class="item <?= $aux ?>">
+                <img src="<?= URL::base() ?>/images/<?= $picture->description ?>" alt="">
+              </div>
+               <?php endforeach; ?>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          
     </div>
-     <?php endforeach; ?>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 </section>
