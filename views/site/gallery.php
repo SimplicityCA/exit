@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
     <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
-    
+      <div class="container">
           <div id="myCarousel" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -51,6 +51,6 @@ $this->params['breadcrumbs'][] = $this->title;
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
-          
+         </div> 
     </div>
 </section>
