@@ -14,7 +14,7 @@ $script=<<< JS
 $(".pay").change(function() {
 var players=$('#client-number_players').val();
 var price=$price;
-if($(this).val()!='RESERVE'){
+if($('#client-pay_method').val()=='PAYPAL'){
 price=$price_d;
 }
 var total= price*players;
@@ -24,7 +24,7 @@ $('#client-total_price').val(total);
 $(".pay").on('input',function(e){
 var players=$('#client-number_players').val();
 var price=$price;
-if($(this).val()!='RESERVE'){
+if($('#client-pay_method').val()=='PAYPAL'){
 price=$price_d;
 }
 var total= price*players;
