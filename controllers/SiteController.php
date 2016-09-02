@@ -11,6 +11,7 @@ use app\models\ContactForm;
 use app\models\ContactFormp;
 use app\models\Content;
 use app\models\Game;
+use app\models\Picture;
 class SiteController extends Controller
 {
     public function behaviors()
@@ -109,6 +110,12 @@ class SiteController extends Controller
     {   
         $this->layout="main2";
         return $this->render('company');
+    }
+    public function actionGallery()
+    {   
+        $this->layout="main2";
+        $model=Picture::find()->where(['game_id'=>NULL])->all();
+        return $this->render('gallery',['model'=>$model]);
     }
     public function actionAbout()
     {

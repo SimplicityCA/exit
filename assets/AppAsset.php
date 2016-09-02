@@ -21,12 +21,13 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/queries.css',
         'css/styles.css',
-        'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700'
+        'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700',
     ];
     public $js = [
         'js/fotorama.js',
         'js/bootstrap.min.js',
-        'js/sticky_menu.js'
+        'js/sticky_menu.js',
+        'js/freewall.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

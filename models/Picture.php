@@ -30,7 +30,7 @@ class Picture extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['description', 'game_id', 'type'], 'required'],
+            [['description', 'type'], 'required'],
             [['game_id'], 'integer'],
             [['type'], 'string'],
             [['description'], 'string', 'max' => 150],

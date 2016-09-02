@@ -17,8 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="inf-contact">
         <div style="text-align:left;">
             <label style="color:white;"> Teléfono: (02)600 7277 </label>
-            <label style="color:white;"> <a href="https://www.facebook.com/exitecuador/"><img class="fb" src="<?= URL::base() ?>/images/fb.png" /></a> </label>
             <label style="color:white;"> E-mail: <a class="mail" href="mailto:info@exit.com.ec">info@exit.com.ec </label>
+            <label style="color:white;"> <a href="https://www.facebook.com/exitecuador/"><img class="fb" src="<?= URL::base() ?>/images/fb.png" /></a> </label>
         </div>
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 

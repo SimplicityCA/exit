@@ -71,7 +71,7 @@ AppAsset::register($this);
               <ul class="nav navbar-nav">
                     <li class="m-menu"><a  href="#¿QUÉ ES?" to_section="what-is" class="btn-menu btn-to-section">¿QUÉ ES?</a></li>
                     <li class="m-menu"><a href="#ELIGE UNA MISIÓN" to_section="missions" class="btn-menu btn-to-section">ELIGE UNA MISIÓN</a></li>
-                    <li class="m-menu"><a href="#" class="btn-menu">GALERIA</a></li>
+                    <li class="m-menu"><a href="<?= Url::to(['site/gallery']) ?>" class="btn-menu">GALERIA</a></li>
                     <li class="m-menu"><a href="#" to_section="missions" class="btn-menu btn-to-section">RESERVAS</a></li>
                     <li class="m-menu"><a href="#ENCUÉNTRANOS" to_section="find-us" class="btn-menu btn-to-section">¿CÓMO LLEGAR?</a></li>
                     <li class="m-menu"><a href="<?= Url::to(['site/contact']) ?>" class="btn-menu">CONTACTO</a></li>

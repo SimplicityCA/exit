@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 $price=$reserve->game->price;
 $price_d=$reserve->game->price_d;
 $script=<<< JS
-$("#client-pay_method").change(function() {
+$(".pay").change(function() {
 var players=$('#client-number_players').val();
 var price=$price;
 if($(this).val()!='RESERVE'){
@@ -20,6 +20,44 @@ price=$price_d;
 var total= price*players;
 $('#price').html(total);
 $('#client-total_price').val(total);
+});
+$(".pay").on('input',function(e){
+var players=$('#client-number_players').val();
+var price=$price;
+if($(this).val()!='RESERVE'){
+price=$price_d;
+}
+var total= price*players;
+$('#price').html(total);
+$('#client-total_price').val(total);
+});
+$(document).ready(function() {
+    $(".number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) ||
+             // Allow: Ctrl+C
+            (e.keyCode == 67 && e.ctrlKey === true) ||
+             // Allow: Ctrl+X
+            (e.keyCode == 88 && e.ctrlKey === true) ||
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+$(".letters").keypress(function(event){
+        var inputValue = event.which;
+        // allow letters and whitespaces only.
+        if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) { 
+            event.preventDefault(); 
+        }
+    });
 });
 JS;
 $this->registerJs($script,View::POS_END);
@@ -45,23 +83,23 @@ $this->title = "EXIT |  ".$reserve->game->title." ".$reserve->game->subtitle;
             <div class="row">
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'identity')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'identity')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>
 
-    <?= $form->field($model, 'names')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'names')->textInput(['maxlength' => true,'class'=>'letters form-control']) ?>
 
-    <?= $form->field($model, 'lastnames')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'lastnames')->textInput(['maxlength' => true,'class'=>'letters form-control']) ?>
 
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'phone')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>
 
-    <?= $form->field($model, 'cellphone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'cellphone')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
 
 
-        <?= $form->field($model, 'number_players')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'number_players')->textInput(['maxlength' => true,'class'=>'number form-control pay']) ?>
 
-        <?= $form->field($model, 'pay_method')->dropDownList(['prompt'=>'Seleccione una Opción','PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo']) ?>
+        <?= $form->field($model, 'pay_method')->dropDownList(['PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo'],['prompt'=>'Seleccione una Opción','class'=>'pay']) ?>
         <?= $form->field($model, 'total_price')->hiddenInput()->label(false); ?>
     <div class="form-group">
     	Precio: <div id="price">0</div>
