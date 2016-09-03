@@ -87,10 +87,10 @@ foreach($aux as $k => $reserve){
         $reserve_date=new \DateTime($reserve->start_date);
         $diff=date_diff($now,$reserve_date);
         $aux=0;
-        if($diff->days<=5 && $diff->days!=0){
+        if($diff->days<=5 && $diff->days!=0 && $diff->invert==0){
              $aux=1;
             }else{
-                if($diff->h>=3 && $diff->days==0 ){
+                if($diff->h>=3 && $diff->days==0 && $diff->invert==0){
                     $aux=1;  
              }
             }       
@@ -166,7 +166,7 @@ foreach($aux as $k => $reserve){
             ]);
         }
     }else{
-            Yii::$app->session->setFlash('alert', "Solo puedes reservar con una semana de anticipación y hasta 3 horas antes.");
+            Yii::$app->session->setFlash('alert', "ATENCIÓN: Las reservas en el sitio web pueden realizarse hasta 3 horas antes del inicio del juego. Para verificar disponibilidad del horario deseado por favor llamar al 60007277 o enviar un correo a reservas@exit.com.ec");
             return $this->render('reserve', [
                 'model' => $model,'reserve'=>$reserve
             ]);  

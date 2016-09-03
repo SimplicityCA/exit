@@ -62,18 +62,18 @@ $(".letters").keypress(function(event){
 JS;
 $this->registerJs($script,View::POS_END);
 AppAsset::register($this);
-$this->title = "EXIT |  ".$reserve->game->title." ".$reserve->game->subtitle;
+$this->title =$reserve->game->title." ".$reserve->game->subtitle;
 ?>
 <!-- -->
 
 <section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
 <div class="inf-contact" style="margin-top:10%;" >
 
-<h1>Reserva para <?= $this->title ?> </h1>
+<h1>Reservar <?= $this->title ?> </h1>
         <?php if (Yii::$app->session->hasFlash('alert')): ?>
   <div class="alert alert-warning alert-dismissable">
   <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-  <h4><i class="icon fa fa-check"></i>Alerta!</h4>
+  <!-- <h4><i class="icon fa fa-check"></i>Alerta!</h4> -->
   <?= Yii::$app->session->getFlash('alert') ?>
   </div>
 <?php endif; ?>
