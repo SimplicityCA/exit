@@ -226,9 +226,10 @@ nav ul li a:link, nav ul li a:visited{
 }
 
 .thumbnail-gallery{
-    width:75px;
-    height:75px;
-    float:left;
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 1%;
 }
 .mail:hover, .mail:visited, .mail:active{
     text-decoration: none;
