@@ -224,6 +224,12 @@ nav ul li a:link, nav ul li a:visited{
     width:320px;
     height: 320px;
 }*/
+
+.thumbnail-gallery{
+    width:75px;
+    height:75px;
+    float:left;
+}
 .mail:hover, .mail:visited, .mail:active{
     text-decoration: none;
     color:#e61939;

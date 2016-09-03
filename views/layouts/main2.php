@@ -28,6 +28,8 @@ AppAsset::register($this);
      <meta name="description" content="Exit cuartos de escape."/>
      <meta name="google" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -35,6 +37,7 @@ AppAsset::register($this);
 <body>
 
 <?php $this->beginBody() ?>
+
 <div id="general">
 
     <!-- -->
@@ -48,7 +51,7 @@ AppAsset::register($this);
     </div> -->
 
     <!-- -->
-<!-- MENU CHAIDE -->
+<!-- MENU-->
     <header>
         <nav class="navbar navbar-default">
           <div class="container-fluid" style="padding:0">
