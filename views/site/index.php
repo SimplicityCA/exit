@@ -75,7 +75,30 @@ $this->title = 'EXIT';
           <a href="#MISIONES" class="btn btn-comprara btn-to-section" to_section="missions">
                   Seleccionar una misión
           </a>
+
       </div>
+                          <div id="phrases" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <?php foreach($phrases as $k => $phrase): ?>
+              <?php $aux = ($k==0) ? 'active' : ''; ?>
+              <li data-target="#phrases" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
+              <?php endforeach; ?>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <?php foreach($phrases as $k => $phrase): ?>
+              <?php $aux = ($k==0) ? 'active' : ''; ?>
+              <div class="item <?= $aux ?>">
+                <?= $phrase->title ?>
+              </div>
+               <?php endforeach; ?>
+            </div>
+
+            <!-- Left and right controls -->
+
+         </div> 
     </div>
 </section>
 <div class="anchor-link" id="what-is"></div>

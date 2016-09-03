@@ -54,8 +54,9 @@ class SiteController extends Controller
     {
         
         $home=Content::find()->where(['type'=>'HOME'])->one();
+        $phrases=Content::find()->where(['type'=>'PHRASE'])->all();
         $games=Game::find()->all();
-        return $this->render('index',['home'=>$home,'games'=>$games]);
+        return $this->render('index',['home'=>$home,'games'=>$games,'phrases'=>$phrases]);
     }
 
     public function actionLogin()
