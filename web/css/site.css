@@ -220,10 +220,10 @@ nav ul li a:link, nav ul li a:visited{
     vertical-align:text-bottom;
 
 }
-/*.item{
-    width:320px;
-    height: 320px;
-}*/
+#phrases{
+    text-align: center;
+    color: white;
+}
 
 .thumbnail-gallery{
     width:75px;
