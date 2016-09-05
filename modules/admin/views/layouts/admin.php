@@ -37,6 +37,10 @@ AdminAsset::register($this);
 	                'options' => ['class' => 'navbar-nav navbar-right'],
 	                'items' => [
 	                	['label'=>'Reservas', 'url'=>['/admin/reserve']],
+                        ['label'=>'Clientes', 'url'=>['/admin/client']],
+                        ['label'=>'Contenidos', 'url'=>['/admin/content']],
+                        ['label'=>'Imágenes', 'url'=>['/admin/picture']],
+                        ['label'=>'Juegos', 'url'=>['/admin/game']],
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                             'url' => ['default/logout'],
                             'linkOptions' => ['data-method' => 'post']],

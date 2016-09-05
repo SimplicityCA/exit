@@ -81,10 +81,12 @@ $this->title = "EXIT |  $model->title $model->subtitle";
             <div class="row">
                    <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
       'options'=>[
-        'locale'=>'es'
+        'locale'=>'es',
       ],
       'clientOptions'=>[
       'default'=>'agendaweek',
+      'displayEventEnd'=>true,
+       'timeFormat'=> 'HH:mm'
       ],
       'events'=> $events
   ));?>

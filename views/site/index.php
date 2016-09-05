@@ -77,14 +77,9 @@ $this->title = 'EXIT';
           </a>
 
       </div>
-                          <div id="phrases" class="carousel slide">
+          <div id="phrases" class="carousel slide">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <?php foreach($phrases as $k => $phrase): ?>
-              <?php $aux = ($k==0) ? 'active' : ''; ?>
-              <li data-target="#phrases" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
-              <?php endforeach; ?>
-            </ol>
+
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -97,7 +92,12 @@ $this->title = 'EXIT';
             </div>
 
             <!-- Left and right controls -->
-
+            <ol class="carousel-indicators">
+              <?php foreach($phrases as $k => $phrase): ?>
+              <?php $aux = ($k==0) ? 'active' : ''; ?>
+              <li data-target="#phrases" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
+              <?php endforeach; ?>
+            </ol>
          </div> 
     </div>
 </section>

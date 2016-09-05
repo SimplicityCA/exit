@@ -31,9 +31,11 @@ class Game extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['description'], 'required'],
-            [['description', 'status'], 'string'],
-            [['title', 'video'], 'string', 'max' => 255],
+            [['description', 'status','recordh','recordm','price_d','price','title','subtitle'], 'required'],
+            [['description', 'status','recordh','recordm'], 'string'],
+            [['title', 'video','subtitle'], 'string', 'max' => 255],
+            [['price_d','price'], 'integer'],
+            [['picture','landing_picture'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
         ];
     }
 

@@ -223,6 +223,7 @@ nav ul li a:link, nav ul li a:visited{
 #phrases{
     text-align: center;
     color: white;
+    position: static;
 }
 
 .thumbnail-gallery{
