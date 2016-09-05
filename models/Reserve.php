@@ -33,7 +33,7 @@ class Reserve extends \yii\db\ActiveRecord
         return [
             [['start_date', 'end_date', 'status', 'game_id'], 'required'],
             [['start_date', 'end_date'], 'safe'],
-            [['status'], 'string'],
+            [['status','description'], 'string'],
             [['game_id'], 'integer'],
             [['game_id'], 'exist', 'skipOnError' => true, 'targetClass' => Game::className(), 'targetAttribute' => ['game_id' => 'id']],
         ];
