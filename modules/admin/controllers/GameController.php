@@ -76,9 +76,29 @@ class GameController extends Controller
     public function actionCreate()
     {
         $model = new Game();
+        if ($model->load(Yii::$app->request->post())) {
+               $picture=UploadedFile::getInstance($model,'picture');
+            if($picture!=NULL){
+                $name1=date('Y_m_d_H_i_s_'). $picture->baseName .'.' . $picture->extension;
+                $model->picture=$name1;
+                $picture->saveAs('images/game/'.$name1);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            }
+                 $background1=UploadedFile::getInstance($model,'landing_picture');
+            if($background1!=NULL){
+                $name2=date('Y_m_d_H_i_s_'). $background1->baseName .'.' . $background1->extension;
+                $model->landing_picture=$name2;
+                $background1->saveAs('images/game/'.$name2);
+
+            }
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->id]);
+ 
+            }else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -92,12 +112,41 @@ class GameController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+ public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $oldpicture=$model->picture;
+        $oldbackground=$model->landing_picture;
+          if ($model->load(Yii::$app->request->post())) {
+               $picture=UploadedFile::getInstance($model,'picture');
+            if($picture!=NULL){
+                $name1=date('Y_m_d_H_i_s_'). $picture->baseName .'.' . $picture->extension;
+                $model->picture=$name1;
+                $picture->saveAs('images/game/'.$name1);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            }else{
+                $model->picture=$oldpicture;
+                    
+            }
+                 $background1=UploadedFile::getInstance($model,'landing_picture');
+            if($background1!=NULL){
+                $name2=date('Y_m_d_H_i_s_'). $background1->baseName .'.' . $background1->extension;
+                $model->landing_picture=$name2;
+                $background1->saveAs('images/game/'.$name2);
+
+            }else{
+                $model->background1=$oldbackground;
+                    
+            }
+            
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->id]);
+ 
+            }else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
         } else {
             return $this->render('update', [
                 'model' => $model,

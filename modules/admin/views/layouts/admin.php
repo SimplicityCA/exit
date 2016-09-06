@@ -69,7 +69,7 @@ AdminAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; Chaide <?= date('Y') ?></p>
+            <p class="pull-left">&copy; Exit <?= date('Y') ?></p>
             <p class="pull-right">Powered by <a href="http://simplicityuniverse.com" target="_blank">Simplicity</a></p>
         </div>
     </footer>

@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'picture')->fileInput() ?>
     <?php if($model->picture): ?>
-    <?= Html::img('@web/images/'.$model->picture,['width'=>'30%']);?>
+    <?= Html::img('@web/images/game/'.$model->picture,['width'=>'30%']);?>
 <?php endif; ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>

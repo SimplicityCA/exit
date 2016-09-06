@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'description')->fileInput() ?>
-    <?php if($model->picture): ?>
+    <?php if($model->description): ?>
     <?= Html::img('@web/images/'.$model->description,['width'=>'30%']);?>
 <?php endif; ?>
 

@@ -30,7 +30,7 @@ class Content extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'subtitle', 'picture', 'video'], 'required'],
+            [['title', 'subtitle', 'picture'], 'required'],
             [['type'], 'string'],
             [['title'], 'string', 'max' => 255],
             [['subtitle', 'picture', 'video'], 'string', 'max' => 150],
