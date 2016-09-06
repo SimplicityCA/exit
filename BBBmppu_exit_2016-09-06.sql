@@ -7,7 +7,7 @@
 #
 # Host: mysql1101.ixwebhosting.com (MySQL 5.1.68-community-log)
 # Base de datos: BBBmppu_exit
-# Tiempo de Generación: 2016-09-02 18:11:54 +0000
+# Tiempo de Generación: 2016-09-06 13:19:56 +0000
 # ************************************************************
 
 
@@ -65,7 +65,15 @@ VALUES
 	(22,'1723071153','Vanessa ','Leones','0995088990','0995088990','dennisseleones@hotmail.com',88,6,'RESERVE','2016-08-30 23:22:34',0,'NOTPAYED'),
 	(23,'1716794555','María Alejandra','Martínez Vilalba','2897419','0992746801','alerchico@gmail.com',92,4,'PAYPAL','2016-09-01 09:38:18',32,'NOTPAYED'),
 	(24,'1712631082','Alejandro','Pérez','2889424','0998509353','alejo.concept@gmail.com',75,4,'RESERVE','2016-09-01 11:09:12',30,'NOTPAYED'),
-	(25,'1712631082','Alejandro','Pérez','2889424','0998509353','alejo.concept@gmail.com',75,4,'RESERVE','2016-09-01 11:09:14',30,'NOTPAYED');
+	(25,'1712631082','Alejandro','Pérez','2889424','0998509353','alejo.concept@gmail.com',75,4,'RESERVE','2016-09-01 11:09:14',30,'NOTPAYED'),
+	(26,'1715783153','Maria Cecilia ','Davalos Martin','2257327','0959415261','cecidavalosm@gmail.com',85,5,'RESERVE','2016-09-02 15:00:39',40,'NOTPAYED'),
+	(27,'1234213412','sdfsdafasdf','asdfasfsadf','234234','234234','alejo.concept@gmail.com',82,4,'RESERVE','2016-09-02 19:51:21',40,'NOTPAYED'),
+	(28,'1720106655','pancjo','vhilla','0980884556','0599899','christian_@gorma.com',100,4,'RESERVE','2016-09-03 16:15:05',40,'NOTPAYED'),
+	(29,'1717171717','Pablo','Pablo','0987109936','0987109936','Nd@nd.con',102,6,'RESERVE','2016-09-04 15:29:45',60,'NOTPAYED'),
+	(30,'1717171717','Pablo','Pablo','0987109936','0987109936','Nd@nd.com',103,4,'RESERVE','2016-09-04 15:31:22',40,'NOTPAYED'),
+	(31,'1712631082','Alejandro','Pérez','998509353','0998509353','alejo.concept@gmail.com',196,4,'PAYPAL','2016-09-04 17:01:55',32,'NOTPAYED'),
+	(32,'1712631082','Alejandro','Pérez','998509353','0998509353','alejo.concept@gmail.com',197,4,'PAYPAL','2016-09-04 17:43:38',32,'PAYED'),
+	(33,'1714834346','Mariangelica ','Pinto Riofrio','2262134','0987032316','Mariangelicapinto2@gmail.com',209,6,'RESERVE','2016-09-05 16:44:53',60,'NOTPAYED');
 
 /*!40000 ALTER TABLE `client` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -82,7 +90,7 @@ CREATE TABLE `content` (
   `subtitle` varchar(150) NOT NULL,
   `picture` varchar(150) NOT NULL,
   `video` varchar(150) NOT NULL,
-  `type` enum('HOME') NOT NULL DEFAULT 'HOME',
+  `type` enum('HOME','PHRASE') NOT NULL DEFAULT 'HOME',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -91,7 +99,9 @@ LOCK TABLES `content` WRITE;
 
 INSERT INTO `content` (`id`, `title`, `subtitle`, `picture`, `video`, `type`)
 VALUES
-	(1,'Tienes 60 minutos para escapar de nuestros cuartos temáticos. ¿Podrás lograrlo?','Será una experiencia inolvidable!','home.jpg','','HOME');
+	(1,'Tienes 60 minutos para escapar de nuestros cuartos temáticos. ¿Podrás lograrlo?','Será una experiencia inolvidable!','home.jpg','','HOME'),
+	(2,'“Lo más divertido que he hecho en mi vida!! es como una película pero en la vida real” Andrés Bustamante','','','','PHRASE'),
+	(3,' “Es como un juego de video hecho realidad, de largo la mejor experiencia que hemos tenido con mis amigos!!” Ana Muñoz ','','','','PHRASE');
 
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -125,10 +135,7 @@ LOCK TABLES `game` WRITE;
 INSERT INTO `game` (`id`, `title`, `subtitle`, `picture`, `description`, `video`, `status`, `landing_picture`, `recordh`, `recordm`, `price`, `price_d`)
 VALUES
 	(1,'ESCAPE DEL CUARTEL','REAL DE LIMA','lima.png','Es 1810, te encuentras en Quito durante el virreinato de Perú bajo el dominio de España, país al que Simón Bolivar declaró guerra a muerte cuando el Conde Ruiz de Castilla ordenó la masacre de los prisioneros del Cuartel Real de Lima, donde fueron asesinados los próceres de la patria que iniciaron el proceso revolucionario en 1809.<br/>\nNo todos murieron. Algunos patriotas, entre ellos el ex presidente Montufar, lograron escapar de los temidos calabozos del Cuartel y dejaron pistas en su camino para que otros compatriotas injustamente encarcelados como tú pudieran escapar.<br/>\nRuiz de Castilla te ha tomado prisionero y has sido declarado a muerte, la sentencia se cumple hoy mismo. Tu misión es escapar, para lo cual deberás encontrar la manera de llegar hasta la calle y salir disfrazado con el uniforme de la guardia Real.<br/>\nTienes 60 minutos antes de que los guardias regresen. ¿Podrás lograrlo?',NULL,'ACTIVE','lima2.jpg','Tiempo: 37 minutos 39 segundos <br/>\nEquipo: Enrique Pérez, Mireya Flor, Ana Pérez, Sebastián Dávalos <br/>\nFecha: 18 agosto 2016 <br/>','Tiempo: 37 minutos 39 segundos <br/>\nEquipo: Enrique Pérez, Mireya Flor, Ana Pérez, Sebastián Dávalos <br/>\nFecha: 18 agosto 2016 <br/>',10,8),
-	(2,'ÁREA','51','area51.png','asddasdasasdasdads',NULL,'INACTIVE',NULL,NULL,NULL,NULL,0),
-	(3,'EL INICIO DE LA','TERCERA GUERRA MUNDIAL ','proximamente.jpg','asddasdasasdasdads',NULL,'INACTIVE',NULL,NULL,NULL,NULL,0),
-	(4,'EL LABORATORIO','DE TESLA','proximamente.jpg','asddasdasasdasdads',NULL,'INACTIVE',NULL,NULL,NULL,NULL,0),
-	(7,'EN BUSCA','DEL TESORO PERDIDO','proximamente.jpg','asddasdasasdasdads',NULL,'INACTIVE',NULL,NULL,NULL,NULL,0);
+	(2,'ÁREA','51','area51.png','asddasdasasdasdads',NULL,'INACTIVE',NULL,NULL,NULL,NULL,0);
 
 /*!40000 ALTER TABLE `game` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -233,10 +240,10 @@ VALUES
 	(79,'2016-09-02 11:00:00','2016-09-02 12:00:00','OPEN',1,'Horario'),
 	(80,'2016-09-02 12:30:00','2016-09-02 13:30:00','OPEN',1,'Horario'),
 	(81,'2016-09-02 14:00:00','2016-09-02 15:00:00','OPEN',1,'Horario'),
-	(82,'2016-09-02 15:30:00','2016-09-02 16:30:00','OPEN',1,'Horario'),
+	(82,'2016-09-02 15:30:00','2016-09-02 16:30:00','CLOSE',1,'Horario'),
 	(83,'2016-09-02 17:00:00','2016-09-02 18:00:00','OPEN',1,'Horario'),
 	(84,'2016-09-02 18:30:00','2016-09-02 19:30:00','OPEN',1,'Horario'),
-	(85,'2016-09-02 20:00:00','2016-09-02 21:00:00','OPEN',1,'Horario'),
+	(85,'2016-09-02 20:00:00','2016-09-02 21:00:00','CLOSE',1,'Horario'),
 	(86,'2016-09-02 21:30:00','2016-09-02 22:30:00','OPEN',1,'Horario'),
 	(87,'2016-09-02 23:00:00','2016-09-02 00:00:00','OPEN',1,'Horario'),
 	(88,'2016-09-03 11:00:00','2016-09-03 12:00:00','CLOSE',1,'Horario'),
@@ -251,12 +258,75 @@ VALUES
 	(97,'2016-09-04 11:00:00','2016-09-04 12:00:00','OPEN',1,'Horario'),
 	(98,'2016-09-04 12:30:00','2016-09-04 13:30:00','OPEN',1,'Horario'),
 	(99,'2016-09-04 14:00:00','2016-09-04 15:00:00','OPEN',1,'Horario'),
-	(100,'2016-09-04 15:30:00','2016-09-04 16:30:00','OPEN',1,'Horario'),
+	(100,'2016-09-04 15:30:00','2016-09-04 16:30:00','CLOSE',1,'Horario'),
 	(101,'2016-09-04 17:00:00','2016-09-04 18:00:00','OPEN',1,'Horario'),
-	(102,'2016-09-04 18:30:00','2016-09-04 19:30:00','OPEN',1,'Horario'),
-	(103,'2016-09-04 20:00:00','2016-09-04 21:00:00','OPEN',1,'Horario'),
+	(102,'2016-09-04 18:30:00','2016-09-04 19:30:00','CLOSE',1,'Horario'),
+	(103,'2016-09-04 20:00:00','2016-09-04 21:00:00','CLOSE',1,'Horario'),
 	(104,'2016-09-04 21:30:00','2016-09-04 22:30:00','OPEN',1,'Horario'),
-	(105,'2016-09-04 23:00:00','2016-08-04 00:00:00','OPEN',1,'Horario');
+	(105,'2016-09-04 23:00:00','2016-09-05 00:00:00','OPEN',1,'Horario'),
+	(196,'2016-09-05 11:00:00','2016-09-05 12:00:00','CLOSE',1,'HORARIO'),
+	(197,'2016-09-05 12:30:00','2016-09-05 13:30:00','CLOSE',1,'HORARIO'),
+	(198,'2016-09-05 14:00:00','2016-09-05 15:00:00','OPEN',1,'HORARIO'),
+	(199,'2016-09-05 15:30:00','2016-09-05 16:30:00','OPEN',1,'HORARIO'),
+	(200,'2016-09-05 17:00:00','2016-09-05 18:00:00','OPEN',1,'HORARIO'),
+	(201,'2016-09-05 18:30:00','2016-09-05 19:30:00','OPEN',1,'HORARIO'),
+	(202,'2016-09-05 20:00:00','2016-09-05 21:00:00','OPEN',1,'HORARIO'),
+	(203,'2016-09-05 21:30:00','2016-09-05 22:30:00','OPEN',1,'HORARIO'),
+	(204,'2016-09-05 23:00:00','2016-09-06 00:00:00','OPEN',1,'HORARIO'),
+	(205,'2016-09-06 11:00:00','2016-09-06 12:00:00','OPEN',1,'HORARIO'),
+	(206,'2016-09-06 12:30:00','2016-09-06 13:30:00','OPEN',1,'HORARIO'),
+	(207,'2016-09-06 14:00:00','2016-09-06 15:00:00','OPEN',1,'HORARIO'),
+	(208,'2016-09-06 15:30:00','2016-09-06 16:30:00','OPEN',1,'HORARIO'),
+	(209,'2016-09-06 17:00:00','2016-09-06 18:00:00','CLOSE',1,'HORARIO'),
+	(210,'2016-09-06 18:30:00','2016-09-06 19:30:00','OPEN',1,'HORARIO'),
+	(211,'2016-09-06 20:00:00','2016-09-06 21:00:00','OPEN',1,'HORARIO'),
+	(212,'2016-09-06 21:30:00','2016-09-06 22:30:00','OPEN',1,'HORARIO'),
+	(213,'2016-09-06 23:00:00','2016-09-07 00:00:00','OPEN',1,'HORARIO'),
+	(214,'2016-09-07 11:00:00','2016-09-07 12:00:00','OPEN',1,'HORARIO'),
+	(215,'2016-09-07 12:30:00','2016-09-07 13:30:00','OPEN',1,'HORARIO'),
+	(216,'2016-09-07 14:00:00','2016-09-07 15:00:00','OPEN',1,'HORARIO'),
+	(217,'2016-09-07 15:30:00','2016-09-07 16:30:00','OPEN',1,'HORARIO'),
+	(218,'2016-09-07 17:00:00','2016-09-07 18:00:00','OPEN',1,'HORARIO'),
+	(219,'2016-09-07 18:30:00','2016-09-07 19:30:00','OPEN',1,'HORARIO'),
+	(220,'2016-09-07 20:00:00','2016-09-07 21:00:00','OPEN',1,'HORARIO'),
+	(221,'2016-09-07 21:30:00','2016-09-07 22:30:00','OPEN',1,'HORARIO'),
+	(222,'2016-09-07 23:00:00','2016-09-08 00:00:00','OPEN',1,'HORARIO'),
+	(223,'2016-09-08 11:00:00','2016-09-08 12:00:00','OPEN',1,'HORARIO'),
+	(224,'2016-09-08 12:30:00','2016-09-08 13:30:00','OPEN',1,'HORARIO'),
+	(225,'2016-09-08 14:00:00','2016-09-08 15:00:00','OPEN',1,'HORARIO'),
+	(226,'2016-09-08 15:30:00','2016-09-08 16:30:00','OPEN',1,'HORARIO'),
+	(227,'2016-09-08 17:00:00','2016-09-08 18:00:00','OPEN',1,'HORARIO'),
+	(228,'2016-09-08 18:30:00','2016-09-08 19:30:00','OPEN',1,'HORARIO'),
+	(229,'2016-09-08 20:00:00','2016-09-08 21:00:00','OPEN',1,'HORARIO'),
+	(230,'2016-09-08 21:30:00','2016-09-08 22:30:00','OPEN',1,'HORARIO'),
+	(231,'2016-09-08 23:00:00','2016-09-09 00:00:00','OPEN',1,'HORARIO'),
+	(232,'2016-09-09 11:00:00','2016-09-09 12:00:00','OPEN',1,'HORARIO'),
+	(233,'2016-09-09 12:30:00','2016-09-09 13:30:00','OPEN',1,'HORARIO'),
+	(234,'2016-09-09 14:00:00','2016-09-09 15:00:00','OPEN',1,'HORARIO'),
+	(235,'2016-09-09 15:30:00','2016-09-09 16:30:00','OPEN',1,'HORARIO'),
+	(236,'2016-09-09 17:00:00','2016-09-09 18:00:00','OPEN',1,'HORARIO'),
+	(237,'2016-09-09 18:30:00','2016-09-09 19:30:00','OPEN',1,'HORARIO'),
+	(238,'2016-09-09 20:00:00','2016-09-09 21:00:00','OPEN',1,'HORARIO'),
+	(239,'2016-09-09 21:30:00','2016-09-09 22:30:00','OPEN',1,'HORARIO'),
+	(240,'2016-09-09 23:00:00','2016-09-10 00:00:00','OPEN',1,'HORARIO'),
+	(241,'2016-09-10 11:00:00','2016-09-10 12:00:00','OPEN',1,'HORARIO'),
+	(242,'2016-09-10 12:30:00','2016-09-10 13:30:00','OPEN',1,'HORARIO'),
+	(243,'2016-09-10 14:00:00','2016-09-10 15:00:00','OPEN',1,'HORARIO'),
+	(244,'2016-09-10 15:30:00','2016-09-10 16:30:00','OPEN',1,'HORARIO'),
+	(245,'2016-09-10 17:00:00','2016-09-10 18:00:00','OPEN',1,'HORARIO'),
+	(246,'2016-09-10 18:30:00','2016-09-10 19:30:00','OPEN',1,'HORARIO'),
+	(247,'2016-09-10 20:00:00','2016-09-10 21:00:00','OPEN',1,'HORARIO'),
+	(248,'2016-09-10 21:30:00','2016-09-10 22:30:00','OPEN',1,'HORARIO'),
+	(249,'2016-09-10 23:00:00','2016-09-11 00:00:00','OPEN',1,'HORARIO'),
+	(250,'2016-09-11 11:00:00','2016-09-11 12:00:00','OPEN',1,'HORARIO'),
+	(251,'2016-09-11 12:30:00','2016-09-11 13:30:00','OPEN',1,'HORARIO'),
+	(252,'2016-09-11 14:00:00','2016-09-11 15:00:00','OPEN',1,'HORARIO'),
+	(253,'2016-09-11 15:30:00','2016-09-11 16:30:00','OPEN',1,'HORARIO'),
+	(254,'2016-09-11 17:00:00','2016-09-11 18:00:00','OPEN',1,'HORARIO'),
+	(255,'2016-09-11 18:30:00','2016-09-11 19:30:00','OPEN',1,'HORARIO'),
+	(256,'2016-09-11 20:00:00','2016-09-11 21:00:00','OPEN',1,'HORARIO'),
+	(257,'2016-09-11 21:30:00','2016-09-11 22:30:00','OPEN',1,'HORARIO'),
+	(258,'2016-09-11 23:00:00','2016-09-12 00:00:00','OPEN',1,'HORARIO');
 
 /*!40000 ALTER TABLE `reserve` ENABLE KEYS */;
 UNLOCK TABLES;
