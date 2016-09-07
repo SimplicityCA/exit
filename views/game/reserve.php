@@ -79,7 +79,6 @@ $this->title =$reserve->game->title." ".$reserve->game->subtitle;
 <?php endif; ?>
             <div class="row" style="color:white;">
                     <span>Fecha y hora de inicio <?= $reserve->start_date ?> </span>
-    <span>Descuento del 20% si pagas en línea.</span>
             <div class="row">
     <?php $form = ActiveForm::begin(); ?>
 
