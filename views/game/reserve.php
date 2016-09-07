@@ -97,8 +97,7 @@ $this->title =$reserve->game->title." ".$reserve->game->subtitle;
 
 
 
-        <?= $form->field($model, 'number_players')->textInput(['maxlength' => true,'class'=>'number form-control pay']) ?>
-
+         <?= $form->field($model, 'number_players')->dropDownList(['4' => '4','5'=>'5','6'=>'6'],['prompt'=>'Seleccione una Opción','class'=>'number form-control pay']) ?>
         <?= $form->field($model, 'pay_method')->dropDownList(['PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo'],['prompt'=>'Seleccione una Opción','class'=>'pay']) ?>
         <?= $form->field($model, 'total_price')->hiddenInput()->label(false); ?>
     <div class="form-group">
