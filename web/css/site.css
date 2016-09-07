@@ -79,13 +79,16 @@ header{
     left:0%;
     top:0%;
     z-index:101;
-    padding-left: 5%;
     background: rgba(255, 255, 255, .2);
     color: white;
     }
 .logo-header{
     width:90px;
     float:left;
+}
+.logo-container {
+    float: left;
+    padding-left: 60px;
 }
 header.is_stuck {
     background: #000;
@@ -412,11 +415,14 @@ nav ul li a:link, nav ul li a:visited{
     padding: 0 !important;
 }
 .inf-home{
-    margin-top:280px;
+    margin-top:240px;
     position:relative;
     text-align:center;  
     font-family: 'Yanone Kaffeesatz';
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+}
+#phrases {
+    margin-bottom: 50px;
 }
 @media (max-width: 767px) {
     .inf-home {

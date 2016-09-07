@@ -20,7 +20,7 @@ nav ul li{
 	width:10%;
 }
 .menu-container{
-	width:92%;
+	width: calc(100% - 155px);
 	float:left;
 }
 
@@ -109,22 +109,5 @@ nav ul li{
 		color:white;
 		font-size:0.6em;
 		margin-bottom:20%;
-	}
-}
-@media screen and (max-width: 767px) {
-	nav ul li{
-		width:100%;
-	}
-	.menu-container{
-		width:100%;
-		float:left;
-		background-color: black;
-		border-color: #e61939 !important;
-	}
-	.m-menu {
-	    margin:0;
-	}
-	.m-menu a:link, .m-menu a:visited {
-    	padding: 1.5% 0;
 	}
 }
