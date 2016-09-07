@@ -9,14 +9,14 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use yii\helpers\Url;
 use yii\web\View;
-use app\assets\AppAsset;
+use app\assets\GalleryAsset;
 $count=count($model);
 $aux="";
 $script=<<< JS
 
 JS;
 $this->registerJs($script,View::POS_END);
-AppAsset::register($this);
+GalleryAsset::register($this);
 $this->title = 'GALERÍA';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
