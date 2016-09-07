@@ -88,7 +88,7 @@ AppAsset::register($this);
           <!--   <li><img src="<?= URL::base() ?>/images/ico-twitter.svg" alt="twitter"/></li> -->
            <!--  <li><a href="https://www.youtube.com/user/ChaideyChaide"><img src="<?= URL::base() ?>/images/ico-youtube.svg" alt="youtube"/></a></li> -->
         </ul>
-        ® <?= date('Y') ?> EXIT, Todos los Derechos Reservados.   Desarrollado por <a href="http://simplicityuniverse.com/" target="_blank">SIMPLICITY.</a>  
+        ® <?= date('Y') ?> EXIT, Todos los Derechos Reservados.   Desarrollado por <a href="http://simplicityuniverse.com/" target="_blank">SIMPLICITY.</a> & CONCEPT  
     </div>
 </footer>
 <!-- -->
