@@ -16,6 +16,12 @@ return array(
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'yii2fullcalendar\\' => array($vendorDir . '/philippfrenzel/yii2fullcalendar'),
+    'kartik\\mpdf\\' => array($vendorDir . '/kartik-v/yii2-mpdf'),
+    'kartik\\grid\\' => array($vendorDir . '/kartik-v/yii2-grid'),
+    'kartik\\export\\' => array($vendorDir . '/kartik-v/yii2-export'),
+    'kartik\\dialog\\' => array($vendorDir . '/kartik-v/yii2-dialog'),
+    'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base'),
+    'dosamigos\\tinymce\\' => array($vendorDir . '/2amigos/yii2-tinymce-widget/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
 );

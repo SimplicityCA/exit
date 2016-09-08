@@ -18,27 +18,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Client', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'identity',
-            'names',
-            'lastnames',
-            'phone',
-            // 'cellphone',
-            // 'email:email',
-            // 'reserve_id',
-            // 'number_players',
-            // 'pay_method',
-            // 'creation_date',
-            // 'total_price',
-            // 'status',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    <p>
+      <?= $exportmenu ?>
+    </p>
+<div style="width: 1200px;">
+    <?= $GridView ?>
+</div>
 </div>

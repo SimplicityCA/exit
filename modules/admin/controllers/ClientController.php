@@ -49,10 +49,42 @@ class ClientController extends Controller
     {
         $searchModel = new ClientSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+                 $gridColumns = [
+            ['class' => 'yii\grid\SerialColumn'],
+            'id',
+            'identity',
+            'names',
+            'lastnames',
+            'phone',
+            'cellphone',
+            'email',
+            'reserve_id',
+            'number_players',
+            'pay_method',
+            'total_price',
+            'status',
+            'creation_date',
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
+            ['class' => 'yii\grid\ActionColumn', 'template' => '{view}'],
+        ];
+
+        // Renders a export dropdown menu
+        $exportmenu= \kartik\export\ExportMenu::widget([
             'dataProvider' => $dataProvider,
+            'columns' => $gridColumns
+        ]);
+
+        // You can choose to render your own GridView separately
+        $GridView= \kartik\grid\GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'columns' => $gridColumns,
+   
+
+        ]);
+        return $this->render('index', [
+            'exportmenu' => $exportmenu,
+            'GridView' => $GridView,
         ]);
     }
 

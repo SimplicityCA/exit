@@ -90,9 +90,9 @@ $config = [
     //         'seo' => [
     //     'class' => 'infoweb\seo\Module',
     // ],
-    //        'gridview' =>  [
-    //     'class' => '\kartik\grid\Module'
-    // ]
+           'gridview' =>  [
+        'class' => '\kartik\grid\Module'
+    ]
     ],
     'params' => $params,
 ];

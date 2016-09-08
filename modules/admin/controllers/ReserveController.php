@@ -118,27 +118,7 @@ class ReserveController extends Controller
         return $this->redirect(['index']);
     }
 
-    public function actionWeekendreserve(){
-        for($i=1;$i<=63;$i++){
-        $last=Reserve::find()->orderBy(['id' => SORT_DESC])->one();
-        $end_date=$last->end_date;
-        if(date('H:i:s',strtotime($end_date))=='00:00:00'){
-        //$start_date=date('Y-m-d H:i:s',strtotime("+1 day",strtotime($last->end_date)));
-         $start_date=date('Y-m-d H:i:s',strtotime("+11 hours",strtotime($last->end_date)));
 
-        }else{
-        $start_date=date('Y-m-d H:i:s',strtotime("+30 minutes",strtotime($last->end_date))); 
-        }
-         $model=New Reserve;;
-         $model->start_date=$start_date;
-         $aux2=date('Y-m-d H:i:s',strtotime("+1 hour",strtotime($start_date)));
-         $model->end_date=$aux2; 
-         $model->status='OPEN';
-          $model->game_id=1;
-          $model->description='HORARIO';
-          $model->save();
-        }
-    }
 
     /**
      * Finds the Reserve model based on its primary key value.

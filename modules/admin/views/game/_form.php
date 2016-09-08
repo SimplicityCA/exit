@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use dosamigos\tinymce\TinyMce;
 /* @var $this yii\web\View */
 /* @var $model app\models\Game */
 /* @var $form yii\widgets\ActiveForm */
@@ -21,7 +21,18 @@ use yii\widgets\ActiveForm;
     <?= Html::img('@web/images/game/'.$model->picture,['width'=>'30%']);?>
 <?php endif; ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'description')->widget(TinyMce::className(), [
+    'options' => ['rows' => 6],
+    'language' => 'es',
+    'clientOptions' => [
+        'plugins' => [
+            "advlist autolink lists link charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste"
+        ],
+        'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    ]
+]);?>
 
     <?= $form->field($model, 'video')->textInput(['maxlength' => true]) ?>
 
@@ -32,9 +43,31 @@ use yii\widgets\ActiveForm;
     <?= Html::img('@web/images/game/'.$model->landing_picture,['width'=>'30%']);?>
 <?php endif; ?>
 
-    <?= $form->field($model, 'recordh')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'recordh')->widget(TinyMce::className(), [
+    'options' => ['rows' => 6],
+    'language' => 'es',
+    'clientOptions' => [
+        'plugins' => [
+            "advlist autolink lists link charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste"
+        ],
+        'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    ]
+]);?>
 
-    <?= $form->field($model, 'recordm')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'recordm')->widget(TinyMce::className(), [
+    'options' => ['rows' => 6],
+    'language' => 'es',
+    'clientOptions' => [
+        'plugins' => [
+            "advlist autolink lists link charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste"
+        ],
+        'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    ]
+]);?>
 
     <?= $form->field($model, 'price')->textInput() ?>
 
