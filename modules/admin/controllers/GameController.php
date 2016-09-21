@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\models\Game;
+use app\models\Reserve;
 use app\models\GameSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

@@ -31,9 +31,15 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>"/>
-    <meta name="title" content="EXIT.">
+        <meta name="title" content="EXIT.">
      <meta name="description" content="Exit cuartos de escape."/>
+     <meta name="keywords" content="Qué hacer en Quito, Diversión en Quito, Turismo Quito, Juegos Quito, Cines Quito, Team building Quito, Eventos corporativos Quito, Cuartos de escape Quito, Juegos de escape Quito, Escape rooms Quito, Roomscape Quito, Roomscape UIO, Escapaya, Xcape, Mysteri rooms Quito, Quest Rooms Quito"/>
      <meta name="google" content="" />
+     <meta property="og:url" content="<?= URL::base(true) ?>" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Exit" />
+      <meta property="og:description" content="Exit cuartos de escape." />
+      <meta property="og:image" content="<?= URL::base(true) ?>/apple-icon-180x180.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">

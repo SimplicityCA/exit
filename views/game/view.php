@@ -86,7 +86,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
       'clientOptions'=>[
       'default'=>'agendaweek',
       'displayEventEnd'=>true,
-       'timeFormat'=> 'HH:mm'
+       'timeFormat'=> 'HH:mm',
       ],
       'events'=> $events
   ));?>

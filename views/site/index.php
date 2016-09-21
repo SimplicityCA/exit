@@ -58,6 +58,7 @@ $(document).ready(function() {
     });
 JS;
 $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHaPsQQtspQ7Sm-azY4CQ4uuVjCRW0l4');
+$this->registerJsFile('https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=894&amp;locationId=10782795&amp;lang=en_US&amp;border=true&amp;display_version=2');
 $this->registerJs($script,View::POS_END);
 
 AppAsset::register($this);
@@ -193,5 +194,11 @@ $this->title = 'EXIT';
       </div> -->
     </div>
     <div id="map"></div>
-    
+        <div id="TA_cdsratingsonlynarrow894" class="TA_cdsratingsonlynarrow" style="margin-top:1%;">
+<ul id="oLh6dhYO6mFU" class="TA_links S0v7zzufw">
+<li id="LcVCloyf" class="E3ec2pgOHVwH">
+<a target="_blank" href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
+</li>
+</ul>
+</div>
 </section>

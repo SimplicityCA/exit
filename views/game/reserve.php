@@ -51,13 +51,9 @@ $(document).ready(function() {
             e.preventDefault();
         }
     });
-$(".letters").keypress(function(event){
-        var inputValue = event.which;
-        // allow letters and whitespaces only.
-        if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) { 
-            event.preventDefault(); 
-        }
-    });
+$(".letters").on('input', function(event) {
+  this.value = this.value.replace(/[^a-z\s]/gi, '');
+});
 });
 JS;
 $this->registerJs($script,View::POS_END);
@@ -80,6 +76,13 @@ $this->title =$reserve->game->title." ".$reserve->game->subtitle;
             <div class="row" style="color:white;">
                     <span>Fecha y hora de inicio <?= $reserve->start_date ?> </span>
             <div class="row">
+                          <div class="row" style="color:white;">
+                    <span>              AVISO IMPORTANTE:  </br> 
+TODA LA INFORMACIÓN QUE SE INGRESE EN ESTE FORMULARIO DEBE SER REAL Y PRECISA. 
+UNA VEZ ENVIADO EL FORMULARIO NOSOTROS NOS PONDREMOS EN CONTACTO PARA VERIFICAR LA RESERVA. 
+EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span>
+            <div class="row">
+
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'identity')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>

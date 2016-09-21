@@ -53,7 +53,7 @@ class GameController extends Controller
     {
         $this->layout="main2";
         $events = array();
-        $aux=Reserve::find()->where(['game_id'=>$id])->all();
+        $aux=Reserve::find()->where(['game_id'=>$id])->andWhere(['>=','start_date',date('Y-m-d H:i:s')])->all();
 foreach($aux as $k => $reserve){
     $date=date('Y-m-d H:i:s',strtotime($reserve->start_date));
      $date2=date('Y-m-d H:i:s',strtotime($reserve->end_date));
