@@ -32,7 +32,7 @@ class Picture extends \yii\db\ActiveRecord
         return [
             [['description', 'type'], 'required'],
             [['game_id'], 'integer'],
-            [['type'], 'string'],
+            [['type','record'], 'string'],
             [['description'], 'string', 'max' => 150],
             [['game_id'], 'exist', 'skipOnError' => true, 'targetClass' => Game::className(), 'targetAttribute' => ['game_id' => 'id']],
         ];

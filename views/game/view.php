@@ -51,26 +51,34 @@ $this->title = "EXIT |  $model->title $model->subtitle";
     <div class="container hall-of-fame" >
       <h1>HALL OF FAME</h1>
       <div class="it-is-cont">
+        <?php foreach($model->pictures as $picture): ?>
+        <?php if($picture->type=="WINNERT"){ ?>
         <div class="row">
-          <h3 class="title-hall">RECORD HISTÓRICO</h3>
+          <h3 class="title-hall"><?= $picture->title ?></h3>
           <div class="col-sm-4" >
-            <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+            <img  src="<?= URL::base() ?>/images/<?= $picture->description ?>" />
           </div>
           <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
             
-            <?= $model->recordh ?>
+            <?= $picture->record ?>
           </div>
         </div>
-        <div class="row" style="margin-bottom:2%">
-          <h3 class="title-hall">MEJOR TIEMPO AGOSTO 2016</h3>
+        <?php } ?>
+      <?php endforeach; ?>
+      <?php foreach($model->pictures as $picture): ?>
+        <?php if($picture->type=="WINNERM"){ ?>
+        <div class="row">
+          <h3 class="title-hall"><?= $picture->title ?></h3>
           <div class="col-sm-4" >
-            <img  src="<?= URL::base() ?>/images/game/IMG_0029 (1).JPG" />
+            <img  src="<?= URL::base() ?>/images/<?= $picture->description ?>" />
           </div>
           <div class="col-sm-8" style="color:white;font-size:1.1em;font-weight:200">
             
-          <?= $model->recordm ?>
+            <?= $picture->record ?>
           </div>
         </div>
+        <?php } ?>
+      <?php endforeach; ?>
       </div>
   </div>
 </section>

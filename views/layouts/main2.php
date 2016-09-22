@@ -57,7 +57,7 @@ AppAsset::register($this);
         <nav class="navbar navbar-default">
           <div class="container-fluid" style="padding:0">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="<?= Url::home() ?>"><img class="logo-header" src="<?= URL::base() ?>/images/logo.svg" alt="logotipo exit"/></a>
+            <a href="<?= Url::home() ?>" class="logo-container"><img class="logo-header" src="<?= URL::base() ?>/images/logo.svg" alt="logotipo exit"/></a>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>

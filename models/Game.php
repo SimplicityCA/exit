@@ -58,7 +58,7 @@ class Game extends \yii\db\ActiveRecord
      */
     public function getPictures()
     {
-        return $this->hasMany(Picture::className(), ['game_id' => 'id']);
+        return $this->hasMany(Picture::className(), ['game_id' => 'id'])->orderBy(['id'=>SORT_DESC]);
     }
     public function getReserves()
     {

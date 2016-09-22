@@ -25,7 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'description',
+            array(
+           'attribute' => 'description',
+            'format' => 'html',
+            'value' => function($data) { return Html::img('/images/'.$data->description, ['width'=>'250']); }
+
+
+               ),
             'game_id',
             'type',
 
