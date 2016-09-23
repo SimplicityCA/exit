@@ -65,9 +65,13 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         </div>
         <?php } ?>
       <?php endforeach; ?>
-      <?php foreach($model->pictures as $picture): ?>
+      <div id="winnersm" class="carousel slide" data-ride="carousel" style="color:white;font-size:1.1em;font-weight:200">
+        <div  class="carousel-inner" role="listbox" style="color:white;font-size:1.1em;font-weight:200">
+      <?php foreach($model->pictures as $k => $picture): ?>
         <?php if($picture->type=="WINNERM"){ ?>
-        <div class="row">
+        
+           <?php $aux = ($k==0) ? 'active' : ''; ?>
+        <div class="row item <?= $aux ?>">
           <h3 class="title-hall"><?= $picture->title ?></h3>
           <div class="col-sm-4" >
             <img  src="<?= URL::base() ?>/images/<?= $picture->description ?>" />
@@ -77,8 +81,18 @@ $this->title = "EXIT |  $model->title $model->subtitle";
             <?= $picture->record ?>
           </div>
         </div>
-        <?php } ?>
+        <?php } ?>        
       <?php endforeach; ?>
+                                  <ol class="carousel-indicators">
+                <?php foreach($model->pictures as $k => $picture): ?>
+        <?php if($picture->type=="WINNERM"){ ?>
+        <?php $aux = ($k==0) ? 'active' : ''; ?>
+      <li data-target="#winnersm" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
+           <?php } ?>        
+      <?php endforeach; ?>
+      </ol>
+               </div> 
+          </div>
       </div>
   </div>
 </section>
