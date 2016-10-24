@@ -161,14 +161,26 @@ class GameController extends Controller
         $space_time=$game->space_time;
         $start_time=$game->start_time;
         for($i=1;$i<=63;$i++){
+        $band=0;
         $last=Reserve::find()->orderBy(['id' => SORT_DESC])->where(['game_id'=>$id])->one();
-        $end_date=$last->end_date;
+        if($last){
+         $end_date=$last->end_date;   
+        }else{
+            $band=1;
+            $end_date=date("Y-m-d $start_time",strtotime(date('Y-m-d')));
+        }
+           
         if(date('H:i:s',strtotime($end_date))==$game->end_time){
-        $start_date=date('Y-m-d H:i:s',strtotime("+10 hours",strtotime($last->end_date)));
+        $start_date=date('Y-m-d H:i:s',strtotime("+10 hours",strtotime($end_date)));
         $start_date=date("Y-m-d $start_time",strtotime($start_date));
         //$start_date=date('Y-m-d H:i:s',strtotime("+11 hours",strtotime($last->end_date)));
         }else{
-        $start_date=date('Y-m-d H:i:s',strtotime($space_time,strtotime($last->end_date))); 
+            if($band==0){
+                $start_date=date('Y-m-d H:i:s',strtotime($space_time,strtotime($end_date))); 
+            }else{
+              $start_date=date('Y-m-d H:i:s',strtotime($end_date));   
+            }
+        
         }
          $model=New Reserve;;
          $model->start_date=$start_date;

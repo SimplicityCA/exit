@@ -41,6 +41,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'recordm:ntext',
             'price',
             'price_d',
+            'start_time',
+            'end_time',
+            'duration',
+            'space_time'
         ],
     ]) ?>
 

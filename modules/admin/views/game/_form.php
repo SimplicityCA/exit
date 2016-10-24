@@ -76,7 +76,6 @@ use dosamigos\tinymce\TinyMce;
     <?= $form->field($model, 'start_time')->textInput() ?>
     <?= $form->field($model, 'end_time')->textInput() ?>
     <?= $form->field($model, 'duration')->textInput() ?>
-    <?= $form->field($model, 'start_time')->textInput() ?>
     <?= $form->field($model, 'space_time')->textInput() ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
