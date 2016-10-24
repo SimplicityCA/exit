@@ -69,7 +69,7 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         <div  class="carousel-inner" role="listbox" style="color:white;font-size:1.1em;font-weight:200">
       <?php foreach($model->pictures as $k => $picture): ?>
         <?php if($picture->type=="WINNERM"){ ?>
-        
+            
            <?php $aux = ($k==0) ? 'active' : ''; ?>
         <div class="row item <?= $aux ?>">
           <h3 class="title-hall"><?= $picture->title ?></h3>
@@ -84,10 +84,13 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         <?php } ?>        
       <?php endforeach; ?>
                                   <ol class="carousel-indicators">
+                                     <?php $count=0; ?>
                 <?php foreach($model->pictures as $k => $picture): ?>
         <?php if($picture->type=="WINNERM"){ ?>
         <?php $aux = ($k==0) ? 'active' : ''; ?>
-      <li data-target="#winnersm" data-slide-to="<?= $k ?>" class="<?= $aux ?>"></li>
+       
+      <li data-target="#winnersm" data-slide-to="<?= $count?>" class="<?= $aux ?>"></li>
+      <?php $count+=1; ?>
            <?php } ?>        
       <?php endforeach; ?>
       </ol>

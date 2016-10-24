@@ -87,7 +87,7 @@ foreach($aux as $k => $reserve){
         $reserve_date=new \DateTime($reserve->start_date);
         $diff=date_diff($now,$reserve_date);
         $aux=0;
-        if($diff->days<=5 && $diff->days!=0 && $diff->invert==0){
+        if($diff->days<=15 && $diff->days!=0 && $diff->invert==0){
              $aux=1;
             }else{
                 if($diff->h>=3 && $diff->days==0 && $diff->invert==0){
