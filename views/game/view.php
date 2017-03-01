@@ -17,8 +17,10 @@ JS;
 
 AppAsset::register($this);
 $this->title = "EXIT |  $model->title $model->subtitle";
+$device=\Yii::getAlias('@device');
 ?>
 <!-- -->
+<?php if(!$model->video || $device!='desktop'){ ?>
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/game/<?= $model->landing_picture ?>')">
       <div class="container">
         <div class="inf-home">
@@ -33,6 +35,25 @@ $this->title = "EXIT |  $model->title $model->subtitle";
         </div>
     </div>
 </section>
+<?php }else{ ?>
+<section id="home"  class="background-exitint interna-exit video-background" >
+      <div class="container ">
+            <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/<?= $model->video ?>?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=<?= $model->video ?>" frameborder="0" allowfullscreen></iframe>
+    </div>
+        <div class="inf-home">
+          <span><?= $model->title ?>
+                </span>
+           <span class="second-text-home">
+           <?= $model->subtitle ?>
+          </span>
+          <a href="#" to_section="reserve"class="btn btn-comprara btn-to-section" >
+                  Reserva ya!
+          </a>
+        </div>
+    </div>
+</section>
+<?php } ?>
 <section class="cont-exitint2 game-view-what-is" >
     <div class="container" >
       <div class="col-xs-12" >
