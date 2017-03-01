@@ -218,7 +218,7 @@ foreach($aux as $k => $reserve){
                 $email=  Yii::$app->mailer->compose('transaction', [
                 'model' => $client,
                 ])->setFrom('info@exit.com.ec')
-                ->setTo("reservas@exit.com.ec")
+                ->setTo(["reservas@exit.com.ec",$client->email])
                 ->setSubject("Reserva realizada #".$client->id)
                 ->send();
         }

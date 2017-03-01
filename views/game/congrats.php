@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
 // JS;
 // $this->registerJs($script,View::POS_END);
 AppAsset::register($this);
-$this->title = "EXIT |  Felicidades";
+$this->title = "EXIT |  Felicidades <?= $model->names ?>";
 ?>
 <!-- -->
 

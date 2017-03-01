@@ -36,7 +36,7 @@ class Game extends \yii\db\ActiveRecord
             [['title', 'video','subtitle'], 'string', 'max' => 255],
             [['start_time', 'end_time'], 'string', 'max' => 10],
             [['duration','space_time'], 'string', 'max' => 15],
-            [['price_d','price'], 'integer'],
+            [['price_d','price'], 'number'],
             [['picture','landing_picture'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }

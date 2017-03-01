@@ -52,13 +52,13 @@ $(document).ready(function() {
         }
     });
 $(".letters").on('input', function(event) {
-  this.value = this.value.replace(/[^a-z\s]/gi, '');
+  this.value = this.value.replace(/[^a-z\s ñ]/gi,'');
 });
 });
 JS;
 $this->registerJs($script,View::POS_END);
 AppAsset::register($this);
-$this->title =$reserve->game->title." ".$reserve->game->subtitle;
+$this->title =$reserve->game->title." ".$reserve->game->subtitle." ".$reserve->id;
 ?>
 <!-- -->
 
@@ -100,7 +100,7 @@ EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span>
 
 
          <?= $form->field($model, 'number_players')->dropDownList(['4' => '4','5'=>'5','6'=>'6'],['prompt'=>'Seleccione una Opción','class'=>'number form-control pay']) ?>
-        <?= $form->field($model, 'pay_method')->dropDownList(['PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo'],['prompt'=>'Seleccione una Opción','class'=>'pay']) ?>
+        <?= $form->field($model, 'pay_method')->dropDownList(['PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo'],['prompt'=>'Seleccione una Opción','class'=>'pay form-control']) ?>
         <?= $form->field($model, 'total_price')->hiddenInput()->label(false); ?>
     <div class="form-group">
     	Precio: <div id="price">0</div>
