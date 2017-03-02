@@ -8,6 +8,7 @@ $config = [
     'language'=>'es',
     'timeZone' => 'America/Guayaquil',
     'bootstrap' => ['log'],
+    'bootstrap' => ['devicedetect'],
     'components' => [
         'urlManager' => [
           'showScriptName' => false,
@@ -80,6 +81,9 @@ $config = [
                 ],
             ],
         ],
+                    'devicedetect' => [
+        'class' => 'alexandernst\devicedetect\DeviceDetect'
+    ],
         'db' => require(__DIR__ . '/db.php')
     ],
         'modules' => [

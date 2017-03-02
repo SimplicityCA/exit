@@ -22,7 +22,8 @@
         "paypal/rest-api-sdk-php": "*",
         "2amigos/yii2-tinymce-widget" : "*",
         "kartik-v/yii2-export": "*",
-        "kartik-v/yii2-mpdf": "@dev"
+        "kartik-v/yii2-mpdf": "@dev",
+        "alexandernst/yii2-device-detect": "0.0.11"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
