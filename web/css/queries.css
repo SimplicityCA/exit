@@ -1,0 +1,188 @@
+@media (min-width: 992px) {
+  .info-mis-second {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 1200px) {
+  .logo-header {
+    width: 65px;
+  }
+  header {
+    font-size: 0.9em;
+  }
+  .mission {
+    max-width: 992px;
+  }
+  .game-container {
+    margin: 0 16px;
+  }
+  .logo-container {
+    padding-left: 40px;
+  }
+  .menu-container{
+    width: calc(100% - 135px);
+    float:left;
+  }
+}
+@media (max-width: 1199px) {
+  .inf-home {
+    margin-top: 210px;
+  }
+}
+@media (max-width: 992px) {
+  .mission {
+    max-width: 768px;
+  }
+  .game-container {
+    margin: 0 12px;
+  }
+}
+@media (max-width: 875px) {
+  .logo-header {
+    width: 55px;
+  }
+  header {
+    font-size: 0.8em;
+  }
+  .cont-exitint2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h1 {
+    font-size: 2.8em;
+  }
+  .it-is-cont div {
+    font-size: 1.3em;
+  }
+  .contact-us-h1 {
+    margin-top: 145px;
+  }
+}
+@media (max-width: 767px) {
+  .logo-container {
+    padding-left: 15px;
+  }
+  .anchor-link {
+    height: 50px; /*same height as header*/
+    margin-top: -50px; /*same height as header*/
+  }
+  header.is_stuck .logo-header{
+    margin-top: 5px;
+  }
+  .inf-home {
+    margin-top: 185px;
+  }
+  .inf-home span { 
+    font-size: 2em;
+  }
+  .btn-comprara {
+    font-size: 1.2em;
+  }
+  .it-is-cont div img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.7em;
+  }
+  .it-is-cont div {
+    font-size: 1.2em;
+  }
+  .mission {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .game-container {
+    max-width: 334px;
+    margin: 15px auto;
+  }
+  .info-map  div ul{
+    padding-left:20px;
+  }
+  .info-map div{
+    margin-bottom:20px;
+  }
+  .fb{
+    width:10%;
+  }
+  .text-media{
+    font-size:1.1em;
+}
+
+}
+@media (max-width: 370px) {
+  .inf-home {
+    margin-top: 140px;
+  }
+}
+@media (max-width: 340px) {
+  .inf-home {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 1152px) {
+  // mobile menu custom styles
+  nav ul li{
+    width:100%;
+  }
+  .menu-container{
+    width:100% !important;
+    float:left;
+    background-color: black;
+    border-color: #e61939 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .m-menu {
+    margin:0;
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .m-menu a:link, .m-menu a:visited {
+    padding: 8px; 0;
+    text-align: center !important;
+  }
+  header.is_stuck li.m-menu a {
+    line-height: 20px;
+  }
+  // end of mobile menu custom styles
+
+  // start of mobile menu custom breakpoint behaviour
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    // margin-top: 7.5px;
+    margin: 7.5px 0;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+  .navbar-header {
+    float: none;
+  }
+  // end of mobile menu custom breakpoint behaviour
+}
