@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Game */
 
@@ -23,7 +23,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Asignar fechas', ['weekendreserve', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?php $form = ActiveForm::begin(['action' => ['weekendreserve'],'options' => ['method' => 'post']]) ?>
+        <?= Html::hiddenInput('id', $model->id); ?>
+        <label># de Fechas:</label>
+        <?= Html::textInput('rnumber'); ?>
+         <?= Html::submitButton('Asignar Fechas', ['class' => 'btn btn-primary']) ?>
+        <?php ActiveForm::end(); ?>
     </p>
 
     <?= DetailView::widget([

@@ -155,12 +155,14 @@ class GameController extends Controller
             ]);
         }
     }
-        public function actionWeekendreserve($id){
+        public function actionWeekendreserve(){
+           $id=$_POST['id'];
+           $rnumber=$_POST['rnumber'];
         $game = $this->findModel($id);
         $duration=$game->duration;
         $space_time=$game->space_time;
         $start_time=$game->start_time;
-        for($i=1;$i<=63;$i++){
+        for($i=1;$i<=$rnumber;$i++){
         $band=0;
         $last=Reserve::find()->orderBy(['id' => SORT_DESC])->where(['game_id'=>$id])->one();
         if($last){
@@ -168,9 +170,8 @@ class GameController extends Controller
         }else{
             $band=1;
             $end_date=date("Y-m-d $start_time",strtotime(date('Y-m-d')));
-        }
-           
-        if(date('H:i:s',strtotime($end_date))==$game->end_time){
+        } 
+        if(date('H:i:s',strtotime($end_date))>=$game->end_time ||  date('H:i:s',strtotime($end_date))=='00:00:00'){
         $start_date=date('Y-m-d H:i:s',strtotime("+10 hours",strtotime($end_date)));
         $start_date=date("Y-m-d $start_time",strtotime($start_date));
         //$start_date=date('Y-m-d H:i:s',strtotime("+11 hours",strtotime($last->end_date)));
