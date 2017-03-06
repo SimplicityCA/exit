@@ -2981,4 +2981,16 @@ ul.publiciad-abj li{
 .c-blue{
     color: #005f92;
 }
-
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+display: inline-block;
+    margin-left: 6%;
+}
+.title-thumb-news{
+        width: 100%;
+    float: left;
+    text-align: center;
+    color: white;
+}

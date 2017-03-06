@@ -231,7 +231,7 @@
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=2,<=3",
+                "bower-asset/jquery": ">=2,<4.0",
                 "bower-asset/moment": ">=2.9.0,<3.0.0"
             },
             "type": "bower-asset-library",
@@ -840,7 +840,7 @@
                 "utf8",
                 "yii2"
             ],
-            "time": "2017-01-14T11:51:12+00:00"
+            "time": "2017-01-14 11:51:12"
         },
         {
             "name": "mobiledetect/mobiledetectlib",

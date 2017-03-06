@@ -12,6 +12,8 @@ use app\models\ContactFormp;
 use app\models\Content;
 use app\models\Game;
 use app\models\Picture;
+use app\models\Params;
+use app\models\News;
 class SiteController extends Controller
 {
     public function behaviors()
@@ -55,10 +57,18 @@ class SiteController extends Controller
         
         $home=Content::find()->where(['type'=>'HOME'])->one();
         $phrases=Content::find()->where(['type'=>'PHRASE'])->all();
+        $popup=Params::find()->where(['type'=>'POPUP'])->one();
         $games=Game::find()->all();
-        return $this->render('index',['home'=>$home,'games'=>$games,'phrases'=>$phrases]);
+        return $this->render('index',['home'=>$home,'games'=>$games,'phrases'=>$phrases,'popup'=>$popup]);
     }
-
+    public function actionNews(){
+        $news=News::find()->all();
+        return $this->render('news',['news'=>$news]);
+    }
+   public function actionNewsview($id){
+        $model=News::findOne($id);
+        return $this->render('newsview',['model'=>$model]);
+    } 
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {

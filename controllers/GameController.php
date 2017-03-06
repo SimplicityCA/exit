@@ -7,6 +7,8 @@ use app\models\Game;
 use app\models\Reserve;
 use app\models\Client;
 use app\models\GameSearch;
+use app\models\Params;
+use app\models\Ticket;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -83,6 +85,10 @@ foreach($aux as $k => $reserve){
         $reserve=Reserve::findOne($id);
         $model=New Client;
         $model->reserve_id=$id;
+        $params=Params::find()->where(['game_id'=>$reserve->game->id,'type'=>'DISCOUNTP'])->orderBy('description')->all();
+        if(!$params){
+            $params=0;
+        }
         $now=new \Datetime();
         $reserve_date=new \DateTime($reserve->start_date);
         $diff=date_diff($now,$reserve_date);
@@ -155,6 +161,19 @@ foreach($aux as $k => $reserve){
             $reserve->save();
             return $this->redirect($approvalUrl);
             }
+            if($model->pay_method=="TICKET"){
+                $ticket=Ticket::findOne($_POST['ticket']);
+                if($ticket){
+                    $ticket->client_id=$model->id;
+                    $ticket->save();
+
+                }else{
+                  Yii::$app->session->setFlash('alert', "Ticket Incorrecto");
+            return $this->render('reserve', [
+                'model' => $model,'reserve'=>$reserve,'params'=>$params
+            ]);    
+                }
+            }
             $reserve=Reserve::findOne($model->reserve_id);
             $reserve->status='CLOSE';
             $reserve->save();
@@ -162,13 +181,13 @@ foreach($aux as $k => $reserve){
             return $this->redirect(['congrats', 'id' => $model->id]);
         } else {
             return $this->render('reserve', [
-                'model' => $model,'reserve'=>$reserve
+                'model' => $model,'reserve'=>$reserve,'params'=>$params
             ]);
         }
     }else{
             Yii::$app->session->setFlash('alert', "ATENCIÓN: Las reservas en el sitio web pueden realizarse hasta 3 horas antes del inicio del juego. Para verificar disponibilidad del horario deseado por favor llamar al 60007277 o enviar un correo a reservas@exit.com.ec");
             return $this->render('reserve', [
-                'model' => $model,'reserve'=>$reserve
+                'model' => $model,'reserve'=>$reserve,'params'=>$params
             ]);  
     }
 

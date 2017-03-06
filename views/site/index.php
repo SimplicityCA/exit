@@ -60,11 +60,37 @@ JS;
 $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHaPsQQtspQ7Sm-azY4CQ4uuVjCRW0l4');
 $this->registerJsFile('https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=894&amp;locationId=10782795&amp;lang=en_US&amp;border=true&amp;display_version=2');
 $this->registerJs($script,View::POS_END);
-
+if($popup->status=='ACTIVE'){
+  $script2=<<< JS
+   $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+JS;
+ $this->registerJs($script2,View::POS_END); 
+}
 AppAsset::register($this);
 $this->title = 'EXIT';
 ?>
-<!-- -->
+<?php if($popup->status=='ACTIVE'){ ?>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h5 class="modal-title" style="float:left;" id="exampleModalLabel"> <?= $popup->description ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+
+      <div class="modal-body">
+    <?= $popup->value ?>
+      </div>
+
+    </div>
+  </div>
+</div>
+<?php } ?>
 <section id="home"  class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/<?= $home->picture ?>')">
     <div class="container">
       <div class="inf-home">
@@ -92,7 +118,32 @@ $this->title = 'EXIT';
                <?php endforeach; ?>
             </div>
          </div> 
-    </div>
+  <div id="trip-container" class="row row-centered">
+         <div id="TA_excellent975" class="TA_excellent col-md-2 col-centered" >
+          <ul id="HjAodF1xhtOg" class="TA_links x9V43wHH">
+          <li id="FzeMuk5YJm" class="Z8Hp4x">
+          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://static.tacdn.com/img2/widget/tripadvisor_logo_115x18.gif" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
+          </li>
+          </ul>
+          </div>
+          <script src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=975&amp;locationId=10782795&amp;lang=es&amp;display_version=2"></script>
+          <div id="TA_cdsscrollingravewide590" class="TA_cdsscrollingravewide col-md-5 col-centered">
+          <ul id="BrjWquHQ2Btt" class="TA_links zifAV1gm">
+          <li id="GuWJwUa4" class="hCjEbsnE">
+          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://static.tacdn.com/img2/t4b/Stacked_TA_logo.png" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
+          </li>
+          </ul>
+          </div>
+          <script src="https://www.jscache.com/wejs?wtype=cdsscrollingravewide&amp;uniq=590&amp;locationId=10782795&amp;lang=es&amp;border=true&amp;backgroundColor=white&amp;display_version=2"></script>
+          <div id="TA_cdsratingsonlynarrow572" class="TA_cdsratingsonlynarrow col-md-2 col-centered">
+          <ul id="V0F17OMi" class="TA_links tZ9lQ8">
+          <li id="72xIqp" class="50JTzGWTJhXC">
+          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://www.tripadvisor.es/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
+          </li>
+          </ul>
+          </div>
+          <script src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=572&amp;locationId=10782795&amp;lang=es&amp;border=true&amp;display_version=2"></script>
+  </div>
 </section>
 <div class="anchor-link" id="what-is"></div>
 <section class="cont-exitint2" >

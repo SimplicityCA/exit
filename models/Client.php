@@ -34,11 +34,11 @@ class Client extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['identity', 'names', 'lastnames', 'phone', 'cellphone', 'email', 'reserve_id','number_players','pay_method','total_price'], 'required'],
+            [[ 'names', 'lastnames', 'cellphone', 'email', 'reserve_id','number_players','pay_method','total_price'], 'required'],
             [['reserve_id','number_players'], 'integer'],
             [['total_price'], 'number'],
             [['email'], 'email'],
-            [['number_players'], 'number','min' => 4, 'max' => 8],
+            [['number_players'], 'number','min' => 2, 'max' => 8],
             [['phone', 'cellphone'], 'string', 'max' => 10],
             [['identity'], 'string', 'max' => 10, 'min'=>10],
             [['names', 'lastnames','status'], 'string', 'max' => 45],

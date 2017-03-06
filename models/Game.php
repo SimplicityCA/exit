@@ -33,6 +33,7 @@ class Game extends \yii\db\ActiveRecord
         return [
             [['description', 'status','recordh','recordm','price_d','price','title','subtitle','start_time','duration'], 'required'],
             [['description', 'status','recordh','recordm'], 'string'],
+            [['min_people','max_people'], 'integer'],
             [['title', 'video','subtitle'], 'string', 'max' => 255],
             [['start_time', 'end_time'], 'string', 'max' => 10],
             [['duration','space_time'], 'string', 'max' => 15],

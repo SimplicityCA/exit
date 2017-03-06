@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
 use app\assets\AppAsset;
 use yii\web\View;
 use yii\widgets\ActiveForm;
@@ -10,24 +11,54 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Product */
 $price=$reserve->game->price;
 $price_d=$reserve->game->price_d;
+$min_people=$reserve->game->min_people;
+$max_people=$reserve->game->max_people;
+$i=0;
+if($params!=0){
+foreach($params as $param){
+$discount[$param->description]=$param->value;
+}
+}else{
+  $params=array();
+for($i=$min_people; $i<=$max_people; $i++){
+  $discount["$i"]=0;
+  $params[$i]["description"]=$i;
+}
+}
+$discount=json_encode($discount);
+// die($discount);
 $script=<<< JS
 $(".pay").change(function() {
+$('#ticket').hide();
 var players=$('#client-number_players').val();
 var price=$price;
+var i=$min_people;
+var max=$max_people
+var discount=$discount;
 if($('#client-pay_method').val()=='PAYPAL'){
 price=$price_d;
 }
-var total= price*players;
+if($('#client-pay_method').val()=='TICKET'){
+$('#ticket').show();
+}
+var total= price*players-(players*discount[players]);
 $('#price').html(total);
 $('#client-total_price').val(total);
 });
 $(".pay").on('input',function(e){
+$('#ticket').hide();
 var players=$('#client-number_players').val();
 var price=$price;
+var i=$min_people;
+var max=$max_people
+var discount=$discount;
 if($('#client-pay_method').val()=='PAYPAL'){
 price=$price_d;
 }
-var total= price*players;
+if($('#client-pay_method').val()=='TICKET'){
+$('#ticket').show();
+}
+var total= price*players-(players*discount[players]);;
 $('#price').html(total);
 $('#client-total_price').val(total);
 });
@@ -85,13 +116,13 @@ EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span>
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'identity')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>
+    
 
     <?= $form->field($model, 'names')->textInput(['maxlength' => true,'class'=>'letters form-control']) ?>
 
     <?= $form->field($model, 'lastnames')->textInput(['maxlength' => true,'class'=>'letters form-control']) ?>
 
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>
+    
 
     <?= $form->field($model, 'cellphone')->textInput(['maxlength' => true,'class'=>'number form-control']) ?>
 
@@ -99,8 +130,9 @@ EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span>
 
 
 
-         <?= $form->field($model, 'number_players')->dropDownList(['4' => '4','5'=>'5','6'=>'6'],['prompt'=>'Seleccione una Opción','class'=>'number form-control pay']) ?>
-        <?= $form->field($model, 'pay_method')->dropDownList(['PAYPAL' => 'PAYPAL','RESERVE'=>'Pago en Efectivo'],['prompt'=>'Seleccione una Opción','class'=>'pay form-control']) ?>
+         <?= $form->field($model, 'number_players')->dropDownList( ArrayHelper::map($params, 'description', 'description'),['prompt'=>'Seleccione una Opción','class'=>'number form-control pay']) ?>
+        <?= $form->field($model, 'pay_method')->dropDownList(['RESERVE'=>'Pago en Efectivo','TICKET'=>'Pago con Ticket'],['prompt'=>'Seleccione una Opción','class'=>'pay form-control']) ?>
+        <input style="display:none" class="form-control" id="ticket" type="text" name="ticket" placeholder="Ticket" />
         <?= $form->field($model, 'total_price')->hiddenInput()->label(false); ?>
     <div class="form-group">
     	Precio: <div id="price">0</div>
