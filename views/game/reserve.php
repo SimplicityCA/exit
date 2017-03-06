@@ -89,14 +89,27 @@ $(".letters").on('input', function(event) {
 JS;
 $this->registerJs($script,View::POS_END);
 AppAsset::register($this);
-$this->title =$reserve->game->title." ".$reserve->game->subtitle." ".$reserve->id;
+$this->title =$reserve->game->title." ".$reserve->game->subtitle;
+function fecha($fecha) {
+  $fecha = substr($fecha, 0, 10);
+  $numeroDia = date('d', strtotime($fecha));
+  $dia = date('l', strtotime($fecha));
+  $mes = date('F', strtotime($fecha));
+  $anio = date('Y', strtotime($fecha));
+  $dias_ES = array("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+  $dias_EN = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+  $nombredia = str_replace($dias_EN, $dias_ES, $dia);
+$meses_ES = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+  $meses_EN = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+  $nombreMes = str_replace($meses_EN, $meses_ES, $mes);
+  return $nombredia." ".$numeroDia." de ".$nombreMes." de ".$anio;
+}
 ?>
 <!-- -->
 
-<section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
-<div class="inf-contact" style="margin-top:10%;" >
+<section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/fondo_reservas.jpg')">
+<div class="row" style="margin-top:12%;padding:2%;" >
 
-<h1>Reservar <?= $this->title ?> </h1>
         <?php if (Yii::$app->session->hasFlash('alert')): ?>
   <div class="alert alert-warning alert-dismissable">
   <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
@@ -104,15 +117,20 @@ $this->title =$reserve->game->title." ".$reserve->game->subtitle." ".$reserve->i
   <?= Yii::$app->session->getFlash('alert') ?>
   </div>
 <?php endif; ?>
-            <div class="row" style="color:white;">
-                    <span>Fecha y hora de inicio <?= $reserve->start_date ?> </span>
-            <div class="row">
-                          <div class="row" style="color:white;">
-                    <span>              AVISO IMPORTANTE:  </br> 
-TODA LA INFORMACIÓN QUE SE INGRESE EN ESTE FORMULARIO DEBE SER REAL Y PRECISA. 
-UNA VEZ ENVIADO EL FORMULARIO NOSOTROS NOS PONDREMOS EN CONTACTO PARA VERIFICAR LA RESERVA. 
-EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span>
-            <div class="row">
+<div class="col-md-5" style="color:white;">
+
+  <img class="img-responsive img-thumbnail" style="width:90%;margin-left:5%;" src="<?= URL::base() ?>/images/game/<?= $reserve->game->picture ?>">
+  </div>
+            <div class="col-md-6" style="color:white;text-align:center;">
+                <h2 class="title-reserve">Reservar <?= $this->title ?> </h2>
+                    <span class="date-reserve"><?= fecha($reserve->start_date) ?><br><?=date('H:i',strtotime($reserve->start_date)) ?> </span>
+           <!--  <div class="row"> -->
+              <div  style="color:white;">
+<!--                               <span>              AVISO IMPORTANTE:  </br> 
+          TODA LA INFORMACIÓN QUE SE INGRESE EN ESTE FORMULARIO DEBE SER REAL Y PRECISA. 
+          UNA VEZ ENVIADO EL FORMULARIO NOSOTROS NOS PONDREMOS EN CONTACTO PARA VERIFICAR LA RESERVA. 
+          EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span> -->
+    <!--         <div class="row"> -->
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -142,7 +160,8 @@ EN CASO DE NO PODER CONTACTARNOS LA RESERVA SERÁ ELIMINADA .</span>
     <?php ActiveForm::end(); ?>
 </div>
 </div>
+<!-- </div>
+</div> -->
 </div>
-
 </section>
 

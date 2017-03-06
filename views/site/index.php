@@ -119,7 +119,7 @@ $this->title = 'EXIT';
             </div>
          </div> 
   <div id="trip-container" class="row row-centered">
-         <div id="TA_excellent975" class="TA_excellent col-md-2 col-centered" >
+         <div id="TA_excellent975" class="TA_excellent col-centered row-centered" >
           <ul id="HjAodF1xhtOg" class="TA_links x9V43wHH">
           <li id="FzeMuk5YJm" class="Z8Hp4x">
           <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://static.tacdn.com/img2/widget/tripadvisor_logo_115x18.gif" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
@@ -127,22 +127,7 @@ $this->title = 'EXIT';
           </ul>
           </div>
           <script src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=975&amp;locationId=10782795&amp;lang=es&amp;display_version=2"></script>
-          <div id="TA_cdsscrollingravewide590" class="TA_cdsscrollingravewide col-md-5 col-centered">
-          <ul id="BrjWquHQ2Btt" class="TA_links zifAV1gm">
-          <li id="GuWJwUa4" class="hCjEbsnE">
-          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://static.tacdn.com/img2/t4b/Stacked_TA_logo.png" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
-          </li>
-          </ul>
-          </div>
-          <script src="https://www.jscache.com/wejs?wtype=cdsscrollingravewide&amp;uniq=590&amp;locationId=10782795&amp;lang=es&amp;border=true&amp;backgroundColor=white&amp;display_version=2"></script>
-          <div id="TA_cdsratingsonlynarrow572" class="TA_cdsratingsonlynarrow col-md-2 col-centered">
-          <ul id="V0F17OMi" class="TA_links tZ9lQ8">
-          <li id="72xIqp" class="50JTzGWTJhXC">
-          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://www.tripadvisor.es/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
-          </li>
-          </ul>
-          </div>
-          <script src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=572&amp;locationId=10782795&amp;lang=es&amp;border=true&amp;display_version=2"></script>
+      
   </div>
 </section>
 <div class="anchor-link" id="what-is"></div>

@@ -14,15 +14,34 @@ use yii\widgets\ActiveForm;
 // $this->registerJs($script,View::POS_END);
 AppAsset::register($this);
 $this->title = "EXIT |  Felicidades <?= $model->names ?>";
+function fecha($fecha) {
+  $fecha = substr($fecha, 0, 10);
+  $numeroDia = date('d', strtotime($fecha));
+  $dia = date('l', strtotime($fecha));
+  $mes = date('F', strtotime($fecha));
+  $anio = date('Y', strtotime($fecha));
+  $dias_ES = array("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+  $dias_EN = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+  $nombredia = str_replace($dias_EN, $dias_ES, $dia);
+$meses_ES = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+  $meses_EN = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+  $nombreMes = str_replace($meses_EN, $meses_ES, $mes);
+  return $nombredia." ".$numeroDia." de ".$nombreMes." de ".$anio;
+}
 ?>
 <!-- -->
 
-<section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/slide1.jpg')">
-<div class="container">
+<section id="find-us" class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/fondo_reservas.jpg')">
+<div class="container row" style="margin-top:12%;padding:2%;">
+<div class="col-md-5" style="color:white;">
 
-	<div class="client-form">
-		<h1 style="margin-bottom:2%">Felicidades <?= $model->names ?> la reserva para <?= $model->reserve->game->title ?> <?= $model->reserve->game->subtitle ?> se ha realizado con éxito</h1>
-		<span class="date-congrats">Fecha de inicio del juego: <?= $model->reserve->start_date ?></span>
+  <img class="img-responsive img-thumbnail" style="width:90%" src="<?= URL::base() ?>/images/game/<?= $model->reserve->game->picture ?>">
+  </div>
+	<div class="col-md6" style="color:white;text-align:center;">
+		<h2 class="title-reserve">Gracias! <?= $model->names ?> </h2>
+		<p><span class="date-reserve">Tu reserva se ha realizado exitosamente</span></p>
+        <p><h2 class="title-reserve"><?= fecha($model->reserve->start_date) ?><br><?=date('H:i',strtotime($model->reserve->start_date)) ?></h2></p>
+		<p><span class="date-reserve">Si tu correo o número telefónico no son verificables, tu reserva podría ser cancelada.</span></p>
 	</div>
 </div>
 </section>
