@@ -12,11 +12,11 @@ use yii\helpers\Url;
 $this->title = 'CONTÁCTANOS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
+<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/empresas.jpg')">
     <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
     <div class="inf-contact">
         <div style="text-align:left;">
-            <label style="color:white;"> Teléfono: (02)600 7277 </label>
+            <label style="color:white;"> Teléfono: (02)600 7277 / Celular: 0998703518 </label>
             <label style="color:white;"> E-mail: <a class="mail" href="mailto:info@exit.com.ec">info@exit.com.ec </label>
             <label style="color:white;"> <a href="https://www.facebook.com/exitecuador/"><img class="fb" src="<?= URL::base() ?>/images/fb.png" /></a> </label>
         </div>
@@ -50,6 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= $form->field($model, 'email') ?>
 
                     <?= $form->field($model, 'subject') ?>
+
+                    <?= $form->field($model, 'cellphone') ?>
 
                     <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
 

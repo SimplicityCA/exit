@@ -12,7 +12,7 @@ use yii\helpers\Url;
 $this->title = 'PRENSA Y MEDIOS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/4.svg')">
+<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/empresas.jpg')">
     <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
     <div class="inf-contact">
     

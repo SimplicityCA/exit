@@ -15,6 +15,7 @@ class ContactForm extends Model
     public $subject;
     public $body;
     public $verifyCode;
+    public $cellphone;
 
     /**
      * @return array the validation rules.
@@ -26,6 +27,7 @@ class ContactForm extends Model
             [['name', 'email', 'subject', 'body'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
+            [['cellphone'], 'number'],
             // verifyCode needs to be entered correctly
             ['verifyCode', 'captcha'],
         ];
@@ -40,7 +42,8 @@ class ContactForm extends Model
             'verifyCode' => 'No soy un robot',
             'name' => 'Nombres y Apellidos',
             'subject' => 'Asunto',
-            'body' =>'Mensaje'
+            'body' =>'Mensaje',
+            'cellphone' => 'Celular'
         ];
     }
 
@@ -56,7 +59,7 @@ class ContactForm extends Model
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
                 ->setSubject($this->subject)
-                ->setTextBody($this->body)
+                ->setTextBody($this->body."<br>".$this->cellphone)
                 ->send();
 
             return true;

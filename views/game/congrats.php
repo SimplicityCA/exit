@@ -41,7 +41,7 @@ $meses_ES = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"
 		<h2 class="title-reserve">Gracias! <?= $model->names ?> </h2>
 		<p><span class="date-reserve">Tu reserva se ha realizado exitosamente</span></p>
         <p><h2 class="title-reserve"><?= fecha($model->reserve->start_date) ?><br><?=date('H:i',strtotime($model->reserve->start_date)) ?></h2></p>
-		<p><span class="date-reserve">Si tu correo o número telefónico no son verificables, tu reserva podría ser cancelada.</span></p>
+		<p><span class="date-reserve" style="font-size: 5.5mm;">Si tu correo o número telefónico no son verificables, tu reserva podría ser cancelada.</span></p>
 	</div>
 </div>
 </section>

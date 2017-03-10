@@ -149,7 +149,7 @@ $meses_ES = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"
 
 
          <?= $form->field($model, 'number_players')->dropDownList( ArrayHelper::map($params, 'description', 'description'),['prompt'=>'Seleccione una Opción','class'=>'number form-control pay']) ?>
-        <?= $form->field($model, 'pay_method')->dropDownList(['RESERVE'=>'Pago en Efectivo','TICKET'=>'Pago con Ticket'],['prompt'=>'Seleccione una Opción','class'=>'pay form-control']) ?>
+        <?= $form->field($model, 'pay_method')->dropDownList(['RESERVE'=>'PAGAR EN EL LOCAL EL DIA DEL JUEGO','TICKET'=>'Pago con Ticket'],['prompt'=>'Seleccione una Opción','class'=>'pay form-control']) ?>
         <input style="display:none" class="form-control" id="ticket" type="text" name="ticket" placeholder="Ticket" />
         <?= $form->field($model, 'total_price')->hiddenInput()->label(false); ?>
     <div class="form-group">

@@ -119,14 +119,7 @@ $this->title = 'EXIT';
             </div>
          </div> 
   <div id="trip-container" class="row row-centered">
-         <div id="TA_excellent975" class="TA_excellent col-centered row-centered" >
-          <ul id="HjAodF1xhtOg" class="TA_links x9V43wHH">
-          <li id="FzeMuk5YJm" class="Z8Hp4x">
-          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://static.tacdn.com/img2/widget/tripadvisor_logo_115x18.gif" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
-          </li>
-          </ul>
-          </div>
-          <script src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=975&amp;locationId=10782795&amp;lang=es&amp;display_version=2"></script>
+
       
   </div>
 </section>
@@ -150,6 +143,14 @@ $this->title = 'EXIT';
                <hr class="style-three"></hr>
             </div>
         </div>
+               <div id="TA_excellent975" class="TA_excellent" >
+          <ul id="HjAodF1xhtOg" class="TA_links x9V43wHH">
+          <li id="FzeMuk5YJm" class="Z8Hp4x">
+          <a target="_blank" href="https://www.tripadvisor.es/"><img src="https://static.tacdn.com/img2/widget/tripadvisor_logo_115x18.gif" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
+          </li>
+          </ul>
+          </div>
+          <script src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=975&amp;locationId=10782795&amp;lang=es&amp;display_version=2"></script>
 </section>
 
 <div class="anchor-link" id="missions"></div>

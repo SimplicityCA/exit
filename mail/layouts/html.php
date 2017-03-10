@@ -116,10 +116,10 @@ use yii\helpers\Html;
       ul,
       ol {
         font-family: sans-serif;
-        font-size: 14px;
+        font-size: 17px;
         font-weight: normal;
         margin: 0;
-        Margin-bottom: 15px; }
+        margin-bottom: 1px; }
         p li,
         ul li,
         ol li {

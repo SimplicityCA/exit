@@ -26,6 +26,21 @@ return [
             ],
         ],
         'db' => $db,
+                'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            // send all mails to a file by default. You have to set
+            // 'useFileTransport' to false and configure a transport
+            // for the mailer to send real emails.
+            'useFileTransport' => false,
+                        'transport' => [
+            'class' => 'Swift_SmtpTransport',
+            'host' => 'mail.exit.com.ec',
+            'username' => 'info@exit.com.ec',
+            'password' => 'Info2016',
+            'port' => '587'
+            // 'encryption' => 'tls',
+        ],
+        ],
     ],
     'params' => $params,
 ];

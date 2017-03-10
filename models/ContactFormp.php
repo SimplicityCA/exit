@@ -60,7 +60,7 @@ class ContactFormp extends Model
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
                 ->setSubject($this->subject)
-                ->setTextBody($this->body)
+                ->setTextBody($this->body."<br>".$this->medio."<br>".$this->office."<br>".$this->cellphone)
                 ->send();
 
             return true;

@@ -12,7 +12,7 @@ use yii\helpers\Url;
 $this->title = 'EMPRESAS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/oficina.JPG')">
+<section   class="background-exitint interna-exit" style="background-image:url('<?= URL::base() ?>/images/empresas.jpg')">
     <h1 class="contact-us-h1"><?= Html::encode($this->title) ?></h1>
     <div class="col-sm-10 col-sm-offset-1 info-company">
         <p>Los Cuartos de Escape en el mundo han demostrado ser una eficiente herramienta de recursos humanos. El formato del juego, de una manera lúdica y experimental, enseña la importancia de una correcta comunicación y del trabajo en equipo.</p> 

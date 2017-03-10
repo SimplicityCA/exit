@@ -58,7 +58,7 @@ class SiteController extends Controller
         $home=Content::find()->where(['type'=>'HOME'])->one();
         $phrases=Content::find()->where(['type'=>'PHRASE'])->all();
         $popup=Params::find()->where(['type'=>'POPUP'])->one();
-        $games=Game::find()->all();
+        $games=Game::find()->OrderBy(['order'=>SORT_ASC])->all();
         return $this->render('index',['home'=>$home,'games'=>$games,'phrases'=>$phrases,'popup'=>$popup]);
     }
     public function actionNews(){
